@@ -65,6 +65,16 @@
     footer.site-footer .inner { max-width: 860px; margin: 0 auto; padding: 16px 24px 40px; color: var(--muted); display: flex; gap: 12px; align-items: center; justify-content: space-between; }
     .footer-links { display: flex; gap: 12px; align-items: center; }
 
+    /* Auth overlay */
+    #authOverlay { position: fixed; inset: 0; background: rgba(17,20,24,.82); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 9999; }
+    #authOverlay .panel { width: 100%; max-width: 380px; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+    #authOverlay h2 { margin: 0 0 8px; font-size: 18px; }
+    #authOverlay p { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
+    .field { display: flex; flex-direction: column; gap: 6px; margin: 10px 0; }
+    .field label { font-size: 13px; color: var(--muted); }
+    .field input { padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; }
+    .error { color: #b42318; font-size: 13px; display: none; margin-top: 4px; }
+
     /* Impression sobre */
     @media print {
       @page { size: A4; margin: 12mm; }
@@ -76,6 +86,26 @@
   </style>
 </head>
 <body>
+  <div id="authOverlay" class="no-print" aria-modal="true" role="dialog">
+    <div class="panel" role="document">
+      <h2>Accès privé</h2>
+      <p>Veuillez vous connecter pour consulter l’audit.</p>
+      <form id="authForm">
+        <div class="field">
+          <label for="authEmail">Email</label>
+          <input id="authEmail" name="email" type="email" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="authPwd">Mot de passe</label>
+          <input id="authPwd" name="password" type="password" autocomplete="current-password" required />
+          <div id="authErr" class="error">Identifiants invalides.</div>
+        </div>
+        <div class="action-row">
+          <button type="submit" class="btn primary" style="width: 100%">Se connecter</button>
+        </div>
+      </form>
+    </div>
+  </div>
   <header>
     <div class="bar">
       <div class="brand no-print">
@@ -261,6 +291,32 @@
   <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/markdown-it-anchor@8.6.7/dist/markdownItAnchor.umd.min.js"></script>
   <script>
+    // Auth gate (léger, côté client)
+    const AUTH_EMAIL = 'client@reality';
+    const AUTH_PWD = 'Reality2025!';
+    const AUTH_KEY = 'audit_auth_ok_v1';
+    const overlay = document.getElementById('authOverlay');
+    const form = document.getElementById('authForm');
+    const err = document.getElementById('authErr');
+    function showOverlay() { overlay.style.display = 'flex'; }
+    function hideOverlay() { overlay.style.display = 'none'; }
+    try {
+      if (localStorage.getItem(AUTH_KEY) !== 'true') {
+        showOverlay();
+      }
+    } catch (_) { showOverlay(); }
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('authEmail').value.trim();
+      const pwd = document.getElementById('authPwd').value;
+      if (email === AUTH_EMAIL && pwd === AUTH_PWD) {
+        try { localStorage.setItem(AUTH_KEY, 'true'); } catch(_) {}
+        hideOverlay();
+      } else {
+        err.style.display = 'block';
+      }
+    });
+
     const tabs = document.querySelectorAll('#tabs button');
     const sections = document.querySelectorAll('main section');
     tabs.forEach(btn => btn.addEventListener('click', () => {
