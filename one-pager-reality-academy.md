@@ -40,5 +40,3 @@
 - Délivrabilité: warm‑up + domaine secondaire + limites quotidiennes.
 - Qualité data: déduplication stricte + exclusions + QA hebdo.
 - Fiabilité Make: monitoring + alerting + runbooks.
-
-Préparé par Corentin Robert — Oct. 2025
