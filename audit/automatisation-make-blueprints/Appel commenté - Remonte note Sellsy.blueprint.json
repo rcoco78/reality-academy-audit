@@ -1,0 +1,1175 @@
+{
+    "name": "Appel commenté > Remonte note Sellsy",
+    "flow": [
+        {
+            "id": 1,
+            "module": "aircall:watchCalls",
+            "version": 1,
+            "parameters": {
+                "__IMTHOOK__": 2583623
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 150
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTHOOK__": {
+                            "data": {
+                                "editable": "false"
+                            },
+                            "label": "My Aircall Call webhook"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTHOOK__",
+                        "type": "hook:aircall3",
+                        "label": "Webhook",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "module": "builtin:BasicFeeder",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "array": "{{1.data.comments}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 150
+                },
+                "restore": {
+                    "expect": {
+                        "array": {
+                            "mode": "edit"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "mode": "edit",
+                        "name": "array",
+                        "spec": [],
+                        "type": "array",
+                        "label": "Array"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "module": "util:TextAggregator",
+            "version": 1,
+            "parameters": {
+                "feeder": 9,
+                "rowSeparator": "\n"
+            },
+            "mapper": {
+                "value": "{{formatDate(now; \"DD-MM-YYYY\")}} : {{9.content}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 150
+                },
+                "restore": {
+                    "extra": {
+                        "feeder": {
+                            "label": "Iterator [9]"
+                        }
+                    },
+                    "parameters": {
+                        "rowSeparator": {
+                            "label": "New row"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "rowSeparator",
+                        "type": "select",
+                        "label": "Row separator",
+                        "validate": {
+                            "enum": [
+                                "\n",
+                                "\t",
+                                "other"
+                            ]
+                        }
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "value",
+                        "type": "text",
+                        "label": "Text"
+                    }
+                ],
+                "advanced": true
+            }
+        },
+        {
+            "id": 2,
+            "module": "phonenumber:TransformerParseNumber",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "number": "{{1.data.raw_digits}}",
+                "defaultCountry": "FR"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 150
+                },
+                "restore": {
+                    "expect": {
+                        "defaultCountry": {
+                            "mode": "chose",
+                            "label": "France (FR)"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "number",
+                        "type": "text",
+                        "label": "Phone number",
+                        "required": true
+                    },
+                    {
+                        "name": "defaultCountry",
+                        "type": "select",
+                        "label": "Default country for parsing",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "AC",
+                                "AD",
+                                "AE",
+                                "AF",
+                                "AG",
+                                "AI",
+                                "AL",
+                                "AM",
+                                "AO",
+                                "AQ",
+                                "AR",
+                                "AS",
+                                "AT",
+                                "AU",
+                                "AW",
+                                "AX",
+                                "AZ",
+                                "BA",
+                                "BB",
+                                "BD",
+                                "BE",
+                                "BF",
+                                "BG",
+                                "BH",
+                                "BI",
+                                "BJ",
+                                "BL",
+                                "BM",
+                                "BN",
+                                "BO",
+                                "BQ",
+                                "BR",
+                                "BS",
+                                "BT",
+                                "BV",
+                                "BW",
+                                "BY",
+                                "BZ",
+                                "CA",
+                                "CC",
+                                "CD",
+                                "CF",
+                                "CG",
+                                "CH",
+                                "CI",
+                                "CK",
+                                "CL",
+                                "CM",
+                                "CN",
+                                "CO",
+                                "CP",
+                                "CR",
+                                "CU",
+                                "CV",
+                                "CW",
+                                "CX",
+                                "CY",
+                                "CZ",
+                                "DE",
+                                "DG",
+                                "DJ",
+                                "DK",
+                                "DM",
+                                "DO",
+                                "DZ",
+                                "EA",
+                                "EC",
+                                "EE",
+                                "EG",
+                                "EH",
+                                "ER",
+                                "ES",
+                                "ET",
+                                "EU",
+                                "FI",
+                                "FJ",
+                                "FK",
+                                "FM",
+                                "FO",
+                                "FR",
+                                "FX",
+                                "GA",
+                                "GB",
+                                "GD",
+                                "GE",
+                                "GF",
+                                "GG",
+                                "GH",
+                                "GI",
+                                "GL",
+                                "GM",
+                                "GN",
+                                "GP",
+                                "GQ",
+                                "GR",
+                                "GS",
+                                "GT",
+                                "GU",
+                                "GW",
+                                "GY",
+                                "HK",
+                                "HM",
+                                "HN",
+                                "HR",
+                                "HT",
+                                "HU",
+                                "IC",
+                                "ID",
+                                "IE",
+                                "IL",
+                                "IM",
+                                "IN",
+                                "IO",
+                                "IQ",
+                                "IR",
+                                "IS",
+                                "IT",
+                                "JE",
+                                "JM",
+                                "JO",
+                                "JP",
+                                "KE",
+                                "KG",
+                                "KH",
+                                "KI",
+                                "KM",
+                                "KN",
+                                "KP",
+                                "KR",
+                                "KW",
+                                "KY",
+                                "KZ",
+                                "LA",
+                                "LB",
+                                "LC",
+                                "LI",
+                                "LK",
+                                "LR",
+                                "LS",
+                                "LT",
+                                "LU",
+                                "LV",
+                                "LY",
+                                "MA",
+                                "MC",
+                                "MD",
+                                "ME",
+                                "MF",
+                                "MG",
+                                "MH",
+                                "MK",
+                                "ML",
+                                "MM",
+                                "MN",
+                                "MO",
+                                "MP",
+                                "MQ",
+                                "MR",
+                                "MS",
+                                "MT",
+                                "MU",
+                                "MV",
+                                "MW",
+                                "MX",
+                                "MY",
+                                "MZ",
+                                "NA",
+                                "NC",
+                                "NE",
+                                "NF",
+                                "NG",
+                                "NI",
+                                "NL",
+                                "NO",
+                                "NP",
+                                "NR",
+                                "NU",
+                                "NZ",
+                                "OM",
+                                "PA",
+                                "PE",
+                                "PF",
+                                "PG",
+                                "PH",
+                                "PK",
+                                "PL",
+                                "PM",
+                                "PN",
+                                "PR",
+                                "PS",
+                                "PT",
+                                "PW",
+                                "PY",
+                                "QA",
+                                "RE",
+                                "RO",
+                                "RS",
+                                "RU",
+                                "RW",
+                                "SA",
+                                "SB",
+                                "SC",
+                                "SD",
+                                "SE",
+                                "SG",
+                                "SH",
+                                "SI",
+                                "SJ",
+                                "SK",
+                                "SL",
+                                "SM",
+                                "SN",
+                                "SO",
+                                "SR",
+                                "SS",
+                                "ST",
+                                "SU",
+                                "SV",
+                                "SX",
+                                "SY",
+                                "SZ",
+                                "TA",
+                                "TC",
+                                "TD",
+                                "TF",
+                                "TG",
+                                "TH",
+                                "TJ",
+                                "TK",
+                                "TL",
+                                "TM",
+                                "TN",
+                                "TO",
+                                "TR",
+                                "TT",
+                                "TV",
+                                "TW",
+                                "TZ",
+                                "UA",
+                                "UG",
+                                "UM",
+                                "US",
+                                "UY",
+                                "UZ",
+                                "VA",
+                                "VC",
+                                "VE",
+                                "VG",
+                                "VI",
+                                "VN",
+                                "VU",
+                                "WF",
+                                "WS",
+                                "YE",
+                                "YT",
+                                "ZA",
+                                "ZM",
+                                "ZW"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "sellsy:makeApiCall",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 8601308
+            },
+            "mapper": {
+                "url": "/v2/contacts/search",
+                "body": "{\n  \"filters\": {\n    \"mobile_number\": \"{{2.e164}}\"\n  }\n}",
+                "method": "POST",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1200,
+                    "y": 150
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "POST"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "sellsy2"
+                            },
+                            "label": "Selssy RA (ANTOINE BERNARD)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:sellsy2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "PATCH",
+                                "DELETE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "builtin:BasicRouter",
+            "version": 1,
+            "mapper": null,
+            "metadata": {
+                "designer": {
+                    "x": 1500,
+                    "y": 150
+                }
+            },
+            "routes": [
+                {
+                    "flow": [
+                        {
+                            "id": 6,
+                            "module": "sellsy:updateContact",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 8601308
+                            },
+                            "filter": {
+                                "name": "Contact trouvé",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{3.body.data[].id}}",
+                                            "o": "exist"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "id": "{{3.body.data[].id}}",
+                                "note": "{{8.text}}<br>{{3.body.data[].note}}",
+                                "sync": {}
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1800,
+                                    "y": 0
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "id": {
+                                            "mode": "edit"
+                                        },
+                                        "sync": {
+                                            "nested": {
+                                                "mailjet": {
+                                                    "mode": "chose"
+                                                },
+                                                "mailchimp": {
+                                                    "mode": "chose"
+                                                },
+                                                "simplemail": {
+                                                    "mode": "chose"
+                                                }
+                                            }
+                                        },
+                                        "civility": {
+                                            "mode": "chose",
+                                            "label": "Empty"
+                                        },
+                                        "is_archived": {
+                                            "mode": "chose"
+                                        },
+                                        "additional_options": {
+                                            "label": "Empty"
+                                        },
+                                        "marketing_campaigns_subscriptions": {
+                                            "mode": "chose"
+                                        }
+                                    },
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "sellsy2"
+                                            },
+                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:sellsy2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "mode": "edit",
+                                        "name": "id",
+                                        "type": "select",
+                                        "label": "Contact ID",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "civility",
+                                        "type": "select",
+                                        "label": "Civility",
+                                        "validate": {
+                                            "enum": [
+                                                "mr",
+                                                "mrs",
+                                                "ms"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "first_name",
+                                        "type": "text",
+                                        "label": "First Name"
+                                    },
+                                    {
+                                        "name": "last_name",
+                                        "type": "text",
+                                        "label": "Last Name"
+                                    },
+                                    {
+                                        "name": "email",
+                                        "type": "email",
+                                        "label": "Email"
+                                    },
+                                    {
+                                        "name": "website",
+                                        "type": "url",
+                                        "label": "Website"
+                                    },
+                                    {
+                                        "name": "phone_number",
+                                        "type": "text",
+                                        "label": "Phone Number"
+                                    },
+                                    {
+                                        "name": "mobile_number",
+                                        "type": "text",
+                                        "label": "Mobile Number"
+                                    },
+                                    {
+                                        "name": "fax_number",
+                                        "type": "text",
+                                        "label": "Fax Number"
+                                    },
+                                    {
+                                        "name": "position",
+                                        "type": "text",
+                                        "label": "Position"
+                                    },
+                                    {
+                                        "name": "birth_date",
+                                        "type": "date",
+                                        "label": "Birth Date"
+                                    },
+                                    {
+                                        "name": "avatar",
+                                        "type": "url",
+                                        "label": "Avatar"
+                                    },
+                                    {
+                                        "name": "note",
+                                        "type": "text",
+                                        "label": "Note"
+                                    },
+                                    {
+                                        "name": "twitter",
+                                        "type": "url",
+                                        "label": "Twitter"
+                                    },
+                                    {
+                                        "name": "facebook",
+                                        "type": "url",
+                                        "label": "Facebook"
+                                    },
+                                    {
+                                        "name": "linkedin",
+                                        "type": "url",
+                                        "label": "Linkedin"
+                                    },
+                                    {
+                                        "name": "viadeo",
+                                        "type": "url",
+                                        "label": "Viadeo"
+                                    },
+                                    {
+                                        "name": "sync",
+                                        "spec": [
+                                            {
+                                                "name": "mailchimp",
+                                                "type": "boolean",
+                                                "label": "Mailchimp"
+                                            },
+                                            {
+                                                "name": "mailjet",
+                                                "type": "boolean",
+                                                "label": "Mailjet"
+                                            },
+                                            {
+                                                "name": "simplemail",
+                                                "type": "boolean",
+                                                "label": "Simplemail"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Sync"
+                                    },
+                                    {
+                                        "name": "additional_options",
+                                        "type": "select",
+                                        "label": "Additional Options",
+                                        "validate": {
+                                            "enum": [
+                                                "embeds",
+                                                "fields"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "marketing_campaigns_subscriptions",
+                                        "type": "select",
+                                        "label": "Marketing Campaigns Subscriptions",
+                                        "multiple": true,
+                                        "validate": {
+                                            "enum": [
+                                                "sms",
+                                                "phone",
+                                                "email",
+                                                "postal_mail",
+                                                "custom"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "is_archived",
+                                        "type": "boolean",
+                                        "label": "Is Archived"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 5,
+                            "module": "sellsy:makeApiCall",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 8601308
+                            },
+                            "filter": {
+                                "name": "Contact non trouvé",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{3.body.data[].id}}",
+                                            "o": "notexist"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "url": "/v2/contacts/search",
+                                "body": "{\n  \"filters\": {\n    \"phone_number\": \"{{2.e164}}\"\n  }\n}",
+                                "method": "POST",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1800,
+                                    "y": 300
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "qs": {
+                                            "mode": "chose"
+                                        },
+                                        "method": {
+                                            "mode": "chose",
+                                            "label": "POST"
+                                        },
+                                        "headers": {
+                                            "mode": "chose",
+                                            "items": [
+                                                null
+                                            ]
+                                        }
+                                    },
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "sellsy2"
+                                            },
+                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:sellsy2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "method",
+                                        "type": "select",
+                                        "label": "Method",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "GET",
+                                                "POST",
+                                                "PUT",
+                                                "PATCH",
+                                                "DELETE"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "headers",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Headers"
+                                    },
+                                    {
+                                        "name": "qs",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Query String"
+                                    },
+                                    {
+                                        "name": "body",
+                                        "type": "any",
+                                        "label": "Body"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 7,
+                            "module": "sellsy:updateContact",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 8601308
+                            },
+                            "filter": {
+                                "name": "Retrouvé",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{5.body.data[].id}}",
+                                            "o": "exist"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "id": "{{5.body.data[].id}}",
+                                "note": "{{8.text}}<br>{{5.body.data[].note}}",
+                                "sync": {}
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 2100,
+                                    "y": 300
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "id": {
+                                            "mode": "edit"
+                                        },
+                                        "sync": {
+                                            "nested": {
+                                                "mailjet": {
+                                                    "mode": "chose"
+                                                },
+                                                "mailchimp": {
+                                                    "mode": "chose"
+                                                },
+                                                "simplemail": {
+                                                    "mode": "chose"
+                                                }
+                                            }
+                                        },
+                                        "civility": {
+                                            "mode": "chose",
+                                            "label": "Empty"
+                                        },
+                                        "is_archived": {
+                                            "mode": "chose"
+                                        },
+                                        "additional_options": {
+                                            "label": "Empty"
+                                        },
+                                        "marketing_campaigns_subscriptions": {
+                                            "mode": "chose"
+                                        }
+                                    },
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "sellsy2"
+                                            },
+                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:sellsy2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "mode": "edit",
+                                        "name": "id",
+                                        "type": "select",
+                                        "label": "Contact ID",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "civility",
+                                        "type": "select",
+                                        "label": "Civility",
+                                        "validate": {
+                                            "enum": [
+                                                "mr",
+                                                "mrs",
+                                                "ms"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "first_name",
+                                        "type": "text",
+                                        "label": "First Name"
+                                    },
+                                    {
+                                        "name": "last_name",
+                                        "type": "text",
+                                        "label": "Last Name"
+                                    },
+                                    {
+                                        "name": "email",
+                                        "type": "email",
+                                        "label": "Email"
+                                    },
+                                    {
+                                        "name": "website",
+                                        "type": "url",
+                                        "label": "Website"
+                                    },
+                                    {
+                                        "name": "phone_number",
+                                        "type": "text",
+                                        "label": "Phone Number"
+                                    },
+                                    {
+                                        "name": "mobile_number",
+                                        "type": "text",
+                                        "label": "Mobile Number"
+                                    },
+                                    {
+                                        "name": "fax_number",
+                                        "type": "text",
+                                        "label": "Fax Number"
+                                    },
+                                    {
+                                        "name": "position",
+                                        "type": "text",
+                                        "label": "Position"
+                                    },
+                                    {
+                                        "name": "birth_date",
+                                        "type": "date",
+                                        "label": "Birth Date"
+                                    },
+                                    {
+                                        "name": "avatar",
+                                        "type": "url",
+                                        "label": "Avatar"
+                                    },
+                                    {
+                                        "name": "note",
+                                        "type": "text",
+                                        "label": "Note"
+                                    },
+                                    {
+                                        "name": "twitter",
+                                        "type": "url",
+                                        "label": "Twitter"
+                                    },
+                                    {
+                                        "name": "facebook",
+                                        "type": "url",
+                                        "label": "Facebook"
+                                    },
+                                    {
+                                        "name": "linkedin",
+                                        "type": "url",
+                                        "label": "Linkedin"
+                                    },
+                                    {
+                                        "name": "viadeo",
+                                        "type": "url",
+                                        "label": "Viadeo"
+                                    },
+                                    {
+                                        "name": "sync",
+                                        "spec": [
+                                            {
+                                                "name": "mailchimp",
+                                                "type": "boolean",
+                                                "label": "Mailchimp"
+                                            },
+                                            {
+                                                "name": "mailjet",
+                                                "type": "boolean",
+                                                "label": "Mailjet"
+                                            },
+                                            {
+                                                "name": "simplemail",
+                                                "type": "boolean",
+                                                "label": "Simplemail"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Sync"
+                                    },
+                                    {
+                                        "name": "additional_options",
+                                        "type": "select",
+                                        "label": "Additional Options",
+                                        "validate": {
+                                            "enum": [
+                                                "embeds",
+                                                "fields"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "marketing_campaigns_subscriptions",
+                                        "type": "select",
+                                        "label": "Marketing Campaigns Subscriptions",
+                                        "multiple": true,
+                                        "validate": {
+                                            "enum": [
+                                                "sms",
+                                                "phone",
+                                                "email",
+                                                "postal_mail",
+                                                "custom"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "is_archived",
+                                        "type": "boolean",
+                                        "label": "Is Archived"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

@@ -1,0 +1,345 @@
+Tu m'entends ? Ouais, très bien.
+
+Est-ce que ça marche ? Ça va ? Oui, et toi ? Oui, ça va. Vous bossez en présentiel ? Oui. Toujours. Sauf le mercredi, notre jour de télétravail à tous. D'accord, ok. Ça marche. Et vous êtes basée où ? On est à Bagnolet. Bagnolet, ok. Attends, Bagnolet. Tu es de Paris ? Ouais, je suis de Paris, mais je ne vois pas. Attends, c'est vers Vincennes ?
+
+C'est pas loin de Vincennes, mais c'est vraiment collé à Paris, c'est Galieny sur la 3, c'est le dernier arrêt de la ligne 3, c'est vraiment collé à Paris, donc c'est collé à Paris 20ème. mais on bouge vers 27 bientôt dans les nouveaux locaux vous agrandissez c'est ça je pense qu'il ya une coupure
+
+Oui, c'est pour prévoir, c'est pour le futur on va dire, mais on ne s'agrandit pas tout de suite. On a déjà des nouveaux qui sont arrivés pour la rentrée de septembre. pour qu'on puisse travailler ensemble. Très bien, très bien. Et du coup, toi, t'es dans la boîte depuis combien de temps ?
+
+Ça fait deux ans en octobre.
+
+à faire aussi. Ça marche. Écoute, moi je t'ai envoyé un petit mail avec, on va dire, une première partie d'analyse que j'ai commencé à faire. Et du coup, ce sur quoi j'aimerais bien qu'on avance aujourd'hui, c'est qu'effectivement Tu m'as transmis des automatisations make, j'aimerais bien que tu me les expliques oralement pour que je puisse parfaitement les comprendre. Il y avait un sujet aussi de...
+
+mécaniques à haute bande pour savoir est-ce que vous aviez plusieurs noms de domaines, est-ce que vous prévoyez d'en acheter ou autre et auquel cas on pourrait regarder ensemble aussi ce qui a été fait par le passé. je vais juste me remettre devant le mail alors ouais voilà ensuite effectivement regarder ensemble
+
+pour parler d'outbound sur la prise de position de chacun et sur les niveaux de standardisation des messages que l'on pourrait faire. comprendre aussi est-ce que vous aviez une base de données initiales de clients à me fournir pour effectivement éviter d'avancer sur des clients déjà existants.
+
+Et ensuite, effectivement, prendre pas mal de temps sur Make et Chelsea pour comprendre un peu les différentes mécaniques d'automatisation et vraiment voir ce qui pourrait pêcher ou ce qui… ce qui pourrait être amélioré, quoi. Voilà. Ok. Ok, très bien. Est-ce que ça te va ? Ça me va. Ok. Ça me va, juste de répondre à tout au maximum et puis...
+
+Je verrai s'il y a des questions sur lesquelles je bloche. Parfait, ok. Alors, du coup... Si tu peux partager ton écran avec Meik, comme ça on peut regarder ensemble de A à Z. J'ai bien accéléré. Alors... Du coup pour t'expliquer un petit peu en fait initialement moi j'avais fait toutes les automatisations sur Zapier, on avait Zapier avant et là en fait on a un freelance qui travaille sur Make pour repasser tous nos apps dans Make.
+
+Du coup, je maîtrise un petit peu moins les scénarios. Néanmoins, je peux t'expliquer comment ils fonctionnent, même s'ils ont été un petit peu restructurés. Donc, pour tous les téléchargements des grosses sources, du coup. Il a fait pas mal de tests, il est en train de tout mettre en place, c'est pour ça que c'est assez récent.
+
+J'essaie de voir ceux qui sont activés.
+
+Je ne vois pas lequel est activé pour le téléchargement des ressources parce qu'il y a eu une anomalie. Ce n'est pas encore vraiment déployé, on est encore sur Zapier. Ok. Pourquoi vous avez décidé de changer? Oui, parce qu'en fait, c'est un certain scénario qu'on ne pouvait pas faire comme on souhaitait dans Aptior.
+
+Du coup, on est passé sur Make et vu qu'on s'était un peu gênant d'avoir les deux, on a demandé du coup aux fréquences qui nous accompagnent de passer toutes nos apps sur Make pour nous faire gagner du temps. Mais du coup, j'imagine que c'est celui-ci, qu'il a été désactivé, je ne sais pas pourquoi. Peut-être qu'il y a encore des retouches dessus ou qu'il y a eu un bug où, en fait, dès qu'on télécharge un catalogue ou une ressource sur le site web...
+
+Lui, il stocke tout dans un datastore, il recherche si un client existe déjà avec un e-mail. Donc s'il n'existe pas, du coup, il crée un contact et s'il existe, ils recherchent l'update du coup, ce contact-là. Donc avec ça, il y a la création de leur société et d'une opportunité systématiquement.
+
+Donc, c'était que si ça n'existe pas et l'opportunité, par contre, c'est tout le temps. Et ensuite, en fait, on a le système de scoring qui est ici. l'opportunité, le score et la mise à jour du score. Donc, on a le scoring qui se met à jour dans celle-ci. Et si on regarde le scoring, comment vous l'avez construit ? Si on clique dessus pour que je comprenne ?
+
+OK, ça c'est des queries d'Emoji, OK, et sur la bulle d'avant, définis le score. C'est quoi exactement ça? Parce qu'il ajoute un chiffre.
+
+Donc il y a une valeur et il augmente cette valeur, d'accord. Ouais, en fait, le but, c'est que ça évolue en fonction du comportement d'utilisateur. Donc s'il télécharge plusieurs ressources, du coup, ça va se cumuler. S'il prend un rendez-vous, ça va augmenter aussi. Et ensuite, après, il y a un tas qui va se mettre lit de chaud, lit de froid.
+
+Et après ça va dans Notion parce que vous stockez aussi des infos dans Notion. Ouais, j'ai des tableaux de leads sur Notion aussi. Donc ça c'est plus pour les commerciaux et de mon côté, mais je pense qu'à terme on ne pourra avoir que celle-ci, mais c'est juste pour avoir encore ce suivi pour le moment. Et après on a des emailings qui sont envoyées, ce que là il fallait qu'ils m'expliquent parce qu'en fait moi sur Zapier, je pouvais mettre un délai.
+
+Et du coup, j'avais un mail qui partait directement, un mail à 7 jours, un mail à 10 jours. Alors que là, il m'a dit qu'il fallait que je stocke sur un document. Et après, je crois qu'il fait une autre automatisation pour que les e-mailings partent. Mais ça, il faut que je revoie avec l'e-mail, je crois. Ok, tu complètes suffis là. Ok. E-mail jet, ok. Ça marche. Et ensuite, création de société en haut.
+
+Ok. Et donc, celle-ci, elle ne fonctionne pas ? Elle était active puisque moi, je l'ai vue la semaine dernière et on l'avait active. Donc, je ne sais pas pourquoi elle est désactivée. Je sais que des fois, ça se bloque en fait quand il y a des bugs. Ça se bloque tout seul.
+
+C'est peut-être ça. Donc, je revois avec lui. Parce que moi, mes apps sont toujours actifs. Donc, quand lui l'aura terminé, le but, c'est que je désactive tous mes apps. C'est pire mais c'est toujours en cours en fait, c'est pour ça. Ok, ça marche. Après, du coup, on en a fait pour ce qui était l'échargement des ressources. Après, on a automatisé également avec Aircall.
+
+pour faire remonter à la fois les commentaires et le tag dans celle-ci. Là, c'est un petit peu plus simple comme scénario. En gros, voilà, dès qu'il y a un tag qui est fait, ça vérifie avec le numéro, ça recherche le numéro, et du coup, ça met le score et ça met à jour le tag.
+
+Et le tag, c'est quoi exactement ? C'est du style, pour pas intéresser, à rappeler, en voie doc et en fonction du tag qu'il y a, le score change aussi. Ok. Et le tag est ajouté automatiquement par du coup Aircall, c'est ça ? En fait, le tag c'est manuel. Dans Aircall, en fait, si tu finis ton appel, tu peux associer un tag et mettre des commentaires. Et le but, du coup, c'est de les faire remonter directement dans celle-ci.
+
+Comme ça quand les commerciaux, enfin quand les SDR font leur session de cold calling en fait ça remonte directement et on voit les prospects qui sont chauds et ceux où ça sert à rien d'aller plus loin. avec eux derrière, et les commerçants peuvent suivre ça directement dans celle-ci. Ok, et c'est quoi les trois bulles en bas, ça sert à quoi ça ? Là c'est quoi ? C'était quoi déjà pour chaque recréer, regrouper ?
+
+Je ne sais plus ce que c'était qu'il m'avait expliqué. Ah, je crois que c'était pour... Les tags précédents se suppriment, sinon ça écrasait le dernier tag. Je ne suis plus trop sûre honnêtement. Mais ils ne sont pas du tout liés en fait.
+
+Non, je ne sais pas, a priori ça marchait, je ne sais pas. Pour être honnête, j'étais vraiment très ambitieuse et là je découvre un peu le mec. Ok, ça marche, c'est clair ça. Ensuite, pareil, on a fait la même chose avec le calendit. dans nos commerciaux. Donc là, pareil, quand il y a un rendez-vous qui est pris, ça recherche si le contact existe déjà, ça crée un contact, ça l'update, ça fonctionne un peu de la même manière que pour le téléchargement des ressources.
+
+Et ensuite, ça crée une opportunité, ça lie à une société, etc. Et ça met à jour un score aussi. Parce que vous estimez que quand quelqu'un prend un rendez-vous, effectivement, il a un score qui est plus élevé, c'est ça ? Oui, parce que du coup, il va en échange directement avec la personne. Alors, quand tu les télécharges une ressource, ça ne veut pas forcément dire qu'il y aura besoin de nous. Ok, mais tu ne sais pas s'il a été présent ou s'il n'a pas été présent, ce gars.
+
+C'est annulé, on annule. Ça enlève les points qui ont été accordés. Dans un autre zap, c'est ça ? Enfin, dans un autre make ?
+
+Normalement, c'était là.
+
+c'est un autre c'est watch event du coup contact retourné
+
+Je ne sais pas où est-ce que c'est honnêtement, je pourrais lui demander, mais il avait mis ça en place normalement, quand il annule, ça enlève les points. Après, s'il n'y vient pas, là, par contre, ça ne fait rien. S'il n'annule pas, mais juste qu'il ne se présente pas, si le rendez-vous n'est pas annulé, effectivement, ça attribue les points.
+
+Et le gars, quand il va dans Calendly, du coup, c'est pour un Google Meet, c'est pour un appel directement, c'est quoi ? Ça, c'est un Google Meet. Ok, mais du coup, le lien... Le lien avec l'outil que tu m'as montré, Airkoll, je ne le vois pas du coup. C'est Airkoll. Ouais.
+
+Non, c'est pas Aircall du tout. En fait, Aircall, c'est des SDR, c'est du cold calling, donc si ils répondent, ça ne veut pas dire grand-chose. Il y a un tag, c'est aussi, ils ont montré un intérêt, donc s'il y a un rappelé en voix d'eau, par exemple.
+
+Mais on met moins de points que si la personne va sur le site et prend un rendez-vous directement avec un sales. Parce que c'est eux qui rentrent en contact avec nous. Après, tu me disais en ce moment, parce que moi je ne suis pas experte dans le gros sous.
+
+Non mais c'est intéressant, mais du coup, il n'y a pas de jointure entre les deux mécanismes parce que ça pourrait être une personne qu'on a sollicité, mais qui derrière prend un rendez-vous, mais qui en fait... Je ne sais pas. En général, si on l'a sollicité, c'est l'OSDR qui fait le lien avec le commercial. Du coup, il y a peu de chances qu'elle prenne elle-même rendez-vous sur le site parce que nous, on la suit derrière.
+
+C'est aussi effectivement, on a fait un call il y a trois mois, par exemple, que la personne n'était pas intéressée et qu'elle nous recontacte plus tard. Là, effectivement, ça va cumuler. Enfin, nous, on aura l'historique puisqu'on va savoir qu'on l'a contactée via Aircall.
+
+et qu'elle a pris rendez-vous. Donc, ça va accumuler le score. Hum, OK, je comprends, OK, et du coup, en termes de nombre de réservations dans l'agenda d'Estéban, du coup, c'est quoi en termes de volumétrie ? Pour l'instant, c'est très peu, parce qu'on est en train de travailler sur un nouveau site qui aurait dû sortir vendredi, mais qui n'est pas encore sorti. On aura la possibilité de prendre directement rendez-vous sur Calendly, mais ce n'est pas encore le cas.
+
+Là, sur notre site actuel, on a juste le formulaire. Et du coup, dans quelques emailings, je mette le calendrier et dans un email, s'il te plaît, il y aura deux rendez-vous. C'est encore énorme, mais le but, c'est celui qui sortira j'espère aujourd'hui. On a la possibilité de prendre rendez-vous, je peux te montrer. Ouais carrément, je suis intéressé.
+
+Je te montre, j'ai partagé l'onglet là, en gros ça c'est le nouveau site, là tu vas dans la prise de contact. Là, tu as le formulaire actuel qui est sur le site, où c'est du texte en gros. Aussi, tu vas prendre rendez-vous comme ça et là, c'est le calendrier d'Esteban.
+
+Et pourquoi vous ne le mettez pas directement en avance ? Juste une simple question. Oui, je ne sais pas, parce que de base, on était habitués au fond. formulaire comme ça. Du coup, on est resté sur celui-ci, mais on ne sait pas en fait si ça fonctionnera bien. Ok. Vous n'avez pas aujourd'hui les stats entre un texte ou la conversion d'Estéban ?
+
+Comme ça, parce qu'on ne l'a pas mis en place, le site que je te montre, c'est encore sur Webflow. Il n'est pas encore publié. Ma question, c'est est-ce qu'à chaque fois que Stéphane a quelqu'un au téléphone, Est-ce qu'il convertit ? On n'a pas de stats. On n'a pas de stats là-dessus. En fait, je pense qu'on est vraiment à la recherche de process puisque, alors en fait, le marketing et le commercial ne communiquent pas beaucoup. Moi, ça fait deux ans que je suis là, mais la première année, je n'étais pas sur ce sujet du tout.
+
+J'étais vraiment sur les catalogues, le site, les brochures, etc. Là, je commence vraiment à être sur d'autres sujets, mais du coup, vraiment, je suis preneuse de tous les conseils possibles parce qu'on n'a pas de strates très précises. C'est un peu flou, peut-être.
+
+Ça ne m'a pas l'air fouillie, mais j'ai l'impression qu'à chaque fois que je pose des questions sur la donnée, j'ai le sentiment qu'il manque un truc. On n'en a pas en fait. En fait, moi j'avais mes chiffres de mon côté, eux avaient les leurs de leur côté.
+
+et n'avaient pas de point de contact entre les deux. Donc, c'est pour ça qu'on essaie de tout mettre sur celle-ci pour qu'on puisse tous ensemble. Mais c'est vrai que moi, par exemple, je ne pouvais pas savoir les lignes magnétiques qui étaient produites.
+
+si ça convertissait ou pas derrière, je pouvais juste voir le nombre de téléchargements. Je demandais en fait, mais les sales n'étaient pas capables de me dire si ça avait été contre un... s'ils avaient converti ou non parce que tout simplement eux ils n'ont pas de quelle source ça venait quand ils avaient une prise de contact derrière et du coup voilà il manquait ça en fait mais toi entre le téléchargement et le nombre d'appels t'auraient pu voir ou non pas du tout ?
+
+Non parce qu'ils téléchargent, moi j'ai mon fichier et après du coup il y a la boucle d'emailing qui part. Mais après moi je ne peux pas savoir s'ils ont pris contact ou non en fait. Tout est automatisé, je ne suis pas dans l'échange une fois que la ressource a été téléchargée.
+
+Mais du coup, si je comprends bien, les SDR, eux, se calquent sur celle-ci. Et du coup, tu aurais pu regarder celle-ci à ce moment-là pour voir ou même pas ? Je ne sais pas. c'est récent, avant il y avait celle-ci mais juste pour les factures, la partie facture qui sont n'y avait pas de suivi, c'est depuis là en fait. Et avant vous faisiez comment ?
+
+Il y avait un doc Excel où on suivait le nombre de téléchargements et c'est les commerçants qui s'organisaient eux-mêmes. Ok. Ah ouais, donc il notait sur un bout de papier, à rappeler, à rappeler, ok. Je pense pas sur un bout de papier, mais sur des docs Excel qu'eux géraient entre eux, en fait. Et moi, j'étais pas dedans.
+
+Et celle-ci, c'était vraiment pour la facturation et du coup, c'est depuis peu, on a voulu tout réunir, mais quand je dis depuis peu, c'est un projet qu'on a lancé au mois de juin. Ok, donc c'est tout neuf, d'accord. Ok, ça marche, non mais très clair. Et du coup là, les pages téléchargées, le e-book Yoga...
+
+ça, est-ce que tu peux juste me la montrer pour voir ? En gros, c'est des informations, là, tu as 10 thématiques et du coup, à chaque fois, tu as un catalogue qui est là, par exemple. Tu rentres tes infos et après, tu télécharges. Ah c'est joli, ok, ah c'est bien foutu, c'est toi qui a fait ça ? Ah c'est une agence. C'est une agence, ok.
+
+Tu as bossé avec pour les Figma et autres, c'est ça ? Oui. On a fait une première version là qui est sortie en juin dernier, et là on travaille sur une deuxième version où en gros on a refait les fiches formation. pour que ça réponde aux enjeux qu'a Lyopi. OK, très bien. Là, tu as le catalogue toujours et après, tu as les ressources comme ça du site Libre Blanc, Calendrier H.
+
+ou de la même manière, tu as un petit forme ici et tu télécharges. Et aujourd'hui, c'est quelle thématique qui fonctionne le mieux ? Thématique, c'est plutôt HSE et DiverCity. C'est un temps fort mis en avant par les entreprises, après HSE pour tout ce qui est risques de premiers secours, incendies, extincteurs, etc.
+
+Mobilité pas mal aussi, pour tout ce qui est risques sur les trajets, travail, domicile. C'est vraiment ces trois là. On a pas mal de vues aussi de téléchargements cyber, mais personne ne commande de journée derrière. Et après celle qui fonctionne le moins bien, vraiment, environnement, ça ne va pas du tout, sales et management. Ok. Et yoga et méditation, ça marche ?
+
+C'est une méditation un peu plus que le yoga, correctement, mais moins que les autres que je t'ai montré. Et RPS, ça marche pas mal aussi, mais c'est une nouvelle formation, une nouvelle thématique. Donc, il y a quelques trucs-là. Et quand tu dis que ça marche pas mal, ça veut dire que là devant toi, tu as un tableau avec le nombre de téléchargements ou autre ? Oui.
+
+Mais ça c'est sur Notion du coup, en fait c'est un peu éparpillé, c'est pour ça. Là du coup, ça remonte sur celle-ci aussi maintenant. Mais de base, moi j'avais sur Notion, j'avais un petit... En gros, j'avais fait ça du coup avec... J'avais fait ça avec Zapier quand je suis arrivée et là du coup t'as les différentes ressources, t'as le téléchargement des catalogues et...
+
+Et du coup, les commerçants, ils mettent leur tag dessus maintenant.
+
+Donc quand ça va sur celle-ci, ça met à jour ce système, c'est ça ? En gros, celui-là il existait depuis longtemps, je l'avais mis moi sur Zapier. Mais ce qui n'existait pas, c'est le fait d'importer dans CellSign. Donc là, ça a été fait et j'ai voulu garder ce tableau-là quand même pour pouvoir suivre de mon côté.
+
+Et là, je trouve que les commerciaux, ils mettent des tags à chaque fois sur le contact. Mais quand tu dis qu'ils mettent des tags, ils vont sur ton notion ou ils vont sur celle-ci et du coup, ça change le tag ? Non, il n'y a pas de connexion entre les deux, là ils vont sur le Notion. En fait, le Chelsea, c'est vraiment nouveau, du coup, le but c'était qu'ils finissent tout et que je leur présente, que je leur dise comment ça marche, etc., et qu'on n'ait que Chelsea à terme.
+
+C'est encore un peu en course, je ne connaissais pas celle-ci avant. Je ne suis pas forcément hyper à l'aise avec Meil pour faire des choses complexes. Donc, c'est vrai que ça prend un petit peu de temps, le temps que moi, je m'imprime du truc et que je leur explique. OK. Et c'est quoi, ça, entreprise WeLoveCheese ? OK. Il y a des gens qui font des tests ?
+
+C'est moi qui fais les tests, mais je ne fais pas des tests comme ça. En général, je marque mon prénom pour qu'ils savent que c'est moi. Je pense que c'est quelqu'un qui a voulu télécharger la ressource sans donner ses vraies coordonnées.
+
+Ok, mais ça, sur Webflow, vous pourriez le bloquer, quoi. Oui, c'est ce qu'on voudrait faire. On a demandé à notre agence actuelle de… Enfin, on va le faire avec une autre agence, du coup, mais d'avoir en gros dans les téléchargements que des e-mails pro.
+
+Il y a pas mal de spam aussi, des fois. Oui, et puis là, je vois 1, 2, 3, 4, 5, 6, 7, 8, 9 en numéro de téléphone. Ouais, ouais.
+
+Ça, on voudrait bloquer justement.
+
+C'est chiant ça, Camille Béranger. OK, mais il y en a quand même pas mal. Enfin, il y a les trois quarts qui sont valides, quand même. Oui, la plupart, oui, quand même. OK, très clair. Non, mais intéressant. Et donc là, si toi, tu dois me faire très rapidement un résumé du nombre de téléchargements sur le début du mois, enfin sur la première quinzaine, du coup, tu sais faire rapidement.
+
+Après, j'ai un tableau KPI où je note tous mes téléchargements. Là, par exemple, c'est mon internaute qui gère. Du coup, elle n'a pas encore fait septembre, ce qui est normal. Elle a fait boutouquer, c'est bon. Et là, tu as tous les chargements globaux et par désign en gros. Donc là, vous êtes passé sur Google Sheets maintenant.
+
+Non, non, mais j'essaie de comprendre tous ces liens avec tous ces outils. Oui, oui, c'est ça le problème, c'est qu'il y en a un peu partout. Non, ça, c'était... Moi, du coup, quand je suis arrivée, il n'y avait pas celle-ci. Du coup, j'ai été sur Notion pour...
+
+que les commerçants ils y aient accès facilement parce qu'ils avaient besoin de savoir qui télécharger pour mettre les tags et prendre contact derrière mais après moi c'est ce tableau qu'a payé que j'étais un jour ça de mon côté et que poursuivre en fait de façon globale le nombre de leads, les visites sur le site web, etc. Ah grave intéressant, mais du coup, ça augmente. Là, j'ai vite fait des courses, ça a l'air d'être…
+
+Ça a augmenté pas mal, parce qu'on a testé de faire du SIA sur Google, donc ça a donné du fond, mais là on a enlevé parce qu'on avait une hausse assez énorme sur le trafic. Mais au niveau de l'élite, ça ne bougeait pas plus que ça.
+
+Donc, c'était plutôt en fait au niveau des vues, ça bougeait. Au niveau des livres, on a eu une hausse, mais c'était juste en janvier. Et après, sinon, ça retombait. C'est vrai. Mais du coup, tu as eu plus de téléchargements parce que c'était boosté aux ads ?
+
+En janvier, on sort le calendrier RH, c'est pour ça qu'on a une hausse en décembre-janvier. C'est un limonnet qui est pas mal téléchargé. Mais après, une fois la nouvelle année passée, on va dire dès février-mars, ça redescend. Ça, c'est à peu près tous les ans et c'est la ressource qui fonctionne le mieux. Donc, on a essayé d'en sortir une autre, le guide RH.
+
+mais qui n'a pas aussi bien marché que le calendrier RH. De toute façon, on peut le voir. Le calendrier RH, on a eu en janvier presque 200 téléchargements et on l'avait sorti du coup un pas avant, donc pas en décembre, mais en novembre, j'imagine. et dès février bah ça retombe quoi ok mais du coup pour comprendre ça veut dire que la personne qui travaille avec toi ton alternante elle met manuellement toutes les semaines ou tous les mois à la fin du mois à jour c'est ça ?
+
+Oui, manuellement, elle va sur Google Analytics, elle va sur mon tableau de motion avec les leads, elle compte à la main et elle met le titre. Pareil, elle reprend le taux d'ouverture, il manque le taux de clics et le nombre d'abonnés. Et ça, ça te permet de piloter le business marketing, enfin la partie marketing.
+
+du coup oui ok parfait non mais génial mais ok ouais ça lui prend combien de temps juste pour savoir c'est rapide ça prend 20 minutes Le plus long, c'est de compter, mais en général, on n'a pas, tu vois, c'est des 30, 20. Ok, attends, si on est sur les titres globales, vue page globale, il y a quoi ? Ça c'est par mois en fait, c'est par mois par rapport à l'année précédente.
+
+Vous faites une comparaison, OK, par rapport à l'année précédente. Oui. OK. Et donc, ta conclusion sur le mois d'août, c'est mieux ? C'est ça.
+
+Bah c'est là du coup... Ok bah... Une minute...
+
+C'était moins bien en termes de demande de contacts, visiblement. Calendrier RH, je ne pouvais pas suivre l'année dernière. Il n'y avait pas, c'est ça ? Il n'y avait pas de suivi. En fait, on a eu un nouveau ESET qui est sorti en juin, et du coup, on a les automatisations qui ont un peu changé, et du coup, on n'a pas très bien suivi.
+
+Taux d'ouverture, nombre d'abos...
+
+d'ouverture ? En général, on n'a pas un taux de crique très bon, on a 2% et encore.
+
+Mais tu sais pourquoi ? Parce que… Non, mais je pense que déjà, une partie de la réponse, c'est que les gens, s'ils mettent des faux mails, normal que ça ne marche pas. J'ai les tris à la main du coup. Mais l'automatisation, elle envoie tout de suite sur Mailjet, j'imagine. Oui, mais ce n'est pas ça. Ce n'est pas le… C'est la newsletter.
+
+Ok. Ce n'est pas les automatisations. Oui, mais ce que je veux dire, c'est peut-être que je ne comprends pas encore parfaitement le process, mais il télécharge la brochure. Et du coup, par défaut, ils s'inscrivent à Medjet, c'est ça ? Non, c'est une case à cocher, ils ne sont pas obligés de s'inscrire.
+
+Ok. En gros, dans les formulaires, quand tu télécharges. Attends. Il y a du double opt-in ou pas ? Genre, vous envoyez tout de suite un mail pour savoir si c'est le bon mail ou pas du tout ? On aura tout de suite un mail, mais pour savoir si c'est le bon mail, on ne sait pas. En gros, après, quand j'envoie ma newsletter et que je vois qu'il y a des adresse mails bizarres, je les enlève à la main, je les supprime de la base de données, je mets ça à la main.
+
+Sinon, c'est quand j'envoie un e-mailing et que j'ai l'onglet pas délivré ou bien bloqué, je ne sais pas c'est quoi le nom, j'explique tout, tu vois. ok parce que là 28% pour des gens qui ont accepté c'est quand même faible ok non mais je comprends mais
+
+Mais j'imagine que si tu gagnes 10 points sur ça, ce sera déjà bien mieux en termes de conversion. Tu as quand même un levier parce que j'ai l'impression que vos leads, ils arrivent essentiellement par là, non ? Oui. Après, il y a les salons aussi. OK, vas-y, il nous reste 30 minutes. Je suis intéressé par les salons, que tu m'en parles un peu plus. Tu m'as parlé de Préventica la dernière fois et vous m'aviez parlé de... Est-ce qu'on est capable de récupérer la liste des...
+
+des visiteurs. Oui. Du coup, est-ce que tu as un accès à ce salon-là, une page, quelque chose ? Oui, j'ai une enfante.
+
+OK.
+
+Est-ce que tu as du coup la liste des exposants ou la liste des visiteurs? J'y vais.
+
+Je n'ai pas la liste normalement, des exposants oui, mais des visiteurs je n'ai pas d'office quoi. En fait ça fonctionne par scan quand nous on fait le salon parce qu'on avait déjà fait celui de Paris, là il y a celui de Bordeaux du coup. très bientôt, pendant le mois prochain. Et en fait, nous, on scanne sur place. Après, on récupère des leads directement et on exploite du coup cette donnée-là. Et je crois que ce que l'Emploi nous voulait, en gros, c'est avoir accès
+
+à toutes les personnes qui sont inscrites à l'événement, même si on ne les a pas scannées. Mais ça, du coup, on ne l'a pas comme ça. Et on avait demandé, du coup, un freelance journal pour Inclusive Day, je crois, qui nous récupère avec mes accès. cette liste là. Et alors vous l'avez... Ouais, il l'avait trouvée pour Inclusive Day, il l'avait fait, ou pour le préventif cas géré pour quel événement, mais pas pour un autre par exemple.
+
+Mais ce n'est pas l'orgueil qui nous donne cette info, quoi. Mais parce que là, pour avoir déjà travaillé sur le sujet, là, normalement, le site pourrait vous donner accès aux visiteurs, mais là, ils ne le font pas. J'ai pas l'impression, j'ai les exposants par contre, mais c'est pas ce qui vous intéresse les exposants. Non, ben non, j'ai cette liste là, quoi, mais j'ai pas tous les visiteurs. En fait, eux, ils m'envoient un fichier.
+
+Je ne sais pas si je peux le retrouver, un export de tous les badges que j'ai scannés.
+
+Mais à la fin de l'événement, si je n'ai pas scanné, ils ne m'envoient pas les personnes que je n'ai pas scannées. Voilà, vos scans sont le lead, et j'ai ça.
+
+Ok, t'en as pas mal. Ouais, on avait scanné un peu moins de 300, je crois, 200 égale vieux croix. Ah, immobilière 3F, ok.
+
+Et du coup à ces personnes-là, on a importé cette verse de données dans celle-ci et du coup il y a un emailing qui est parti aussi. Il y a celle-ci.
+
+Donc ça, vous avez déjà fait le travail, quoi. Ouais, ouais. Et ça, du coup, pour le coup, c'est assez calme, puisque c'est des temps. C'est le badge des personnes, donc ce n'est pas des fausses adresses ou des faux numéros. Il y a quand même des adresses, mais Gmail, Renault, ok. Après, il y a quelques indépendants qui viennent aussi sur le salon, donc nous, on scanne tout et après, on fait le prix.
+
+Ok, j'ai mail, j'ai mail, ok.
+
+J'ai l'impression que le mot-clé HSE, QSE, c'est le... Parce que c'est préventica, donc c'est un salaud en fait sur la sécurité et la prévention au travail, c'est le thème en fait de l'HLM.
+
+Merci. Santé, Sécurité, Travail, Management inter-HQVCT, Environnement de travail.
+
+Il y a beaucoup de responsables HSEQ qui ont organisé.
+
+OK.
+
+Parfait. Il faudrait voir et faire la comparaison avec vos clients, c'est assez intéressant. Moi, aujourd'hui, j'ai une base de données QSE HSE. de 9000 personnes. Tu as trouvé où ce qu'on voit ? J'ai déjà travaillé sur ce sujet. Ah d'accord, ok. A voir si c'est toujours à jour.
+
+Mais oui, je pourrais vous la fournir, si jamais. Ok, intéressant. Du coup, si vous n'avez pas de jointure de données, cela veut dire que la base de client actuel, toi, tu n'as pas accès.
+
+La base de clients actuels ? Ouais, je pourrais éviter de les contacter si demain on les contacte. Normalement, il faut qu'ils la mettent à jour sur celles de clients. Deux gens qui ont payé. Deux noirs. Ceux qui l'ont... Elle est sur celle-ci, du coup. OK.
+
+Mais je ne sais pas si elle est propre ou pas. OK.
+
+Ok, ça marche. Donc, pour comprendre, vous avez quand même plusieurs mécaniques. Aujourd'hui, vous avez une mécanique où tu as testé LinkedIn Ads, mais aujourd'hui, ça n'est plus, c'est ça ? Vous avez une mécanique outbound, mais qui est finalement une mécanique très disparate dans le sens où vous faites des…
+
+à des actions coups de poing de temps à autre, c'est ça. Ensuite, vous avez du paid ads sur Google. plus actuellement, mais qui vous a permis d'avoir un boost de trafic et a priori de ce que tu m'as montré pas de boost forcément de téléchargement. Non. Ok. Bizarre. Vous avez du SEO, est-ce que tu peux me montrer le Google Analytics et voir la tête un peu de la search console ?
+
+OK.
+
+Du coup, ça, c'est sur quelle période ? Sur le mois. OK, sur les 30 derniers jours. OK, 1900 actifs. Et est-ce que, du coup, tu connais l'attribution de chacune des pages ? Quel est le parcours de l'utilisateur avant qu'il télécharge ? Est-ce que tu as ce genre de choses ou pas ?
+
+C'est juste qu'ils passent par la home en général, après je ne sais pas. Ok, la sorte du console, ok ça c'est les performances. Indexer, non indexer, ok. Je peux voir sur la performance, sur le rapport complet. OK.
+
+Ok, vous êtes positionnés sur des mots clés comme ça. Mise à jour il y a trois heures. Vous êtes sur plus de 1000 mots et il y a combien d'impressions du coup ?
+
+Tout en haut, encore un peu plus, nombre total d'impressions, clics.
+
+OK, et du coup, tu ne sais pas dire la version finale. Là, il y en a 1 500 clics sur les trois derniers mois. Tu ne sais pas dire si c'est 1 500 en converti ? Non.
+
+Ok, donc on ne sait même pas dire si c'est du trafic qualifié, quoi. Ok.
+
+Ça marche en termes de problématiques d'indexation de pages, si on va sur les pages. sur ta gauche, indexation, page.
+
+nom indexé il y a 188 problèmes page avec redirection ok est-ce que si on clique dessus page avec redirection Qu'est-ce que c'est que ça?
+
+À l'ancien site. Formation, conditions générales.
+
+Je veux juste vérifier, formation HSE, est-ce que ça, c'est des articles de blog ou pas ? Non, non, non, c'est des pages.
+
+et parce que c'est le nouveau... par rapport au nouveau site, je ne sais pas, c'est vraiment des pages.
+
+Il y en a quand même beaucoup, mais ce qui est bizarre, c'est qu'en fait, c'est des doublons, comme s'il y avait des pages en double dans votre index. C'est peut-être parce que c'est les anciennes pages du site et qu'il y a les nouvelles qu'on n'a pas encore publiées, non ?
+
+de balise canonique qui indique exactement quelle est la page de référence. OK.
+
+Tu vois, genre votre page blog, elle n'est pas indexée en fait.
+
+Et alors que vous m'aviez dit la dernière fois que vous travaillez dessus. Du coup là... On a pris un mec et il a fait n'importe quoi. Ah bon ? Du coup là, ouais, ça marche pas ce qu'il a fait, enfin, je te le montre.
+
+et j'ai posé, ça du coup c'est le blog ok ok, ça ça fonctionne plus pas trop
+
+Mais après, c'est surtout réconcurrent dans l'article. Voilà, on a ça. Edding 2, Edding 1.
+
+waouh
+
+Ok. Ça ne marche pas, là, on a ça, un jeu, une vieille image. C'était quoi le sujet avec lui ? C'était de faire les articles ou c'était de créer des pages ? et des pages on a une grosse photo énorme là qui a complètement collé au texte il devait refaire le blog et faire une stratégie SEO
+
+Sa stratégie SEO, c'était du chat de GPT, où il fallait faire des articles sur, c'était quoi, Agence Paris VS Pion, quelle est la meilleure agence VR, des choses comme ça. On a que des articles qui n'ont rien à voir avec ce qu'on fait. Vous avez dit que c'était normal, c'était pour notre autorité. Pour votre quoi ? Votre autorité.
+
+Et après, du coup, il avait fait ses maquettes, donc il a mis en place, avec beaucoup de bugs, c'était très très compliqué d'avancer et il nous a laissé ça. Donc là, il trahitait avec vous ? Ça a pris énormément de temps, parce qu'il ne voyait pas les retours que je lui faisais. Du coup, il ne répétait pas mes retours.
+
+Et après, nous, on a enchaîné avec la V2 du site. Et donc, du coup, notre agent s'est mis dessus, ce qui fait que lui ne pouvait plus mettre à jour. Donc là, il attend qu'on sorge le site pour pouvoir retravailler dessus. Donc c'est qu'on enchaîne avec la V2.2 directement, qu'on devait sortir, enfin qu'on devait commencer aujourd'hui, mais vu que l'agence n'a pas terminé, ça décale un peu, du coup je ne sais pas quand est-ce qu'ils pourraient s'en mettre dessus, mais là c'est catastrophique.
+
+Parce que du coup, sur cette V2-là, il y aura toujours la partie blog et toujours ces articles de blog. Oui, ils ne se sont pas occupés de la partie blog. Ce n'est pas le sujet de leur intervention, on va dire. Mais du coup, je ne comprends pas, pourquoi il ne peut plus bosser dessus ? Est-ce qu'il ne peut pas publier le site ?
+
+s'il y a l'autre agence qui est dessus. C'est les limitations Webflow, c'est ça ? En fait, c'est que si on publie, ça publie tout. Tu peux le mettre dessus en comptant que les autres, mais c'est compliqué s'il y a deux personnes qui travaillent. Ah oui, OK, je comprends.
+
+Ok, ok, très clair. Ça marche, parce que c'est quand même une de vos stratégies qui a l'air... Enfin, vous avez quand même un bon trafic, mais mais il y a quand même 188 pages qui ne sont pas indexées, quoi. Mais ça, je ne comprends pas. Je ne sais pas.
+
+Et il y a surtout une problématique de balise canonique et de... Alors, moi, ce n'est pas mon sujet, le SEO, j'en ai fait et je n'en fais plus du tout. Mais là, aujourd'hui, on voit des pages en double et des pages sur lesquelles les slashs... ne le sont pas et d'autres le sont. Du coup, ça me surprend quand même. Et le truc qui me semble important quand même, c'est que votre page blog doit être indexée parce que c'est sur ça que tout repose.
+
+pour que derrière vous ayez de plus en plus de trafic. Je ne sais pas comment ça se fait. Ok, si on retourne sur la Search Console pour voir l'évolution à 3 ou 6 mois sur les sites d'Anamo. Finalement, quand même, ce qu'il a fait, ça a apporté ses fruits. Si on retourne sur performance, le rapport de performance.
+
+à plus de six mois
+
+Ouais, c'est derrière moi, ouais. Très bien.
+
+Ok, ça baisse.
+
+Ça a l'air de baisser. Et si tu mets à 12 mois ?
+
+Sur les douze derrière moi, vous avez 220 impressions. Le CTR, il m'a l'air pas mal et la position mine, elle est de 25, c'est vraiment pas mal. Mais par contre, la position des pages, j'ai l'impression que vous ne créez plus de pages, il n'y a plus rien qui est créé. Tu sais, normalement, une courbe SEO, c'est comme ça, vraiment. Si tu crées au fur et à mesure tes articles de blog, si tu les indexes, etc., il y a une progression naturelle qui se fait.
+
+Il était sur la refonte du blog, du coup, on les a créés au brouillon, mais on ne les a pas publiés parce que le blog n'était pas prêt. Il n'y a pas beaucoup de nouvelles pages qu'on puisse mettre sur le nouveau site, sur le nouveau blog. Ok, il y a un sujet là.
+
+Je te montre un truc, parce que je ne suis pas du tout expert, mais j'en ai fait un peu et je continue d'en faire.
+
+Là, on sort du cadre de l'audit que je suis censé faire, mais je trouve que ça rentre un peu dedans quand même. Aujourd'hui... Bon, tu dis que tu as du mal avec ton freelance et qu'il a mal fait les pages, etc. Bon, c'est un autre sujet, la structuration même de la page ou autre, c'est un sujet qui est...
+
+qui est différent et qui est une réflexion globale posée sur papier, éventuellement sur Figma. Et en fait, sur des articles de blog, ce qu'on remarque c'est à la fois effectivement le visuel, mais aussi toute la partie technique. Est-ce que ton site va vite ?
+
+Bon, semble-t-il que vous êtes indexé, donc ça a l'air d'être pas trop mauvais. Mais aussi, est-ce que toutes les balises canoniques, les métadescriptions ? les titres et autres vous aident à porter du trafic. Ça, on va dire que c'est sur un sujet qui a un volet un peu plus technique. Donc, a priori, en fait, souvent les expérienciaux, normalement, ils ont les trois compétences. Ils ont cette partie technique, ils ont cette partie backlink et ils ont cette partie rédaction de contenu.
+
+Mais bon, semble-t-il, il a du mal à créer des pages, donc je pose quand même un doute sur la partie technique. Mais néanmoins, il est censé avoir les compétences rédactionnelles. Et aujourd'hui, moi ce que j'observe, et encore une fois, ce n'est pas une parole du tout d'expert, mais c'est plutôt une parole de test sur les derniers mois et un retour d'expérience, c'est qu'aujourd'hui...
+
+au vu de ce que tu as produit l'article ou les articles, c'est-à-dire un trafic SEO qui n'est pas du tout en croissance et surtout un article de blog qui a, comme tu l'as dit, été créé à l'association 4GPT, mais qui à mon avis a été fait de manière manuelle, c'est-à-dire qu'il a réfléchi sur des titres.
+
+des éventuelles descriptions, il lui a donné un petit prompt et ça a fait un petit article. Mais aujourd'hui, tu as des choses qui sont beaucoup plus efficientes et qui permettent de publier de manière organique et continue à partir simplement de tes contenus initiaux.
+
+et c'est un outil parmi tant d'autres parce que je l'ai testé, donc je t'en parle. Ça aujourd'hui, ça te permet de publier en automatique tous les jours des nouveaux articles de blog et je te montre un exemple typique d'un site dont je suis le propriétaire et qui en fait fonctionne de cette manière-là, c'est-à-dire que je vais te montrer la tête ensuite de la search console.
+
+Aujourd'hui, ce n'est pas du tout dans votre thématique. C'est sur les logements atypiques et c'est sur la réservation de biens atypiques. Mais aujourd'hui, il y a une partie blog. Et cette partie blog, je m'appuie sur l'outil dont je t'ai parlé pour écrire des articles.
+
+Moi, je ne suis pas du tout bon dans l'aspect SEO et rédaction d'articles de blog. Ça me prendrait énormément de temps. Mais en revanche, cet outil-là me permet d'aller mapper l'ensemble. des concurrents et de voir là où il y a des trous dans la raquette, là où potentiellement on aurait un avantage de se positionner sur un tel ou tel mot-clé. Du coup, quand tu regardes, je te montre la tête de l'article, alors évidemment la structure même, c'est moi qui l'ai construit, mais en revanche, toute la partie rédactionnelle, c'est-à-dire que c'est un article quand même...
+
+où le temps de lecture est de 22 minutes, on a le temps de placer des choses. C'est vraiment très construit. Et surtout, ce que je n'ai pas vu dans tes articles, c'est qu'il y a ce qu'on appelle des liens intégrés au sein même de ton article de blog, c'est-à-dire que ça va faire référence potentiellement à ton document, à ton PDF que tu veux...
+
+faire télécharger ou autre et en fait ça arrive à faire des liens et systématiquement ça intègre tu vois les photos automatiquement il a pris des screenshots de photos c'est pas du tout moi qui ai fait ça tu vois c'est lui qui est allé et qui a mis automatiquement des photos donc ça image ça ajoute aussi des vidéos c'est à dire qu'il va avoir des fois des points de référence sur youtube avec des vidéos de référence ça les ajoute
+
+Aujourd'hui, si tu veux, autant je crois beaucoup à l'humain qui doit structurer les choses et qui doit permettre de cadrer l'IA, mais autant sur la partie rédactionnelle pure, aujourd'hui, ces articles-là, je les lis en travers et en réalité, je n'aurais pas fait mieux en termes de rédaction.
+
+Mais c'est quoi le nom de l'outil du coup, c'est Outrengue? C'est un français qui a créé ça, outrengue.so. Et pour te montrer à l'intérieur ce qui se passe, je vais m'y connecter.
+
+Et en fait, voilà ce qu'il y a en face de toi, c'est-à-dire que lui, il va générer des articles. Donc, tu lui glisses des mots-clés et il génère les articles en fonction de ces mots-clés-là, et tout ça de manière automatique. Là, tu as une liste et un calendrier de mots-clés. Comment il le fait ? En fait, tu as des settings généraux que tu lui donnes sur lesquels tu donnes ta description, tu donnes ton langage, tu donnes ton audience et tes concurrents.
+
+et tu donnes ta search console pour qu'il voit en fait où tu en es. Est-ce que tu as beaucoup de trafic ? Est-ce que tu n'en as pas beaucoup ? Et du coup, en fonction de ça, il va te savoir est-ce que tu dois te positionner sur des mots-clés avec forte concurrence ou est-ce qu'en fait tu ne peux pas et tu dois te baser sur des mots-clés avec une concurrence qui est faible.
+
+Et en fait, tout ça, tu vois combiné, ça crée forcément de l'organique à un moment donné. Et pour te montrer, du coup, la performance, pour appuyer les propos et montrer une forme de performance, aujourd'hui, ça, c'est la Search Console. Evidemment moi j'ai pas du tout l'historique que vous avez avec les trois ans ou quatre ans d'ancienneté d'entreprise. En revanche ce que j'observe sans forcément faire quoi que ce soit, c'est à dire que le site a été lancé le 14 juin et qu'on était à zéro évidemment impression et qu'aujourd'hui sur la seule journée d'hier
+
+on est à 137 impressions et qu'en fait, il y a une vraie continuité dans la croissance même puisqu'en fait, tous les jours, il y a des nouvelles pages qui s'indexent liées aux articles de blog. et qu'en fait ça amène de l'exponentialité. Bon voilà, c'est juste une aparté complète sur quoi je m'arrête parce que je trouve ça étrange quand même qu'un site comme le vôtre avec l'effort qui a été fourni et surtout la stratégie SEO
+
+n'est pas une croissance qui est quand même linéaire, qui est certes peut-être un peu faible, mais qui est continue et linéaire. Là, on n'observe pas une courbe linéaire en croissance. voilà ok très clair très clair très clair bah écoute moi j'ai à peu près tout à Ninoufi
+
+J'ai à peu près tout ce dont j'avais besoin et tout ce que j'avais noté. maintenant ce que maintenant ce que je te propose c'est effectivement sur cette base là et sur tout ce qu'on vient de se dire je fasse une proposition complète sur une documentation de ce qui peut être amélioré et et ce sur quoi je viendrai faire un focus et là où je pourrais potentiellement moi d'un point de vue opérationnel
+
+activer des choses et là où je pourrais te conseiller, toi, de faire des choses en fonction de ce que vous souhaitez. Soit internaliser ma compétence, soit faites finalement plutôt se faire des petits ateliers ensemble. Ça, c'est vraiment au cas par cas, en fonction de ce que toi tu as besoin, en fonction de ton temps, de comment tu vois les choses aussi.
+
+Ce n'est pas du tout la next step naturelle. La next step naturelle, c'est que je vous donne une documentation avec des recommandations bien précises sur tout ce que j'ai pu observer et tout ce qui est amélioré. à améliorer. Tu vois, on en a parlé, on parle très brièvement là du SEO. La dernière fois, je vous avais fait une aparté très brève aussi sur la partie outbound.
+
+Donc, ce genre de recommandation apparaîtra sur la documentation et en fonction des recommandations que je fais, vous allez être libre de prendre la décision de est-ce que c'est moi, est-ce que c'est quelqu'un de l'équipe qui fait ces intégrations. ok ok ça marche ok top tu penses revenir vers moi c'est combien de temps à peu près ? fin de semaine moi j'ai le temps de faire l'audit complet
+
+Ok, ça marche. Ok, top. Est-ce que ça te va comme manière de travailler ou est-ce que tu voyais les choses autrement ? Ça va. Oui. Ok. Est-ce que j'ai appuyé sur des points importants pour toi ou est-ce qu'il y a des choses que j'ai manqué complètement ? Non, comme je te dis, nous, on ne s'est pas vraiment structuré, tu vois, donc...
+
+On a vraiment besoin d'être élu et d'avoir une stratégie qui est assez précise. Je pense que tu as posé les bonnes questions pour voir nos faiblesses, on va dire. Maintenant, le but, c'est qu'on fasse mieux. Oui, bien sûr. Bien sûr, bien sûr. Je pense qu'une fois les recommandations faites, qui seront peut-être des formes de bullet point, une fois qu'il y a ça, le but, c'est d'avancer par silos, pas de tout faire en même temps et de tout faire de front, parce que je pense que vous n'avez pas l'équipe pour.
+
+et que moi tout seul, si c'est moi qui dois le faire, ça va être trop long et ça va vous frustrer. Ensuite, il faudra prendre des décisions sur les deux axes majeurs sur lesquels on veut se pencher, disons sur les trois, six prochains mois. Je pense, mais tu vois, par exemple, le SEO, ça peut être ce premier axe. L'outbound, ça peut être un premier axe, une problématique. En fait, le SEO, comme Antoine t'avais dit, on a quelqu'un là, un autre financeur, qui va travailler dessus aussi.
+
+Ce ne serait peut-être pas l'axe prioritaire de ton côté. Non, non, non, complètement, complètement. Mais voilà, je pense qu'il faudrait se concentrer sur est-ce que c'est automatisation, est-ce que c'est outbound, est-ce que c'est finalement créer un dashboard d'analytics sur lequel l'ensemble des commerciaux et marketing...
+
+s'associent pour travailler ensemble et regarder vraiment bien ça ensemble et faire remonter les données correctement, mais tous ensemble. Voilà, ça peut être des sujets comme ça. Je pense qu'il faudrait que ce soit moi qui pilote tout ça et que les commerçants ils aient accès directement à toute la data dont ils ont besoin mais que moi je puisse tout contrôler.
+
+C'est un peu ça l'idée. Oui, complètement. Ok, très clair. Et garde en tête aussi que du coup, j'ai la base de données HSE-QSE que je vais vous fournir aussi. Bon, et bien écoute Mélina, merci beaucoup. Je te souhaite une bonne journée. Moi, et bien également. À très bientôt. Au revoir.
+
+Voilà.
+
+Oui, oui, oui, je t'ai vu.
+
+Ensuite, il y a une console centrale. Juste ici, appuyez sur un bouton, ça va activer...
+
+En France entière, je suis de base qu'il y a un autre gars qui a dit à tout le monde qu'il a fait un petit barbe ou n'importe quoi, mais ça veut dire qu'il suffit juste de tirer une bouteille de l'eau, je dis. Oui, oui !

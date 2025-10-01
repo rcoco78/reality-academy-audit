@@ -1,0 +1,1148 @@
+{
+    "name": "Appel tagé > Remonte tag Sellsy v2",
+    "flow": [
+        {
+            "id": 1,
+            "module": "aircall:watchCalls",
+            "version": 1,
+            "parameters": {
+                "__IMTHOOK__": 2600072
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0,
+                    "name": "Appel tagé"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTHOOK__": {
+                            "data": {
+                                "editable": "false"
+                            },
+                            "label": "My Aircall Call webhook"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTHOOK__",
+                        "type": "hook:aircall3",
+                        "label": "Webhook",
+                        "required": true
+                    }
+                ]
+            },
+            "onerror": [
+                {
+                    "id": 28,
+                    "module": "builtin:Ignore",
+                    "version": 1,
+                    "filter": {
+                        "name": "",
+                        "conditions": [
+                            [
+                                {
+                                    "a": "{{1.error.message}}",
+                                    "o": "exist"
+                                }
+                            ]
+                        ]
+                    },
+                    "metadata": {
+                        "designer": {
+                            "x": 300,
+                            "y": 150
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "module": "phonenumber:TransformerParseNumber",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "number": "{{1.data.raw_digits}}",
+                "defaultCountry": "FR"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": -150,
+                    "name": "Parse le numéro"
+                },
+                "restore": {
+                    "expect": {
+                        "defaultCountry": {
+                            "mode": "chose",
+                            "label": "France (FR)"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "number",
+                        "type": "text",
+                        "label": "Phone number",
+                        "required": true
+                    },
+                    {
+                        "name": "defaultCountry",
+                        "type": "select",
+                        "label": "Default country for parsing",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "AC",
+                                "AD",
+                                "AE",
+                                "AF",
+                                "AG",
+                                "AI",
+                                "AL",
+                                "AM",
+                                "AO",
+                                "AQ",
+                                "AR",
+                                "AS",
+                                "AT",
+                                "AU",
+                                "AW",
+                                "AX",
+                                "AZ",
+                                "BA",
+                                "BB",
+                                "BD",
+                                "BE",
+                                "BF",
+                                "BG",
+                                "BH",
+                                "BI",
+                                "BJ",
+                                "BL",
+                                "BM",
+                                "BN",
+                                "BO",
+                                "BQ",
+                                "BR",
+                                "BS",
+                                "BT",
+                                "BV",
+                                "BW",
+                                "BY",
+                                "BZ",
+                                "CA",
+                                "CC",
+                                "CD",
+                                "CF",
+                                "CG",
+                                "CH",
+                                "CI",
+                                "CK",
+                                "CL",
+                                "CM",
+                                "CN",
+                                "CO",
+                                "CP",
+                                "CR",
+                                "CU",
+                                "CV",
+                                "CW",
+                                "CX",
+                                "CY",
+                                "CZ",
+                                "DE",
+                                "DG",
+                                "DJ",
+                                "DK",
+                                "DM",
+                                "DO",
+                                "DZ",
+                                "EA",
+                                "EC",
+                                "EE",
+                                "EG",
+                                "EH",
+                                "ER",
+                                "ES",
+                                "ET",
+                                "EU",
+                                "FI",
+                                "FJ",
+                                "FK",
+                                "FM",
+                                "FO",
+                                "FR",
+                                "FX",
+                                "GA",
+                                "GB",
+                                "GD",
+                                "GE",
+                                "GF",
+                                "GG",
+                                "GH",
+                                "GI",
+                                "GL",
+                                "GM",
+                                "GN",
+                                "GP",
+                                "GQ",
+                                "GR",
+                                "GS",
+                                "GT",
+                                "GU",
+                                "GW",
+                                "GY",
+                                "HK",
+                                "HM",
+                                "HN",
+                                "HR",
+                                "HT",
+                                "HU",
+                                "IC",
+                                "ID",
+                                "IE",
+                                "IL",
+                                "IM",
+                                "IN",
+                                "IO",
+                                "IQ",
+                                "IR",
+                                "IS",
+                                "IT",
+                                "JE",
+                                "JM",
+                                "JO",
+                                "JP",
+                                "KE",
+                                "KG",
+                                "KH",
+                                "KI",
+                                "KM",
+                                "KN",
+                                "KP",
+                                "KR",
+                                "KW",
+                                "KY",
+                                "KZ",
+                                "LA",
+                                "LB",
+                                "LC",
+                                "LI",
+                                "LK",
+                                "LR",
+                                "LS",
+                                "LT",
+                                "LU",
+                                "LV",
+                                "LY",
+                                "MA",
+                                "MC",
+                                "MD",
+                                "ME",
+                                "MF",
+                                "MG",
+                                "MH",
+                                "MK",
+                                "ML",
+                                "MM",
+                                "MN",
+                                "MO",
+                                "MP",
+                                "MQ",
+                                "MR",
+                                "MS",
+                                "MT",
+                                "MU",
+                                "MV",
+                                "MW",
+                                "MX",
+                                "MY",
+                                "MZ",
+                                "NA",
+                                "NC",
+                                "NE",
+                                "NF",
+                                "NG",
+                                "NI",
+                                "NL",
+                                "NO",
+                                "NP",
+                                "NR",
+                                "NU",
+                                "NZ",
+                                "OM",
+                                "PA",
+                                "PE",
+                                "PF",
+                                "PG",
+                                "PH",
+                                "PK",
+                                "PL",
+                                "PM",
+                                "PN",
+                                "PR",
+                                "PS",
+                                "PT",
+                                "PW",
+                                "PY",
+                                "QA",
+                                "RE",
+                                "RO",
+                                "RS",
+                                "RU",
+                                "RW",
+                                "SA",
+                                "SB",
+                                "SC",
+                                "SD",
+                                "SE",
+                                "SG",
+                                "SH",
+                                "SI",
+                                "SJ",
+                                "SK",
+                                "SL",
+                                "SM",
+                                "SN",
+                                "SO",
+                                "SR",
+                                "SS",
+                                "ST",
+                                "SU",
+                                "SV",
+                                "SX",
+                                "SY",
+                                "SZ",
+                                "TA",
+                                "TC",
+                                "TD",
+                                "TF",
+                                "TG",
+                                "TH",
+                                "TJ",
+                                "TK",
+                                "TL",
+                                "TM",
+                                "TN",
+                                "TO",
+                                "TR",
+                                "TT",
+                                "TV",
+                                "TW",
+                                "TZ",
+                                "UA",
+                                "UG",
+                                "UM",
+                                "US",
+                                "UY",
+                                "UZ",
+                                "VA",
+                                "VC",
+                                "VE",
+                                "VG",
+                                "VI",
+                                "VN",
+                                "VU",
+                                "WF",
+                                "WS",
+                                "YE",
+                                "YT",
+                                "ZA",
+                                "ZM",
+                                "ZW"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "module": "sellsy:makeApiCall",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 8601308
+            },
+            "mapper": {
+                "url": "/v2/contacts/search?embed[]=smart_tags&embed[]=cf.250644",
+                "body": "{\n  \"filters\": {\n    \"mobile_number\": \"{{7.e164}}\"\n  }\n}",
+                "method": "POST",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0,
+                    "name": "Recherche avec mobile"
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "POST"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "sellsy2"
+                            },
+                            "label": "Selssy RA (ANTOINE BERNARD)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:sellsy2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "PATCH",
+                                "DELETE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 15,
+            "module": "sellsy:makeApiCall",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 8601308
+            },
+            "mapper": {
+                "url": "/v2/contacts/search?embed[]=smart_tags&embed[]=cf.250644",
+                "body": "{\n  \"filters\": {\n    \"phone_number\": \"{{7.e164}}\"\n  }\n}",
+                "method": "POST",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0,
+                    "name": "Recherche avec le phone"
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "POST"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "sellsy2"
+                            },
+                            "label": "Selssy RA (ANTOINE BERNARD)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:sellsy2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "PATCH",
+                                "DELETE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 23,
+            "module": "util:SetVariables",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "scope": "roundtrip",
+                "variables": [
+                    {
+                        "name": "score_actuel",
+                        "value": "{{ifempty(if(6.body.data[].`_embed`.custom_fields[].id; 6.body.data[].`_embed`.custom_fields[].value; 15.body.data[].`_embed`.custom_fields[].value); parseNumber(0))}}"
+                    },
+                    {
+                        "name": "tag_aircall",
+                        "value": "{{1.data.tags[].name}}"
+                    },
+                    {
+                        "name": "point_associe_tag",
+                        "value": "{{switch(1.data.tags[].name; \"Mauvais numéro\"; parseNumber(-100); \"Refus\"; parseNumber(-100); \"Envoi Docs\"; 50; \"RDV Fixé\"; 70)}}"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1200,
+                    "y": 0,
+                    "name": "Prépare score en fonction du tag"
+                },
+                "restore": {
+                    "expect": {
+                        "scope": {
+                            "label": "One cycle"
+                        },
+                        "variables": {
+                            "items": [
+                                null,
+                                null,
+                                null
+                            ]
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "variables",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Variable name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Variable value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Variables"
+                    },
+                    {
+                        "name": "scope",
+                        "type": "select",
+                        "label": "Variable lifetime",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "roundtrip",
+                                "execution"
+                            ]
+                        }
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "score_actuel",
+                        "type": "any",
+                        "label": "score_actuel"
+                    },
+                    {
+                        "name": "tag_aircall",
+                        "type": "any",
+                        "label": "tag_aircall"
+                    },
+                    {
+                        "name": "point_associe_tag",
+                        "type": "any",
+                        "label": "point_associe_tag"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 27,
+            "module": "util:SetVariables",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "scope": "roundtrip",
+                "variables": [
+                    {
+                        "name": "score_final",
+                        "value": "{{parseNumber(23.score_actuel) + parseNumber(23.point_associe_tag)}}"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1500,
+                    "y": 0,
+                    "name": "Calcul le score"
+                },
+                "restore": {
+                    "expect": {
+                        "scope": {
+                            "label": "One cycle"
+                        },
+                        "variables": {
+                            "items": [
+                                null
+                            ]
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "variables",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Variable name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Variable value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Variables"
+                    },
+                    {
+                        "name": "scope",
+                        "type": "select",
+                        "label": "Variable lifetime",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "roundtrip",
+                                "execution"
+                            ]
+                        }
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "score_final",
+                        "type": "any",
+                        "label": "score_final"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 26,
+            "module": "sellsy:makeApiCall",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 8601308
+            },
+            "filter": {
+                "name": "",
+                "conditions": [
+                    [
+                        {
+                            "a": "{{15.body.data[].id}}",
+                            "o": "exist"
+                        }
+                    ],
+                    [
+                        {
+                            "a": "{{6.body.data[].id}}",
+                            "o": "exist"
+                        }
+                    ]
+                ]
+            },
+            "mapper": {
+                "url": "/v2/contacts/{{ifempty(6.body.data[].id; 15.body.data[].id)}}/custom-fields",
+                "body": "[\n  {\n    \"id\":250644,\n    \"value\": \"{{if(27.score_final > parseNumber(100); 100; if(27.score_final < parseNumber(0); 0; 27.score_final))}}\"\n  },\n  {\n    \"id\":250652,\n    \"value\": {{if(27.score_final < parseNumber(40); 3971223; if(27.score_final >= parseNumber(70); 3971222; 3971224))}}\n  }\n]",
+                "method": "PUT",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1840,
+                    "y": -1,
+                    "name": "MAJ CP"
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "PUT"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "sellsy2"
+                            },
+                            "label": "Selssy RA (ANTOINE BERNARD)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:sellsy2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "PATCH",
+                                "DELETE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": [
+                [
+                    {
+                        "id": 20,
+                        "module": "builtin:BasicFeeder",
+                        "version": 1,
+                        "parameters": {},
+                        "filter": {
+                            "name": "Retrouvé",
+                            "conditions": [
+                                [
+                                    {
+                                        "a": "{{15.body.data[].id}}",
+                                        "o": "exist"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "a": "{{6.body.data[].id}}",
+                                        "o": "exist"
+                                    }
+                                ]
+                            ]
+                        },
+                        "mapper": {
+                            "array": "{{ifempty(6.body.data[].`_embed`.smart_tags; 15.body.data[].`_embed`.smart_tags)}}"
+                        },
+                        "metadata": {
+                            "designer": {
+                                "x": 1165,
+                                "y": 519,
+                                "name": "Pour chaque",
+                                "messages": [
+                                    {
+                                        "category": "reference",
+                                        "severity": "warning",
+                                        "message": "Referenced module 'Sellsy - Make an API Call' [6] is not accessible."
+                                    },
+                                    {
+                                        "category": "reference",
+                                        "severity": "warning",
+                                        "message": "Referenced module 'Sellsy - Make an API Call' [15] is not accessible."
+                                    },
+                                    {
+                                        "category": "link",
+                                        "severity": "warning",
+                                        "message": "The module is not connected to the data flow."
+                                    }
+                                ]
+                            },
+                            "restore": {
+                                "expect": {
+                                    "array": {
+                                        "mode": "edit"
+                                    }
+                                }
+                            },
+                            "expect": [
+                                {
+                                    "mode": "edit",
+                                    "name": "array",
+                                    "spec": [],
+                                    "type": "array",
+                                    "label": "Array"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": 21,
+                        "module": "util:SetVariable2",
+                        "version": 1,
+                        "parameters": {},
+                        "filter": {
+                            "name": "Enlève tag lead_",
+                            "conditions": [
+                                [
+                                    {
+                                        "a": "{{20.value}}",
+                                        "b": "lead_froid",
+                                        "o": "text:notequal"
+                                    },
+                                    {
+                                        "a": "{{20.value}}",
+                                        "b": "lead_tiede",
+                                        "o": "text:notequal"
+                                    },
+                                    {
+                                        "a": "{{20.value}}",
+                                        "b": "lead_chaud",
+                                        "o": "text:notequal"
+                                    }
+                                ]
+                            ]
+                        },
+                        "mapper": {
+                            "name": "tag",
+                            "scope": "roundtrip",
+                            "value": "{\"value\":\"{{20.value}}\"}"
+                        },
+                        "metadata": {
+                            "designer": {
+                                "x": 1517,
+                                "y": 516,
+                                "name": "Le recrée"
+                            },
+                            "restore": {
+                                "expect": {
+                                    "scope": {
+                                        "label": "One cycle"
+                                    }
+                                }
+                            },
+                            "expect": [
+                                {
+                                    "name": "name",
+                                    "type": "text",
+                                    "label": "Variable name",
+                                    "required": true
+                                },
+                                {
+                                    "name": "scope",
+                                    "type": "select",
+                                    "label": "Variable lifetime",
+                                    "required": true,
+                                    "validate": {
+                                        "enum": [
+                                            "roundtrip",
+                                            "execution"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "value",
+                                    "type": "any",
+                                    "label": "Variable value"
+                                }
+                            ],
+                            "interface": [
+                                {
+                                    "name": "tag",
+                                    "type": "any",
+                                    "label": "tag"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": 22,
+                        "module": "util:TextAggregator",
+                        "version": 1,
+                        "parameters": {
+                            "feeder": 20,
+                            "rowSeparator": "other",
+                            "otherRowSeparator": ","
+                        },
+                        "mapper": {
+                            "value": "{{21.tag}}"
+                        },
+                        "metadata": {
+                            "designer": {
+                                "x": 1817,
+                                "y": 516,
+                                "name": "Regroupe",
+                                "messages": [
+                                    {
+                                        "category": "last",
+                                        "severity": "warning",
+                                        "message": "A transformer should not be the last module in the route."
+                                    }
+                                ]
+                            },
+                            "restore": {
+                                "extra": {
+                                    "feeder": {
+                                        "label": "Pour chaque [20]"
+                                    }
+                                },
+                                "parameters": {
+                                    "rowSeparator": {
+                                        "label": "Other"
+                                    }
+                                }
+                            },
+                            "parameters": [
+                                {
+                                    "name": "rowSeparator",
+                                    "type": "select",
+                                    "label": "Row separator",
+                                    "validate": {
+                                        "enum": [
+                                            "\n",
+                                            "\t",
+                                            "other"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "otherRowSeparator",
+                                    "type": "text",
+                                    "label": "Separator"
+                                }
+                            ],
+                            "expect": [
+                                {
+                                    "name": "value",
+                                    "type": "text",
+                                    "label": "Text"
+                                }
+                            ],
+                            "advanced": true
+                        }
+                    }
+                ]
+            ]
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

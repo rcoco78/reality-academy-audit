@@ -1,0 +1,291 @@
+Merci. Au revoir. Merci.
+
+Oui, il y a Antoine, je crois qu'il attend que tu l'acceptes. Oui, je suis en train de t'accepter.
+
+je vais essayer de voir je reviens dans deux minutes j'arrive
+
+J'ai complètement bousillé ma connexion. Non, il n'y en a qu'un, mais c'est vrai qu'il y en a deux.
+
+J'entends très mal, je crois. Tu nous entends bien toi, du coup, quand on entend ? Ouais, moi je vous entends bien.
+
+Mais excuse, normalement ça devrait être mieux.
+
+Il y a eu un problème ? Oui, je suis en plan de déménagement et du coup ma connexion n'est pas forcément super stable en Wi-Fi. Du coup j'ai fait un partage de connexion.
+
+Ok. Écoute, pour rentrer, je te présente Lélina qui est directrice de marketing chez nous. Enchanté. Et qui va être plutôt... avec moi aussi bien entendu mais ok très clair très très clair et du coup mélina tu t'as un rôle précis tu as travaillé sur le marketing
+
+de manière globale ou sur un scope précis ? Sourcing et communication de manière globale. Après là, on se focusse un peu plus sur le gros, donc du coup avec ton aide, j'imagine. Ok, donc du coup sur un focus sur une partie acquisition outbound, on est d'accord là-dessus.
+
+Ok
+
+sur une partie Ads aussi.
+
+Du coup, pour comprendre, c'est la mécanique d'événements qui t'amène à avoir des... une base de données, et sur cette base de données là, tu fais de l'outbound ou non, ça n'a rien à voir ?
+
+D'accord, et toute cette mécanique d'email automatisé, ça, ça part de celle-ci, et ensuite la mécanique d'outbound pur, de démarchage, là, ça part de l'amnist. C'est bien ça ?
+
+Ok, et comment t'arrives à t'en sortir sur une partie analyse de résultat, t'arrives à sortir les données des trois outils et du coup te dire bah tiens il y a... J'arrive à faire des analyses toutes les semaines de telle ou telle campagne performe bien, telle ou telle campagne performe mal, comment tu fais ?
+
+Parce que pour moi, de ma maigre connaissance, je ne connais pas tellement Melgett, mais sur la liste, aujourd'hui, moi j'observe, c'est vraiment de l'out-band, donc c'est forcément des outils, un outil adapté pour envoyer en instantané le message mais plutôt pour faire du récurrent, du long terme et c'est un peu de te faire connaître sur un message commercial ou
+
+sur l'invitation à un événement en amont, très en amont de cet événement-là ou plein d'autres options, mais pas forcément ce message on va dire immédiat d'accueil sur ton service, à la différence de celle-ci qui va être plutôt à mon avis cadré CRM par contre du coup la mécanique double entre Medjet et celle-ci j'imagine qu'effectivement elle est un peu redondante et elle aurait pu être tout centralisée pour t'aider toi à analyser les choses.
+
+de manière plus claire est orienté sur un seul et même outil pour de l'outbound et ou pour du nurturing.
+
+Et la newsletter, elle parle de Meljet aussi. Ok. Ok, ça marche.
+
+de délivrabilité, c'est ça qu'on vous parlait.
+
+d'utilisation, d'accord.
+
+Ah d'accord, vous avez quelqu'un en interne qui vient designer un email, c'est ça, avec du html, css?
+
+Merci.
+
+Ok très clair. Donc on est là réunis, ça fait un peu de temps qu'on avait discuté avec Antoine, mais les souvenirs me reviennent un peu progressivement. On est là aujourd'hui essentiellement pour identifier... finalement un, deux, voire trois points sur lesquels je suis en capacité de pouvoir mener un audit de manière précise et on va dire un peu plus chirurgicale sur lesquels en fait vous...
+
+penser qu'il y a un trou dans la raquette, donc là on a évoqué effectivement l'usage de plusieurs outils qui viendraient potentiellement te faire perdre du temps sur l'analyse. Mais aujourd'hui, si on devait se focus sur, effectivement, un ou deux use cases sur lesquels vous pensez qu'il y a une problématique qui est liée et qui pourrait être largement améliorée, est-ce qu'on peut orienter la discussion autour de ça ?
+
+si vous aviez noté des use case précis, j'entends par là éventuellement et là aujourd'hui j'ai pas eu forcément le temps puisque j'ai eu accès il n'y a pas si longtemps de ça sur le LEM list mais éventuellement sur de l'outbound, est-ce que en fait pour vous c'est une problématique liée au copywriting ?
+
+et auquel cas on peut discuter un peu plus longtemps comment vous avez imaginé le copywriting, comment vous avez construit les différentes campagnes, etc. Est-ce que c'est une mécanique ? qui est lié aux automatisations, qui sont assez régulièrement dysfonctionnelles et qui du coup vous empêchent de faire certaines actions. Enfin voilà, j'essaye d'orienter la discussion pour qu'on puisse pendant effectivement l'heure qu'on a, ou peut-être un peu moins, mais on pourrait dépasser.
+
+à cause de ma problématique internet, pendant l'heure qu'on a, sur quoi on doit se focus finalement et sur quoi je dois vraiment porter mon attention lors de l'audit. puisque derrière moi je vais éditer un rapport et puis derrière par rapport à ce rapport là et par rapport aux différents tests que j'aurais mené, on pourra avancer sur une phase opérationnelle où vous pourrez directement le faire si vous le souhaitez.
+
+sur cette phase opérationnelle directement.
+
+Donc concrètement, aujourd'hui, si on résume, soit on a de l'inband ou de l'outband. Sur Leanband, on a des livres blancs, des lits de magnètes qui sont sur notre site. On essaye de driver du business là-dessus. Je trouve que des fois, on a eu des pics de demande, là on en a un peu moins.
+
+Donc après on a un mec en SEO qui nous aide à faire ranquer plus de pages et peut-être qu'il y a un problème sur le... Copywriting du site ou peut-être avoir plus de ROI, surtrouver au final un moyen de... par notre trafic qu'on a, avoir plus de demandes. C'est vrai qu'on a quand même pas mal de trafic, mais que sur notre site, on n'a pas assez de demandes. Donc on a essayé de faire des pop-ups.
+
+On va essayer de faire un truc genre contactez-nous en bas à droite, toujours accessible, donc on a essayé de prendre quelques idées à droite, à gauche, mais s'il y en a d'autres... Notre site c'est quand même une bonne vitrine là-dessus. Après on fait les réseaux sociaux. Donc on a quand même pas mal sur LinkedIn des postes.
+
+plus ou moins actifs. On n'a pas trop de leads depuis de LinkedIn, je pense que ça manque de... Si tu peux noter aussi, il y a l'activation sur notre site pour avoir plus de conversions. plus de conversions sur nos postes LinkedIn, nos newsletters sont faites mais je n'ai pas l'impression qu'elles sont très héroïstes.
+
+On va voir s'il y a besoin de mettre plus peut-être de messages genre type Kalenji pour prendre un rendez-vous.
+
+Et après, sur la stratégie outbound, on a, je pense maintenant, un truc assez bien, on a Vane. plus Wollenrich ou Cognizant pour aller chercher des leads. On fait du cold calling avec des SDR et ça, je trouve qu'on essaie d'avoir 10 à 15 rendez-vous, c'est ce qui marche le mieux.
+
+Après, il y a les campagnes out-band, mais là, c'est peut-être là où on est moins bon. Je trouve que l'out-band n'a jamais vraiment bien fonctionné. Ou même LinkedIn, j'ai l'impression qu'il y a quand même pas mal de gens qui n'ont arrêté pas. commerciaux ont arrêté ça. On est plus dans une logique commerciale à faire du cold calling et c'est là où on a les meilleurs résultats.
+
+Mais je pense que le marketing ou le commercial pourraient récupérer la chose, voire juste le marketing peut-être, et laisser le commercial continuer sur le...
+
+sur du coup le cold calling et après sur nous on fait pas mal de salons donc pareil sur les salons après on remet dans notre base Là, on a aussi maintenant la création d'opportunités dans celle-ci. Pour savoir depuis quand en fait ce lead, il est chaud, il est faillé chez nous.
+
+plus on a des interactions avec lui, plus on va lui mettre des notes, donc plus on le fait grandir en fait dans notre base. Là, est-ce qu'il y a du growth à aller sur certains salons, chercher des bases de données et les hacker dans Préventica ou... pour avoir une grosse base de données et peut-être aller plus faire du retargeting même sur des sites qu'on n'a pas eus, donc faire du scrapping d'événements.
+
+Voilà, moi je dirais le premier truc dans la raquette qu'on a, c'est, je dirais, la conversion sur notre site internet où on a dû... Je trouve qu'on n'a pas assez de demandes de devis ou de demandes de déchargement. Un. Deux outbands de LinkedIn, l'Aimlist, où je trouve qu'on a un peu arrêté ça parce que c'était pas assez performant.
+
+Et scrapping de sites web d'événements clés où on peut récupérer des leads et on pourrait faire du coup, soit du lame list ou du... Et si il y a un cinquième, c'est peut-être la délivrabilité slash le... le fait qu'on ait un bon taux d'ouverture slash de prise de contact avec nos emailings newsletters.
+
+Est-ce qu'on peut voir aujourd'hui ensemble, si on parle de l'inbound puisque vous en parlez souvent, est-ce qu'on peut regarder le parcours utilisateur tel que vous l'avez imaginé ? en partageant l'écran peut-être. Moi ça m'intéresse de comprendre un peu comment il arrive et ce que l'utilisateur moyen fait aujourd'hui. Est-ce que vous avez une idée ?
+
+Je crois que je t'ai montré le site. Oui, il y avait un film, ce qui avait été fait, c'est ça.
+
+C'est tout pour aujourd'hui, merci d'avoir regardé cette vidéo, et je vous dis à la prochaine !
+
+Merci.
+
+Deux dix secondes, je l'ai, je n'avais pas de couleur.
+
+Dites-moi si c'est bon pour mon écran.
+
+On a plusieurs ressources à télécharger gratuitement. Donc, par exemple, le catalogue global, le livre blanc ou le calendrier RH. À chaque fois, du coup, on a le même process qui se passe. Donc, on arrive sur la page où il y a un formulaire qui s'ouvre.
+
+entre le prénom, nom, adresse mail, numéro de téléphone et l'entreprise. Une fois que la ressource est téléchargée, il y a un premier mail qui part, qui confirme du coup le téléchargement de la ressource. Ensuite, pour certains, on a des relances. C'est le cas, par exemple, pour le calendrier RH et pour le livre blanc, où on va avoir un mail de relance.
+
+qui va être envoyé à J7 et à J30. Et après, une fois que le téléchargement est fait, ça nous crée une ligne dans celle-ci. ça attribue un score en fonction de l'action effectuée. D'accord, pour comprendre du coup après il y a le SDR qui reprend la main ou c'est quoi l'action ?
+
+Je vous expliquais tout à l'heure, après les SDR, ils ont la possibilité de les appeler, donc ils ont accès à leur numéro, ils l'appellent et ils qualifient. Le lead est en fonction, c'est le commercial qui prend le relais derrière. Ok. Et ensuite, à 30 jours, à 90 jours, il y a une relance ou ça, ce n'est pas forcément...
+
+mis en place pour comprendre ? Non parce qu'en fait le problème c'est que si le SDR il a qualifié et qu'on continue à envoyer des e-mails Je ne sais même pas comment on arrête la campagne si le SDR est qualifié. Moi j'ai pas forcément l'information, en fait on est trop séparés je pense commerçants et marketing donc moi ça continue ma boucle
+
+mais il n'a pas l'information si l'ASDR l'a contacté ça il faudrait peut-être... ça tu m'as parlé de MAKE, j'imagine que MAKE est une solution c'est à dire que... s'il y a un tag sur celle-ci alors ta campagne s'arrête, c'est ça ? Oui, quelque chose comme ça.
+
+Les parcours sont sensiblement les mêmes pour des skis différents, c'est ça ? Tout d'un coup ça se passe de la même manière, après on n'a pas forcément le même nombre de relances. Pour les téléchargements du catalogue on en a un seul, pour le calendrier RH on en a trois par exemple. Est-ce que vous avez tenté des variantes ?
+
+Ce joli mail n'a pas été fait d'une seule traite. Vous avez fait des variantes directement sur un formulaire Facebook parce que là vous faites des emails, mais aujourd'hui vous faites j'imagine de l'inbound aussi sur Facebook Ads. Est-ce que vous avez pris le format Facebook directement ? J'ai essayé sur LinkedIn du coup de faire un formulaire directement qui permettait de télécharger, mais ça n'avait pas fonctionné.
+
+Ça n'a pas fonctionné. On avait du zéro téléchargement, oui. Peut-être que la ressource n'était pas assez attractive, je crois que c'était sur les catalogues, ce n'était pas sur... Sur notre calendrier RH qui marche plutôt bien, c'était sur une autre ressource. Donc là, pour comprendre le CTA, c'est une publicité LinkedIn, qui est de quel format ?
+
+Je vais l'introduire ici.
+
+C'est une seule et même publicité ou vous faites des variations à toutes les semaines parce que en fonction des résultats en fait on avait je pense qu'on n'avait pas assez de budget aussi sur l'indie net on était un budget plutôt restreint en fait on avait plusieurs publicités qui tournaient en même temps ce qui fait qu'on avait mis
+
+En fait, on a fait tourner plusieurs budgets parce que nous, on a plusieurs thématiques et en fait, plusieurs campagnes, pardon, et du coup, on a fait une campagne par thématique. On a dix grandes thématiques. Et du coup en fait on avait mis en total quelque chose comme 500 euros mais divisé par 10 du coup. Donc c'était peut-être pas suffisant je pense.
+
+Et là, tu parles au passé, c'est-à-dire qu'elle tourne plus, c'est ça ? Elle tourne plus. Elle tourne plus. Ça coûte quand même très cher, l'Indie Nodes. Quand tu parles de 500 euros, on parle de 500 euros semaine, mensuel. Sur combien de jours, excuse-moi, j'ai pas entendu. D'accord.
+
+Je crois que voilà, j'avais ça du coup.
+
+Ok. Et voilà, c'était quelque chose comme ça.
+
+Et là, vous avez le formulaire annonce 20, c'est ça?
+
+Avant de la pub, il faut que ce soit héroïste quoi, il faut que quand même...
+
+Donc là il laisse son mail et son numéro de téléphone, ok. J'avais rajouté entreprise après pour les autres. Je pense que la ressource n'est pas assez intéressante pour le coup. Le catalogue... Je pense qu'il faudra faire des trucs avec replay. Ouais. Ça, ça n'a pas marché du tout. OK.
+
+ok ok intéressant et vous avez jamais tenté les webinaires dans votre j'imagine que dans votre secteur c'est des choses qui sont pas mal faut qu'on se mette sur la stratégie oui On veut faire ça en 2026, vraiment focus webinaire. D'accord, avec du coup une animation par toi-même, Antoine, ou par quelqu'un de l'équipe ?
+
+Par moi, Greg ou David, ou Mélina. D'accord. Très intéressant. On va discuter, on va dire un peu en surface de chacun des sujets, on n'a pas énormément de temps. Moi ce que je te proposerais Mélina, c'est effectivement si tu as la possibilité, parce que je ne vais pas vous demander les accès de chacun des outils.
+
+la possibilité de m'extraire les résultats de ces cinq campagnes ou dix campagnes comme ça moi ça me permettra d'analyser, de comprendre un peu ce qui n'a pas fonctionné comprendre aussi éventuellement, je ne sais pas si dans l'extraction que tu vas faire...
+
+tu pourras m'indiquer les cibles et la manière dont t'as agrégé justement cette cible-là. Et après, je comprends qu'effectivement, la créative, elle est systématiquement la même, c'est une image simple. Après on a fait d'autres qui ont un peu mieux marché mais c'était pour d'autres assets comme pour le calendrier RH où là on avait quand même...
+
+des meilleurs résultats, mais ce n'était pas un formulaire intégré. Ça a redirigé directement sur notre site. Ok. Ça a mieux marché en tout cas que celle-ci. D'accord ça marche parce que pour comprendre du coup vous avez mis de la force de travail sur la création de newsletters mais qui aujourd'hui ne fonctionnent plus, ne sont plus pour Bios de Leeds c'est ça ?
+
+On n'a pas les chiffres mauvais en termes de taux d'ouverture et de taux de clics mais après c'est vrai que ça ne convertit pas. En fait on a un problème de conversion. C'est l'autre truc qui convertit bien, c'est le cold call, c'est-à-dire un pré-rendez-vous. Et pourquoi, selon vous, est-ce que c'est la cible qui est problématique ? Parce que c'est assez surprenant quand même.
+
+C'est la force la plus compliquée quand même à mettre en place le call call.
+
+J'ai pas entendu. Pourquoi ? Pourquoi ? Parce que moi je pense que peut-être que... peut-être que c'est le copywriting qui fait que l'on n'a pas peut-être. Peut-être. On ne le fait pas assez souvent, peut-être qu'on relance pas, peut-être qu'on relance deux, trois fois, peut-être qu'il faut les relancer six fois, peut-être qu'il y a le copywriting, il y a le nombre de fois, il y a des...
+
+Il y a le fait qu'ils soient très sollicités. Ok. C'est vrai qu'on n'a pas du tout parlé du persona. Est-ce que vous pouvez m'en toucher deux mots sur le persona cible ?
+
+Du coup, nous on cible donc plutôt les grands groupes ou les groupes de taille moyenne et en fait notre notre cible principale du coup c'est tous les responsables formation, la ciblérage et après en fait on a plusieurs thématiques donc on va cibler les responsables de chaque pôle comme par exemple...
+
+un responsable QVT-CIA, un responsable handicap-CIA, donc pour nos différentes thématiques. Ok, ok, ok. Et aujourd'hui, ce parterre de personnes, ça représente combien de personnes en France ? Vous avez un ordre d'idée ou pas du tout ?
+
+C'est une question qu'il faudrait qu'on sache.
+
+vous faites du coup l'événement ils sont tous là ils sont tous réunis au même endroit ou non ils sont pas forcément toujours sur paris j'imagine
+
+Préventica, vous me parlez de Préventica, est-ce que c'est l'événement phare sur lequel ils se déplacent tous ? Juste dans un seul secteur du coup, parce que c'est plus sur la prévention. Il y a une partie de la cible dessus, mais pas pour toutes nos thématiques. Parce que nous, comme je te l'ai dit, on a un catalogue de dix grandes thématiques, donc on n'aura pas forcément la même cible en fonction.
+
+Mais de manière générale, c'est tout ce qui est responsable formation, directeur formation, etc. Donc sur PréventiCas, c'est plus lié à la sécurité. OK. Et donc quand tu fais du LinkedIn, tu mets directeur formation, responsable formation, c'est ça ? Oui, c'est ça. En fait, ça dépend si c'est pour une formation ciblée. Par exemple, si c'est pour cybersécurity, je ne vais pas avoir la même chose que pour diversity, parce que cybersécurity, du coup, c'est pour les risques cyber et diversity, c'est tout ce qui est inclusion en entreprise.
+
+Donc, du coup, je n'ai pas la même cible. Par contre, si c'est une ressource qui est globale, comme le calendrier RH, là, du coup, je vais mettre les deux. OK, OK, très bien. Et donc si on doit classer aujourd'hui les différents canaux d'acquisition, si je comprends bien tout en haut aujourd'hui votre ressource principale c'est le call call et tout en bas du coup, si je comprends bien, il y a apporté absolument...
+
+à aucun fruit, c'est le LinkedIn Ads. Pour Somo2, oui, c'est ça. Et si on doit les classifier, du coup, l'outbound, on n'en a pas parlé. Est-ce que c'est entre les deux ? Est-ce que c'est tout en bas ? C'est ça représente quoi, pour comprendre ?
+
+À la haute bande, il faudrait faire l'extract de l'analyse de nos compagnies M-List, voir ce que tu en penses. Ok. Ok, ok. Ils sont tagués. Il y a des choses qui pourraient former des SDM en M-List, quoi. Je pense qu'avant de... de les mettre au cas où il y a un split, c'est de l'abattre et d'y réfléchir bien avant d'envoyer des mots à la personne.
+
+à attaquer des choses plus personnalisées dans l'objet ou des gifs ou une image personnalisée. J'aurais peut-être des idées de trucs que tu aurais envie de dire, oui, ça peut faire plus. peu de leads dans chacune des campagnes. On parle d'une centaine de leads sur chacune des campagnes. Je ne sais pas dans dans quel scénario vous avez créé aujourd'hui encore et
+
+et combien de temps ils prennent. Mais c'est vrai qu'évectivement lancer une campagne avec 40 leads, c'est un peu faible pour en tirer des conclusions directement. Surtout par rapport à votre cible qui, à mon avis, représente quand même... milliers de personnes j'imagine.
+
+Parce qu'aujourd'hui la logique, j'ai bien compris sur l'inbound, sur le ads, Du coup, si on centre le Deva sur l'outbound, comment vous créez vos campagnes ? C'est là ce que je vois par exemple, la dernière campagne active, Estéban, Salon, Préventica, 75 Prospects, c'est terminé.
+
+Aujourd'hui, c'est quoi la logique que vous avez ? C'est tiens, en amont d'un salon, je vais faire une campagne et je vais essayer de collecter les quelques litres, c'est ça ? Et je vais leur envoyer un message. Comment vous fonctionnez exactement ? Est-ce que c'est très en amont que vous réfléchissez ?
+
+Est-ce que vous avez un scrapping boy ou quelqu'un qui collecte des leads et qui vient vous les enrichir ? Vous avez parlé de full and rich, mais full and rich c'est un complément qui vient enrichir les leads. Vous n'avez pas forcément le lead en question dès le départ, c'est-à-dire qu'il ne va pas venir collecter directement que ce soit sur LinkedIn ou que ce soit sur...
+
+les pages de salon ou autre, il faut effectivement un peu de code ou peut-être un outil extérieur. Comment vous fonctionnez exactement là-dessus ?
+
+Justement, j'ai l'impression qu'on n'a pas une stratégie, qu'on improvise un peu en fonction de ça. On improvise trop. C'est ça le problème, c'est qu'on n'a pas de finale qui est déterminée. Du coup, selon les salons, on va faire des choses mais qu'on ne va pas reproduire pour le prochain.
+
+Il nous manque ça, je pense. Et donc potentiellement, vous avez des prospects qui sont dans la campagne Esteban Inclusive Day, mais qui sont aussi dans le Salon Préventica. Vous ne faites pas la déduplication ?
+
+Je t'avoue que l'Emily s'était quand même très gérée par le commercial, moins par le marketing, et du coup l'idée c'est qu'on reprenne un peu la main sur la Strat. et appeler, guider, voir nous-mêmes faire les campagnes, analyser. C'est un peu ça aussi l'objet de l'accompagnement. Ok, intéressant.
+
+Et du coup il y a des choses à mettre en place parce que nous on n'a pas forcément une process très précise sur tout ça. Ok. Donc avoir une mécanique, tu me parlais Mélina justement de sales machine. sur lequel en fait progressivement vous avez des leads qui rentrent dans la mise dans une campagne sur lequel vous avez travaillé et en fait au lieu d'en avoir 75 vous en avez peut-être 15, 20, 30, 50 par semaine qui s'ajoutent et qui sont contactés, ça c'est quelque chose de relativement intéressant.
+
+lequel comme ça vous avez la main, vous pouvez étérer, faire des AB testing sur les messages clés, sur les séquences de messages et sûrement tester est-ce que c'est finalement une réservation dans l'agenda d'un commercial, est-ce que c'est la redirection vers une page, est-ce que c'est
+
+la réservation dans un webinar, ce genre de choses vous n'avez pas eu le temps de tester j'imagine.
+
+On est en train de mettre tout ça en place actuellement, du coup c'est un peu récent, on n'a pas forcément de retour encore. On a mis en place tout ça depuis quelques mois. mois, semaines, c'est assez nouveau. Ok. Et donc du coup là les messages, c'est toi qui les as rédigés ou c'est quelqu'un d'autre sur lequel toi t'as pas forcément eu vent ?
+
+En fait, ça va dépendre sur l'EMNIS, sur tous les commerces. Ça dépend des fois, Stephen et Greg, ils envoient leur campagne tout seuls sur l'EMNIS. Oui, même les emails que tu avais validés. La plupart du temps, c'est moi qui fais, mais j'ai l'impression que ça arrive quand même qu'il soit autonome dessus. Je pense pas que je les ai toutes faites, parce qu'il y en a quand même pas mal à mon avis, je les ai pas toutes faites, mais je pense, je dirais 70%.
+
+Avant j'avais pas forcément la main dessus, ils géraient plus de leur côté et du coup moi je pouvais pas forcément traquer. Ok, donc c'est-à-dire que chacun analysait sa petite campagne et du coup il n'y avait pas forcément de réunion ensemble pour se dire bah tiens tu pourrais faire ça, tu pourrais faire ça. Moi ma dernière campagne elle a marché comme ça et c'était pas mal.
+
+ça c'est que moi je faisais le contenu et ensuite je leur transférais et après j'avais plus de visibilité dessus ok et après j'imagine qu'entre eux ils s'en parlaient mais dans leur pôle mais du coup ça me parvenait pas Intéressant. Est-ce qu'aujourd'hui, Estéban et Greg, c'est les deux autres fondateurs, c'est ça ? Non, non, c'est des commerciaux.
+
+C'est un des fondateurs maintenant, associé, et du coup Esteban c'est un commercial. Niveau commercial, on a 3 SDR.
+
+ou deux à compte exécutive.
+
+3 comptes exécutifs et un directeur commercial et 3 CSM. Donc tout le monde là, ils sont tous dans une logique commerciale. L'ASDR trouve des rendez-vous pour les accounts exécutifs, les accounts exécutifs closent les deals et les CSM font grandir le compte.
+
+faire de l'upselling, voire du cross-selling dans certains cas. Ok, ok, ok. Très clair. Et ensuite, les objets de formation, c'est un pôle dédié aussi ? Le produit final sur les formations Realty Academy, ça c'est directement du... C'est d'huile à huile. Pour créer les formations, c'est ça ta question ? Oui, c'est ça. Donc en gros, on a trois produits, on a une solution présentielle.
+
+On fait des ateliers de sensibilisation et des formations intra-entreprise. On a une solution de réalité virtuelle où les gens vont en autonomie, acheter les matériels. les formations et utiliser les plateformes pour faire leurs propres formations en interne. On a une solution digitale qui est du e-learning en 2D en format classique.
+
+Et là, on lance une offre de roleplay d'agents conversationnels. Il y a une landing page slash une nouvelle stratégie qui va y avoir dans la fin d'année. ok et donc quand ils viennent en physique là c'est laissé c'est les csm qui dans tous les cas c'est les commerciaux ils vendent les trois offres ok
+
+Toujours grand compte, on vend et après soit on vient chez eux, on s'occupe de tout, soit ils achètent le matériel, ils font eux, soit ils veulent du digital et on l'intègre sur leur plateforme LMS.
+
+Très clair. Très clair, très clair. Ça marche. Est-ce que vous avez... du coup j'imagine que sur celle-ci vous avez déjà une base de données de tous vos clients pour éviter de les contacter eux ? L'idée c'était de les mettre dans de la haute bande par exemple.
+
+non plus on a des bases on a des bases prospètes pour éviter que tu envoies de la haute bande à des clients Il faudrait qu'il y ait une connexion entre l'analyste et celle-ci pour que tu n'envoies pas à des clients. À des prospects, tu peux envoyer quand même. Aujourd'hui, donc, si je comprends bien, entre les lignes, celle-ci n'est pas connectée à la liste.
+
+Donc c'est-à-dire que toutes les actions, que ce soit des clics, des ouvertures ou même des conversations, les commerciaux n'ont pas vent sur celles-ci, ils doivent aller se connecter sur la liste. c'est ça ok, est-ce qu'ils le font ?
+
+Aujourd'hui, là, ils sont dans une logique... C'est pour ça que je pense que l'aim liste, il faut que ce soit repris par le marketing. Parce que les commerciaux, ils ont trop de tâches. Enfin, entre demander du cold-calling... Prendre les lignes 20, faire les rendez-vous commerciaux, envoyer les devis et les propales, relancer, closer, faire les facturations, envoyer les factures.
+
+C'est vrai que faire l'upselling, le cross-selling, ça fait quand même beaucoup de taf. C'est des gens qui ont déjà, ils gèrent...
+
+pas mal d'outils aussi quoi. Pour moi c'est la team marketing SDR qui doit s'en occuper quoi. Ok, moi ce que j'observe dans les équipes que j'accompagne c'est systématiquement, effectivement l'équipe marketing vient instaurer les bases de données, mettre en place le copywriting, éventuellement s'il a un peu de technique, mettre en place tout ce qui est sécurité, traçabilité, DNS.
+
+lié au nom de domaine et lié aux e-mails et ensuite toutes les conversations. En gros, donc tu dis l'équipe marketing elle fait la base de données. le copywriting, en gros l'organisation sur l'aim list et tout ce qui est DNS slash technique. Voilà, donc généralement ça peut passer sur...
+
+une sur un CTO ou autre qui aurait cette main là sur les noms de domaines mais des fois l'équipe marketing sait le faire donc ils le font et ensuite sur tous les enjeux de conversation puisque c'est lié assez régulièrement sur les adresses e-mail en l'occurrence de Greg et Esteban, et bien c'est à eux d'y répondre. Parce que l'équipe marketing généralement, comme Mélina, elle doit gérer du ads, elle doit aussi gérer...
+
+de la stratégie sur les prochaines campagnes, sur les A-B testing et les améliorations de ces campagnes-là. Elle doit éventuellement mettre en place la mécanique d'agrégation des nouveaux leads, donc peut-être qu'en fait, si elle n'a pas créé cette machine automatisée, toutes les semaines, elle doit quand même prendre un peu de temps pour...
+
+aller chercher des nouveaux leads, donc les nouveaux leads, éventuellement elle aurait extrait la première semaine 200 leads sur les responsables formation, elle doit en trouver 200 autres et donc voilà cette mécanique là aussi côté marketing prend du temps et donc ce que j'observe c'est qu'effectivement la centralisation
+
+des conversations, bien généralement se fait effectivement côté commercial, mais ça encore une fois ça dépend de l'organisation, du temps de chacun et comment vous voulez allouer. Ce n'est pas vraiment à moi de dire quoi que ce soit, mais globalement, c'est ce que j'observe sur 90% des boîtes que j'accompagne.
+
+Oui, on a mis en place les best practices SDR à compte exécutif CSM et ça marche bien. Donc je pense que c'est bien de prendre les best practices des gens. Si 90% ils y vont comme ça, je pense que c'est aussi bien. Aujourd'hui ce que j'observe aussi, et là pour faire une rapide analyse de votre compte outbound puisque je l'ai sous les yeux, aujourd'hui il y a deux adresses email, vous parlez de volume, vous parlez de résultat.
+
+Il y a deux choses. Pour faire du volume, effectivement, il y a un premier aspect de sécurité. Cet aspect de sécurité, vous ne l'avez pas touché parce qu'aujourd'hui, vous ne touchez pas du volume. Néanmoins, je préfère anticiper. Aujourd'hui, les adresses mail qui sont connectées sont les adresses mail de Greg et d'Estéban.
+
+sont directement rattachées à votre nom de domaine principal. Aujourd'hui ça, warning alert, ça peut être une problématique si demain on augmente le volume, si demain le compte est mal géré et le DNS est mal configuré, ce qui n'est pas votre cas aujourd'hui.
+
+potentiellement ça peut faire tomber le nom de domaine. Donc ce que je conseille toujours à mes clients c'est de prendre un nom de domaine de sécurité, un nom de domaine secondaire. lequel en fait Esteban et Greg aurait toujours le nom Esteban et Greg mais avec un nom de domaine qui serait très lié à votre marque mais qui serait peut-être un peu différent, ce qui éviterait à Google, à Microsoft ou autre de vous...
+
+lancé dans les spams, ça c'est un premier vrai sujet, je pense, qu'on doit aborder et ensuite si vous parlez de volume ce qui est intéressant c'est qu'aujourd'hui la liste et notamment sur le compte que vous avez vous permet d'agréger Aujourd'hui il y a mon avis 5 emails mais potentiellement vous pouvez en ajouter plus en fonction du forfait que vous voulez prendre et du coup pouvoir employer plus de volume. C'est vrai que sur des campagnes de 75 c'est pas vraiment la question mais demain si on part sur 1000, 2000 et que vous voulez absorber ce volume là de manière relativement rapidement toutes les semaines ou tous les mois
+
+c'est vrai qu'en fait avoir plusieurs adresses email ça peut être intéressant et donc ça peut être grec1, grec2, grec3, arrobas, realtyacademy.fr peut qui peut aussi tourner de cette manière c'est un premier constat que je fais comme ça à chaud en regardant le compte mais c'est vrai que c'est des sujets qui pourraient être abordés et qui permettraient d'apporter du volume en
+
+plus, et ça c'est toujours on va dire complémentaire, en plus des éventuels ZAD que vous allez faire, en plus de l'éventuel trafic organique avec le SEO que vous allez apporter avec votre SEO manager ou autre.
+
+On est preneur de faire plus de growth et plus de volume pour mettre en place ce que tu viens de dire. T'en penses quoi Mylina, du coup t'as déjà vu ce genre de choses ou pas du tout ? Oui si, moi je m'étais renseignée justement et c'est vrai que j'avais vu qu'il était conseillé de faire ça après vu que moi je suis pas expert dedans, je n'avais pas forcément osé le faire donc non, ça me paraît totalement convaincant.
+
+Ok, ok, très clair, très très clair. Le mieux qu'on entend c'est que peut-être que voilà, il y a la phase de... comme tu as fait là d'audit, enfin ce que tu as fait d'audit, un peu de mapping, de nous donner des orientations, et après d'orienter à ce que Mélina sait faire aujourd'hui, il peut le faire en autonomie.
+
+Ce que Mélina ne sait pas faire et qu'elle veut apprendre à faire et que tu lui apprennes à faire. Et ce que Mélina n'a pas le temps de faire et que tu ne fasses pas. Complètement, complètement. C'est pour ça qu'en fait, peut-être qu'une heure c'est un peu court.
+
+Moi, j'aimerais bien rééchanger avec toi, Mélina, ou à trois, lundi prochain, si ça te va ou si ça vous va. lundi ou mardi quand vous avez un peu de dispo pour effectivement creuser parce que je trouve qu'une heure c'est peut-être un peu court Habituellement le format n'est pas vraiment comme ça on arrive avec une problématique
+
+On n'est pas sur un pilotage et un audit 360°, on est plutôt sur un audit d'une section du marketing. Et donc là, comme vous avez quand même des sujets larges, on n'est vraiment rentré qu'en surface. que ce soit sur du ads ou que ce soit sur des mécaniques outbound. Je pense qu'on a pas mal de sujets aussi à creuser. Moi, ce qui m'intéresserait, c'est effectivement de regarder avec vous le compte celle-ci, éventuellement de regarder votre make, comment vous l'avez formaté.
+
+et sur les automatisations, donc je ne sais pas trop ce que vous en pensez, mais c'est vrai que ça va être un peu juste pour moi pour poser un bilan et même si vous me donnez les accès, j'aurai toujours des questions en suspens et je pense qu'on y gagnerait tous.
+
+à reprendre peut-être une heure dans un créneau en début de semaine prochaine, si vous êtes dispo, pour continuer l'échange, quoi. Moi, ce que je te propose, c'est de continuer avec Melina. Moi, si j'ai besoin que j'intervienne, je me dirai, mais je pense que Milina reprend la main. Je me rends contact et après...
+
+Bon bah top, on fait comme ça, mais là je vais prendre... Mél, tu veux faire la note dans le chat ? Alors ton mail, je l'ai, mais je vais plutôt prendre tes dispos. Si tu veux.
+
+N'oubliez pas de vous abonner à notre chaîne YouTube.
+
+Tu me dis à quelle heure, alors lundi matin à 10h, 11h c'est bon pour toi ? On passera peut-être plutôt sur la phase CRM et sur la phase automatisation pour que je comprenne un peu où est-ce que vous en êtes aussi. Ça m'intéresserait, voilà si tu veux, celle-ci j'ai déjà accès, donc je vais commencer à regarder un peu. Mais si tu veux m'envoyer aussi les accès make, comme ça moi ça me permettra éventuellement de regarder un peu en avant et de poser des questions plus précises.
+
+Merci d'avoir regardé cette vidéo !
+
+Parfait, je viens de t'envoyer l'invite.
+
+Merci. Au revoir. Au revoir.
+
+Très très bien, je pense que si juste en amont de notre échange de lundi, t'es en capacité de pouvoir m'envoyer effectivement pour Ecap. L'extrait des résultats de LinkedIn Ads m'intéresse, l'accès à l'émisse je l'ai donc je vais pouvoir m'y pencher et comprendre un peu les messages que vous avez fait et éventuellement qu'on en reparle ensuite.
+
+vais aussi extraire les prospects qu'il y a dedans pour comprendre vraiment, vous m'avez parlé d'une cible, mais voir si effectivement cette cible est complètement liée. ou est-ce qu'en fait il y a un faux-bomb là-dessus et puis bah du coup lundi on parlera et j'aurai eu le temps de regarder celle-ci mais on parlera aussi des automatisations make parce que j'ai l'impression que c'est très lié c'est toute votre mécanique et vos vos sujets de communication qui sont liés aux automatisations mais comme j'ai pas eu la vue et je sais pas exactement quels sont les tags, quelles sont les automatisations
+
+que vous avez mis en place, ça me permettrait d'effricher aussi à ce niveau-là. Merci à vous de montrer tout ça, et je t'envoie tout... Avant lundi, tu m'as dit du coup vendredi, demain ? Oui, quand tu as le temps.
+
+Est-ce qu'il y a éventuellement d'autres sujets, on avait parlé rapidement du SIO, il nous reste 5 minutes je vois. Je ne sais pas exactement comment vous avez construit votre SEO. On a fait pas mal de SEO au départ de la boîte. On était premier dans la plupart des requêtes liées à la réalité virtuelle et à la formation. On a fait un peu toute l'arborescence du site avec un nouveau site qui va sortir vendredi et un autre site qui va sortir le 15 octobre, donc on a pas mal fait évoluer l'offre.
+
+Et on a quelqu'un qui nous accompagne sur le SEO là, sur l'achat de mots-clés slash de backlinks. et de se positionner au niveau technique et que l'on aille chercher des opportunités pour de nouveaux métiers.
+
+Ok, aujourd'hui les articles de blog ils sont du coup écrits par toi Mélina aussi ou c'est la personne en SEO qui écrit lui-même ? Non, non, pour le moment, non, c'était de ton côté. De ton côté, ok. Et vous avez déjà émis l'idée de SEOIA ou pas du tout ?
+
+C'est quoi ça ? Ah oui, du coup c'est ce qu'il va mettre en place le nouveau, le gars qui nous accompagne là-dessus. Ok, trop bien. vous allez avoir des articles qui vont se générer automatiquement et sur lesquels Melina, du coup, tu vas juste projeter ta validation, quoi.
+
+Ok ok bon bah ça je pense que c'est si c'est déjà géré par quelqu'un quelqu'un d'extérieur je veux pas vraiment y toucher ça marche Très clair. Moi, ça m'a permis de me défricher et je vais continuer de regarder le Lemmist. Du coup, j'attends les accès.
+
+Dès que possible, Mélina, et comme ça on en reparle lundi, si ça te va.
+
+Bon bah merci beaucoup, merci à tous, merci, à plus, merci.

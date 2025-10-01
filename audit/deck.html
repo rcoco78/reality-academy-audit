@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reality Academy — Pitch deck</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css" id="theme">
+    <style>
+      .reveal { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji; }
+      .reveal h1, .reveal h2, .reveal h3 { letter-spacing: .2px; }
+      .reveal .slides { text-align: left; }
+      .reveal a { color: #0d6efd; }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown="deck-reality-academy.md"
+                 data-separator="^---$"
+                 data-separator-vertical="^--$"
+                 data-separator-notes="^Note:"
+                 data-charset="utf-8">
+        </section>
+      </div>
+    </div>
+
+    <div style="position: fixed; left: 16px; bottom: 14px; font-size: 13px; color: #5c6672; background: rgba(255,255,255,.85); padding: 6px 10px; border-radius: 8px; border: 1px solid #e6e8eb;">
+      fait par <strong>Corentin Robert</strong> ·
+      <a href="https://www.linkedin.com/in/robertcorentin/?skipRedirect=true" target="_blank" style="color:#0d6efd;">LinkedIn</a>
+      · <a href="https://www.malt.fr/profile/growth" target="_blank" style="color:#0d6efd;">Malt</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+    <script>
+      const deck = new Reveal({
+        hash: true,
+        plugins: [ RevealMarkdown, RevealNotes ],
+        navigationMode: 'default',
+        slideNumber: true,
+        transition: 'fade'
+      });
+      deck.initialize();
+    </script>
+  </body>
+</html>
+
+

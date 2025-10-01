@@ -1,0 +1,120 @@
+# Analyse campagnes
+
+**Reality Academy — Rapport de campagnes payantes** 
+
+---
+
+## 1) Résumé
+
+- **Objectifs :** Générer des leads (Calendrier RH), tester des campagnes « Catalogue » par thématique, travailler la notoriété via un boost vidéo Meta.
+- **Canaux :** LinkedIn Ads (Lead Gen / Sponsored Content), Meta Ads (vues vidéo).
+- **Budget vu sur captures :** **10 816,55 €** (4 campagnes Calendrier RH) + **≈1 275 €** (tests Catalogues VR) + **149,99 €** (Meta boost vidéo).
+- **KPI suivis :** CPL, CTR, conversions (soumissions formulaire), CPV (coût par vue).
+
+**Faits marquants :**
+
+1. **Calendrier RH** performe fort : **664 conversions** pour un **CPL moyen 16,29 €** ; **707 545** impr., **4 163** clics, **CTR 0,59 %**.
+2. Les **créas fond blanc** sont les plus efficaces (CPL ≈ **8–9 €**).
+3. Les campagnes **Catalogues** testées n’ont pas généré de leads (budgets limités, offres à enrichir).
+
+---
+
+## 2) Vue d’ensemble
+
+| Canal | Campagne | Objectif | Période | Dépensé | Impressions | Clics | CTR | Conversions | Coût / résultat |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LinkedIn Ads | **Calendrier RH – profil EN (RH)** | Lead Gen | 03/2025 | 2 718,82 € | 231 964 | 1 544 | 0,67 % | 288 | 9,44 € |
+| LinkedIn Ads | **Calendrier RH – profil FR (RH)** | Lead Gen | 03/2025 | 2 723,92 € | 230 564 | 1 401 | 0,61 % | 218 | 12,50 € |
+| LinkedIn Ads | **Calendrier RH – cible pôle EN** | Lead Gen | 03/2025 | 2 687,61 € | 106 087 | 511 | 0,48 % | 40 | 67,19 € |
+| LinkedIn Ads | **Calendrier RH – cible pôle FR** | Lead Gen | 03/2025 | 2 686,20 € | 138 930 | 707 | 0,51 % | 118 | 22,76 € |
+| Meta Ads | **Boost vidéo – Post 05/03/2025** | Vues vidéo | 03/2025 | 149,99 € | 9 937 | 12 | 0,12 % | 2 997 vues | 0,05 € / vue |
+| LinkedIn Ads | **Diversity VR – Catalogue** | Leads | 03/2025 | 150,00 € | 2 228 | 9 | 0,4 % | 0 | — |
+| LinkedIn Ads | **Cyber VR – Catalogue** | Leads | 2025 | 637,40 € | 13 775 | — | — | 0 | — |
+| LinkedIn Ads | **HSE VR – Catalogue** | Leads | 2025 | 150,00 € | 4 389 | — | — | 0 | — |
+| LinkedIn Ads | **Mobility VR – Catalogue** | Leads | 2025 | 93,49 € | 1 589 | — | — | 0 | — |
+| LinkedIn Ads | **Management VR – Catalogue** | Leads | 2025 | 50,00 € | 1 394 | — | — | 0 | — |
+
+> Total Calendrier RH (4 campagnes) : 10 816,55 € · 707 545 impr. · 4 163 clics · 664 conversions · CPL moyen 16,29 €.
+> 
+
+---
+
+## 3) Détail — LinkedIn « Calendrier RH » (groupe de 4 campagnes)
+
+**Objectif :** Lead Magnet (formulaire natif).
+
+**Audience principale :** **Fonction RH** (FR/EN).
+
+**Taille d’audience prévisionnelle :** **≈670 000+** (selon Campaign Manager).
+
+### 3.1 Performances par campagne
+
+| Campagne | Audience | Dépensé | Impr. | Clics | CTR | Conversions | CPL |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Profil EN | RH | 2 718,82 € | 231 964 | 1 544 | 0,67 % | 288 | 9,44 € |
+| Profil FR | RH | 2 723,92 € | 230 564 | 1 401 | 0,61 % | 218 | 12,50 € |
+| Cible pôle EN | Pôles métiers | 2 687,61 € | 106 087 | 511 | 0,48 % | 40 | 67,19 € |
+| Cible pôle FR | Pôles métiers | 2 686,20 € | 138 930 | 707 | 0,51 % | 118 | 22,76 € |
+
+### 3.2 Créations testées (extraits des captures)
+
+- **Top performers (fond blanc)**
+    - *Horizontal blanc 2024* : **23 conv.**, **CPL 8,02 €**.
+    - *Carré blanc 2024* : **14 conv.**, **CPL 8,77 €**.
+- **Autres variantes**
+    - *Téléchargez le Calendrier RH 🚀* : **233 conv.**, **CPL 8,99 €**.
+    - *Horizontal rose* : **16 conv.**, **CPL 16,79 €**.
+    - *Carré rose* : **2 conv.**, **CPL 16,51 €**.
+
+**Enseignements :**
+
+- Les **créas fond blanc** > variants **rose** en CPL et volume.
+- Le ciblage **fonction RH** performe mieux que les **pôles métiers** ?
+
+---
+
+## 4) Détail — LinkedIn « Diversity VR – Catalogue »
+
+**Objectif :** Téléchargement de ressource (formulaire).
+
+**Ciblage (d’après captures) :**
+
+- **Lieu :** France ; **Langue de profil :** Français.
+- **Titres inclus (≥1 requis)** : Spécialiste du handicap, Consultant en diversité, DRH, Responsable RH, Responsable/Directeur de la diversité, Directeur de formation.
+- **Taille d’audience prévisionnelle :** **150 000+** (RH 93 %, Exploitation 4 %, Finances 3 %, Administration 3 %, Management de projets 3 %).
+
+**Résultats :** **0 lead** pour **150,00 €** ; **2 228** impr., **9** clics (**CTR 0,4 %**).
+
+**Hypothèse :** offre « catalogue » perçue moins utile / formule trop générique ; titres trop spécifiques vs. **fonction RH**.
+
+---
+
+## 6) Ciblages & paramètres (selon captures)
+
+- **LinkedIn – Calendrier RH** : Fonction **Ressources humaines** (FR/EN). Variantes « Profil » vs « Cible pôle ». Placements fil d’actualité, **Single Image Ad**.
+- **LinkedIn – Diversité** : Langue **FR**, titres listés ci‑dessus ; **expansion d’audience activée** ; exclusions de **niveaux hier.** (Jeune diplômé, Formation, Non payé) et de certains **secteurs** non pertinents (retail, agriculture, etc.).
+- **Meta boost** : Promotion d’un post vidéo existant (objectif vues).
+
+## 8) Annexes — Références des captures
+
+- **LinkedIn – Campagnes Calendrier RH (tableau)** : budgets, impr., clics, CTR, conversions (mars 2025).
+- **LinkedIn – Niveau publicité** : performances par créa (fond blanc/rose, carré/horizontal).
+- **LinkedIn – Diversité** : vue campagne (résultats) + **Audience** détaillée.
+- **Meta Ads** : vue ensemble du boost vidéo (vues, CPV, impr., clics, CTR).
+
+> NB : Les chiffres ci‑dessus proviennent exclusivement des captures fournies, sans autre retraitement.
+> 
+
+![Capture d’écran 2025-09-12 à 16.02.56.png](attachment:4270236c-200b-4578-8b2c-2431544e8dfb:Capture_decran_2025-09-12_a_16.02.56.png)
+
+![Capture d’écran 2025-09-12 à 16.02.42.png](attachment:0bf67601-3969-476a-824b-f42cb28c0fff:Capture_decran_2025-09-12_a_16.02.42.png)
+
+![Capture d’écran 2025-09-12 à 16.02.25.png](attachment:b0cee004-b733-409a-af35-f8380966aef6:Capture_decran_2025-09-12_a_16.02.25.png)
+
+![Capture d’écran 2025-09-12 à 16.02.12.png](attachment:765d2b59-9978-41b0-b6bb-a6ef56fcf0c3:Capture_decran_2025-09-12_a_16.02.12.png)
+
+![Capture d’écran 2025-09-12 à 16.02.12.png](attachment:3bce7045-e5f8-4d19-8922-9102a0b21859:Capture_decran_2025-09-12_a_16.02.12.png)
+
+![Capture d’écran 2025-09-12 à 16.05.47.png](attachment:6612e010-c951-4a0e-87ee-1497d4dfb2c3:Capture_decran_2025-09-12_a_16.05.47.png)
+
+![Capture d’écran 2025-09-12 à 16.05.06.png](attachment:fdf6ab6a-8e82-4ecc-ba82-1cb8d9faacc5:Capture_decran_2025-09-12_a_16.05.06.png)

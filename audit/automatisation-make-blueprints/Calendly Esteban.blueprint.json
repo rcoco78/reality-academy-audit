@@ -1,0 +1,2414 @@
+{
+    "name": "Calendly Esteban",
+    "flow": [
+        {
+            "id": 38,
+            "module": "calendly:watchInvitees",
+            "version": 2,
+            "parameters": {
+                "__IMTHOOK__": 2882434
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 450
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTHOOK__": {
+                            "data": {
+                                "editable": "false"
+                            },
+                            "label": "Esteban"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTHOOK__",
+                        "type": "hook:calendly4",
+                        "label": "Webhook",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 37,
+            "module": "util:SetVariables",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "scope": "roundtrip",
+                "variables": [
+                    {
+                        "name": "prenom",
+                        "value": "{{trim(upper(38.first_name))}}"
+                    },
+                    {
+                        "name": "nom",
+                        "value": "{{trim(upper(38.last_name))}}"
+                    },
+                    {
+                        "name": "email",
+                        "value": "{{trim(38.email)}}"
+                    },
+                    {
+                        "name": "note",
+                        "value": "{{replace(get(map(38.questions_and_answers; \"answer\"; \"question\"; \"Veuillez partager tout ce qui pourra être utile à la préparation de notre réunion.\"); 1); newline; \"<br>\")}}"
+                    },
+                    {
+                        "name": "date_rdv",
+                        "value": "{{38.scheduled_event.start_time}}"
+                    },
+                    {
+                        "name": "fin RDV",
+                        "value": "{{38.scheduled_event.end_time}}"
+                    },
+                    {
+                        "name": "statut",
+                        "value": "{{38.status}}"
+                    },
+                    {
+                        "name": "societe",
+                        "value": "{{get(map(38.questions_and_answers; \"answer\"; \"question\"; \"Entreprise\"); 1)}}"
+                    },
+                    {
+                        "name": "annulation",
+                        "value": "{{38.cancellation.created_at}}"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 450
+                },
+                "restore": {
+                    "expect": {
+                        "scope": {
+                            "label": "One cycle"
+                        },
+                        "variables": {
+                            "items": [
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ]
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "variables",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Variable name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Variable value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Variables"
+                    },
+                    {
+                        "name": "scope",
+                        "type": "select",
+                        "label": "Variable lifetime",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "roundtrip",
+                                "execution"
+                            ]
+                        }
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "prenom",
+                        "type": "any",
+                        "label": "prenom"
+                    },
+                    {
+                        "name": "nom",
+                        "type": "any",
+                        "label": "nom"
+                    },
+                    {
+                        "name": "email",
+                        "type": "any",
+                        "label": "email"
+                    },
+                    {
+                        "name": "note",
+                        "type": "any",
+                        "label": "note"
+                    },
+                    {
+                        "name": "date_rdv",
+                        "type": "any",
+                        "label": "date_rdv"
+                    },
+                    {
+                        "name": "fin RDV",
+                        "type": "any",
+                        "label": "fin RDV"
+                    },
+                    {
+                        "name": "statut",
+                        "type": "any",
+                        "label": "statut"
+                    },
+                    {
+                        "name": "societe",
+                        "type": "any",
+                        "label": "societe"
+                    },
+                    {
+                        "name": "annulation",
+                        "type": "any",
+                        "label": "annulation"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 19,
+            "module": "sellsy:makeApiCall",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 8601308
+            },
+            "mapper": {
+                "url": "/v2/contacts/search?embed[]=smart_tags&embed[]=cf.250644",
+                "body": "{\n    \"filters\":{\n        \"email\":\"{{37.email}}\"\n    }\n}",
+                "method": "POST",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 450,
+                    "name": "Recherche avec email"
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "POST"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "sellsy2"
+                            },
+                            "label": "Selssy RA (ANTOINE BERNARD)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:sellsy2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "PATCH",
+                                "DELETE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 20,
+            "module": "builtin:BasicRouter",
+            "version": 1,
+            "mapper": null,
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 450
+                }
+            },
+            "routes": [
+                {
+                    "flow": [
+                        {
+                            "id": 34,
+                            "module": "sellsy:makeApiCall",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 8601308
+                            },
+                            "filter": {
+                                "name": "Contact retrouvé",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{19.body.data[].id}}",
+                                            "o": "exist"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "url": "/v2/contacts/{{19.body.data[].id}}/companies",
+                                "method": "GET",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1200,
+                                    "y": 0,
+                                    "name": "Recherche la société liée"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "qs": {
+                                            "mode": "chose"
+                                        },
+                                        "method": {
+                                            "mode": "chose",
+                                            "label": "GET"
+                                        },
+                                        "headers": {
+                                            "mode": "chose",
+                                            "items": [
+                                                null
+                                            ]
+                                        }
+                                    },
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "sellsy2"
+                                            },
+                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:sellsy2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "method",
+                                        "type": "select",
+                                        "label": "Method",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "GET",
+                                                "POST",
+                                                "PUT",
+                                                "PATCH",
+                                                "DELETE"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "headers",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Headers"
+                                    },
+                                    {
+                                        "name": "qs",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Query String"
+                                    },
+                                    {
+                                        "name": "body",
+                                        "type": "any",
+                                        "label": "Body"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 56,
+                            "module": "builtin:BasicRouter",
+                            "version": 1,
+                            "mapper": null,
+                            "metadata": {
+                                "designer": {
+                                    "x": 1500,
+                                    "y": 0
+                                }
+                            },
+                            "routes": [
+                                {
+                                    "flow": [
+                                        {
+                                            "id": 55,
+                                            "module": "util:SetVariables",
+                                            "version": 1,
+                                            "parameters": {},
+                                            "filter": {
+                                                "name": "Société retrouvée",
+                                                "conditions": [
+                                                    [
+                                                        {
+                                                            "a": "{{34.body.data[].id}}",
+                                                            "o": "exist"
+                                                        }
+                                                    ]
+                                                ]
+                                            },
+                                            "mapper": {
+                                                "scope": "execution",
+                                                "variables": [
+                                                    {
+                                                        "name": "contact_id",
+                                                        "value": "{{19.body.data[].id}}"
+                                                    },
+                                                    {
+                                                        "name": "third_id",
+                                                        "value": "{{34.body.data[].id}}"
+                                                    }
+                                                ]
+                                            },
+                                            "metadata": {
+                                                "designer": {
+                                                    "x": 1800,
+                                                    "y": -150
+                                                },
+                                                "restore": {
+                                                    "expect": {
+                                                        "scope": {
+                                                            "label": "One execution"
+                                                        },
+                                                        "variables": {
+                                                            "items": [
+                                                                null,
+                                                                null
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "expect": [
+                                                    {
+                                                        "name": "variables",
+                                                        "spec": [
+                                                            {
+                                                                "name": "name",
+                                                                "type": "text",
+                                                                "label": "Variable name",
+                                                                "required": true
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "any",
+                                                                "label": "Variable value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Variables"
+                                                    },
+                                                    {
+                                                        "name": "scope",
+                                                        "type": "select",
+                                                        "label": "Variable lifetime",
+                                                        "required": true,
+                                                        "validate": {
+                                                            "enum": [
+                                                                "roundtrip",
+                                                                "execution"
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "interface": [
+                                                    {
+                                                        "name": "contact_id",
+                                                        "type": "any",
+                                                        "label": "contact_id"
+                                                    },
+                                                    {
+                                                        "name": "third_id",
+                                                        "type": "any",
+                                                        "label": "third_id"
+                                                    }
+                                                ],
+                                                "advanced": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "flow": [
+                                        {
+                                            "id": 57,
+                                            "module": "sellsy:makeApiCall",
+                                            "version": 2,
+                                            "parameters": {
+                                                "__IMTCONN__": 8601308
+                                            },
+                                            "filter": {
+                                                "name": "Société inconnue",
+                                                "conditions": [
+                                                    [
+                                                        {
+                                                            "a": "{{34.body.data[].id}}",
+                                                            "o": "notexist"
+                                                        }
+                                                    ]
+                                                ]
+                                            },
+                                            "mapper": {
+                                                "url": "/v2/companies",
+                                                "body": "{\n    \"name\":\"{{37.societe}}\",\n    \"type\":\"prospect\",\n    \"note\":\"Créé automatiquement via Make le {{formatDate(now; \"DD-MM-YYYY HH:mm\")}} après avoir reçu une demande de RDV de la part de {{38.name}} via Calendly.\"\n}",
+                                                "method": "POST",
+                                                "headers": [
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json"
+                                                    }
+                                                ]
+                                            },
+                                            "metadata": {
+                                                "designer": {
+                                                    "x": 1859,
+                                                    "y": 172,
+                                                    "name": "Création société"
+                                                },
+                                                "restore": {
+                                                    "expect": {
+                                                        "qs": {
+                                                            "mode": "chose"
+                                                        },
+                                                        "method": {
+                                                            "mode": "chose",
+                                                            "label": "POST"
+                                                        },
+                                                        "headers": {
+                                                            "mode": "chose",
+                                                            "items": [
+                                                                null
+                                                            ]
+                                                        }
+                                                    },
+                                                    "parameters": {
+                                                        "__IMTCONN__": {
+                                                            "data": {
+                                                                "scoped": "true",
+                                                                "connection": "sellsy2"
+                                                            },
+                                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                                        }
+                                                    }
+                                                },
+                                                "parameters": [
+                                                    {
+                                                        "name": "__IMTCONN__",
+                                                        "type": "account:sellsy2",
+                                                        "label": "Connection",
+                                                        "required": true
+                                                    }
+                                                ],
+                                                "expect": [
+                                                    {
+                                                        "name": "url",
+                                                        "type": "text",
+                                                        "label": "URL",
+                                                        "required": true
+                                                    },
+                                                    {
+                                                        "name": "method",
+                                                        "type": "select",
+                                                        "label": "Method",
+                                                        "required": true,
+                                                        "validate": {
+                                                            "enum": [
+                                                                "GET",
+                                                                "POST",
+                                                                "PUT",
+                                                                "PATCH",
+                                                                "DELETE"
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "headers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "key",
+                                                                "type": "text",
+                                                                "label": "Key"
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "text",
+                                                                "label": "Value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Headers"
+                                                    },
+                                                    {
+                                                        "name": "qs",
+                                                        "spec": [
+                                                            {
+                                                                "name": "key",
+                                                                "type": "text",
+                                                                "label": "Key"
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "text",
+                                                                "label": "Value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Query String"
+                                                    },
+                                                    {
+                                                        "name": "body",
+                                                        "type": "any",
+                                                        "label": "Body"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": 58,
+                                            "module": "util:SetVariables",
+                                            "version": 1,
+                                            "parameters": {},
+                                            "mapper": {
+                                                "scope": "execution",
+                                                "variables": [
+                                                    {
+                                                        "name": "contact_id",
+                                                        "value": "{{19.body.data[].id}}"
+                                                    },
+                                                    {
+                                                        "name": "third_id",
+                                                        "value": "{{57.body.id}}"
+                                                    }
+                                                ]
+                                            },
+                                            "metadata": {
+                                                "designer": {
+                                                    "x": 2074,
+                                                    "y": 169
+                                                },
+                                                "restore": {
+                                                    "expect": {
+                                                        "scope": {
+                                                            "label": "One execution"
+                                                        },
+                                                        "variables": {
+                                                            "items": [
+                                                                null,
+                                                                null
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "expect": [
+                                                    {
+                                                        "name": "variables",
+                                                        "spec": [
+                                                            {
+                                                                "name": "name",
+                                                                "type": "text",
+                                                                "label": "Variable name",
+                                                                "required": true
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "any",
+                                                                "label": "Variable value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Variables"
+                                                    },
+                                                    {
+                                                        "name": "scope",
+                                                        "type": "select",
+                                                        "label": "Variable lifetime",
+                                                        "required": true,
+                                                        "validate": {
+                                                            "enum": [
+                                                                "roundtrip",
+                                                                "execution"
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "interface": [
+                                                    {
+                                                        "name": "contact_id",
+                                                        "type": "any",
+                                                        "label": "contact_id"
+                                                    },
+                                                    {
+                                                        "name": "third_id",
+                                                        "type": "any",
+                                                        "label": "third_id"
+                                                    }
+                                                ],
+                                                "advanced": true
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 21,
+                            "module": "sellsy:makeApiCall",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 8601308
+                            },
+                            "filter": {
+                                "name": "Inconnu",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{19.body.data[].id}}",
+                                            "o": "notexist"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "url": "/v2/contacts",
+                                "body": "{\n    \"first_name\":\"{{37.prenom}}\",\n    \"last_name\":\"{{37.nom}}\",\n    \"email\":\"{{37.email}}\",\n    \"position\":\"{{37.fonction}}\",\n    \"note\":\"Demande de RDV via Calendly.\"\n}",
+                                "method": "POST",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1200,
+                                    "y": 450,
+                                    "name": "Création contact"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "qs": {
+                                            "mode": "chose"
+                                        },
+                                        "method": {
+                                            "mode": "chose",
+                                            "label": "POST"
+                                        },
+                                        "headers": {
+                                            "mode": "chose",
+                                            "items": [
+                                                null
+                                            ]
+                                        }
+                                    },
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "sellsy2"
+                                            },
+                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:sellsy2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "method",
+                                        "type": "select",
+                                        "label": "Method",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "GET",
+                                                "POST",
+                                                "PUT",
+                                                "PATCH",
+                                                "DELETE"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "headers",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Headers"
+                                    },
+                                    {
+                                        "name": "qs",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Query String"
+                                    },
+                                    {
+                                        "name": "body",
+                                        "type": "any",
+                                        "label": "Body"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 25,
+                            "module": "util:FunctionSleep",
+                            "version": 1,
+                            "parameters": {},
+                            "mapper": {
+                                "duration": "1"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1500,
+                                    "y": 450
+                                },
+                                "restore": {},
+                                "expect": [
+                                    {
+                                        "name": "duration",
+                                        "type": "uinteger",
+                                        "label": "Delay",
+                                        "required": true,
+                                        "validate": {
+                                            "max": 300,
+                                            "min": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 22,
+                            "module": "sellsy:makeApiCall",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 8601308
+                            },
+                            "mapper": {
+                                "url": "/v2/companies/search",
+                                "body": "{\n    \"filters\":{\n        \"name\":\"{{37.societe}}\"\n    }\n}",
+                                "method": "POST",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1800,
+                                    "y": 450,
+                                    "name": "Recherche société avec nom"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "qs": {
+                                            "mode": "chose"
+                                        },
+                                        "method": {
+                                            "mode": "chose",
+                                            "label": "POST"
+                                        },
+                                        "headers": {
+                                            "mode": "chose",
+                                            "items": [
+                                                null
+                                            ]
+                                        }
+                                    },
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "sellsy2"
+                                            },
+                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:sellsy2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "method",
+                                        "type": "select",
+                                        "label": "Method",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "GET",
+                                                "POST",
+                                                "PUT",
+                                                "PATCH",
+                                                "DELETE"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "headers",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Headers"
+                                    },
+                                    {
+                                        "name": "qs",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Query String"
+                                    },
+                                    {
+                                        "name": "body",
+                                        "type": "any",
+                                        "label": "Body"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 23,
+                            "module": "builtin:BasicRouter",
+                            "version": 1,
+                            "mapper": null,
+                            "metadata": {
+                                "designer": {
+                                    "x": 2100,
+                                    "y": 450
+                                }
+                            },
+                            "routes": [
+                                {
+                                    "flow": [
+                                        {
+                                            "id": 24,
+                                            "module": "sellsy:makeApiCall",
+                                            "version": 2,
+                                            "parameters": {
+                                                "__IMTCONN__": 8601308
+                                            },
+                                            "filter": {
+                                                "name": "Inconnue",
+                                                "conditions": [
+                                                    [
+                                                        {
+                                                            "a": "{{22.body.data[].id}}",
+                                                            "o": "notexist"
+                                                        }
+                                                    ]
+                                                ]
+                                            },
+                                            "mapper": {
+                                                "url": "/v2/companies",
+                                                "body": "{\n    \"name\":\"{{37.societe}}\",\n    \"type\":\"prospect\",\n    \"note\":\"Créé automatiquement via Make le {{formatDate(now; \"DD-MM-YYYY HH:mm\")}} après avoir reçu une demande de RDV de la part de {{38.name}} via Calendly.\"\n}",
+                                                "method": "POST",
+                                                "headers": [
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json"
+                                                    }
+                                                ]
+                                            },
+                                            "metadata": {
+                                                "designer": {
+                                                    "x": 2400,
+                                                    "y": 300,
+                                                    "name": "Création société"
+                                                },
+                                                "restore": {
+                                                    "expect": {
+                                                        "qs": {
+                                                            "mode": "chose"
+                                                        },
+                                                        "method": {
+                                                            "mode": "chose",
+                                                            "label": "POST"
+                                                        },
+                                                        "headers": {
+                                                            "mode": "chose",
+                                                            "items": [
+                                                                null
+                                                            ]
+                                                        }
+                                                    },
+                                                    "parameters": {
+                                                        "__IMTCONN__": {
+                                                            "data": {
+                                                                "scoped": "true",
+                                                                "connection": "sellsy2"
+                                                            },
+                                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                                        }
+                                                    }
+                                                },
+                                                "parameters": [
+                                                    {
+                                                        "name": "__IMTCONN__",
+                                                        "type": "account:sellsy2",
+                                                        "label": "Connection",
+                                                        "required": true
+                                                    }
+                                                ],
+                                                "expect": [
+                                                    {
+                                                        "name": "url",
+                                                        "type": "text",
+                                                        "label": "URL",
+                                                        "required": true
+                                                    },
+                                                    {
+                                                        "name": "method",
+                                                        "type": "select",
+                                                        "label": "Method",
+                                                        "required": true,
+                                                        "validate": {
+                                                            "enum": [
+                                                                "GET",
+                                                                "POST",
+                                                                "PUT",
+                                                                "PATCH",
+                                                                "DELETE"
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "headers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "key",
+                                                                "type": "text",
+                                                                "label": "Key"
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "text",
+                                                                "label": "Value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Headers"
+                                                    },
+                                                    {
+                                                        "name": "qs",
+                                                        "spec": [
+                                                            {
+                                                                "name": "key",
+                                                                "type": "text",
+                                                                "label": "Key"
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "text",
+                                                                "label": "Value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Query String"
+                                                    },
+                                                    {
+                                                        "name": "body",
+                                                        "type": "any",
+                                                        "label": "Body"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": 26,
+                                            "module": "util:FunctionSleep",
+                                            "version": 1,
+                                            "parameters": {},
+                                            "mapper": {
+                                                "duration": "1"
+                                            },
+                                            "metadata": {
+                                                "designer": {
+                                                    "x": 2700,
+                                                    "y": 300
+                                                },
+                                                "restore": {},
+                                                "expect": [
+                                                    {
+                                                        "name": "duration",
+                                                        "type": "uinteger",
+                                                        "label": "Delay",
+                                                        "required": true,
+                                                        "validate": {
+                                                            "max": 300,
+                                                            "min": 1
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": 27,
+                                            "module": "sellsy:makeApiCall",
+                                            "version": 2,
+                                            "parameters": {
+                                                "__IMTCONN__": 8601308
+                                            },
+                                            "mapper": {
+                                                "url": "/v2/companies/{{24.body.id}}/contacts/{{21.body.id}}",
+                                                "body": "{\n    \"roles\": [\n        \"main\"\n    ]\n}",
+                                                "method": "POST",
+                                                "headers": [
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json"
+                                                    }
+                                                ]
+                                            },
+                                            "metadata": {
+                                                "designer": {
+                                                    "x": 3000,
+                                                    "y": 300,
+                                                    "name": "Lie le contact à société"
+                                                },
+                                                "restore": {
+                                                    "expect": {
+                                                        "qs": {
+                                                            "mode": "chose"
+                                                        },
+                                                        "method": {
+                                                            "mode": "chose",
+                                                            "label": "POST"
+                                                        },
+                                                        "headers": {
+                                                            "mode": "chose",
+                                                            "items": [
+                                                                null
+                                                            ]
+                                                        }
+                                                    },
+                                                    "parameters": {
+                                                        "__IMTCONN__": {
+                                                            "data": {
+                                                                "scoped": "true",
+                                                                "connection": "sellsy2"
+                                                            },
+                                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                                        }
+                                                    }
+                                                },
+                                                "parameters": [
+                                                    {
+                                                        "name": "__IMTCONN__",
+                                                        "type": "account:sellsy2",
+                                                        "label": "Connection",
+                                                        "required": true
+                                                    }
+                                                ],
+                                                "expect": [
+                                                    {
+                                                        "name": "url",
+                                                        "type": "text",
+                                                        "label": "URL",
+                                                        "required": true
+                                                    },
+                                                    {
+                                                        "name": "method",
+                                                        "type": "select",
+                                                        "label": "Method",
+                                                        "required": true,
+                                                        "validate": {
+                                                            "enum": [
+                                                                "GET",
+                                                                "POST",
+                                                                "PUT",
+                                                                "PATCH",
+                                                                "DELETE"
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "headers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "key",
+                                                                "type": "text",
+                                                                "label": "Key"
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "text",
+                                                                "label": "Value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Headers"
+                                                    },
+                                                    {
+                                                        "name": "qs",
+                                                        "spec": [
+                                                            {
+                                                                "name": "key",
+                                                                "type": "text",
+                                                                "label": "Key"
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "text",
+                                                                "label": "Value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Query String"
+                                                    },
+                                                    {
+                                                        "name": "body",
+                                                        "type": "any",
+                                                        "label": "Body"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": 29,
+                                            "module": "util:SetVariables",
+                                            "version": 1,
+                                            "parameters": {},
+                                            "mapper": {
+                                                "scope": "execution",
+                                                "variables": [
+                                                    {
+                                                        "name": "contact_id",
+                                                        "value": "{{21.body.id}}"
+                                                    },
+                                                    {
+                                                        "name": "third_id",
+                                                        "value": "{{24.body.id}}"
+                                                    }
+                                                ]
+                                            },
+                                            "metadata": {
+                                                "designer": {
+                                                    "x": 3300,
+                                                    "y": 300
+                                                },
+                                                "restore": {
+                                                    "expect": {
+                                                        "scope": {
+                                                            "label": "One execution"
+                                                        },
+                                                        "variables": {
+                                                            "items": [
+                                                                null,
+                                                                null
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "expect": [
+                                                    {
+                                                        "name": "variables",
+                                                        "spec": [
+                                                            {
+                                                                "name": "name",
+                                                                "type": "text",
+                                                                "label": "Variable name",
+                                                                "required": true
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "any",
+                                                                "label": "Variable value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Variables"
+                                                    },
+                                                    {
+                                                        "name": "scope",
+                                                        "type": "select",
+                                                        "label": "Variable lifetime",
+                                                        "required": true,
+                                                        "validate": {
+                                                            "enum": [
+                                                                "roundtrip",
+                                                                "execution"
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "interface": [
+                                                    {
+                                                        "name": "contact_id",
+                                                        "type": "any",
+                                                        "label": "contact_id"
+                                                    },
+                                                    {
+                                                        "name": "third_id",
+                                                        "type": "any",
+                                                        "label": "third_id"
+                                                    }
+                                                ],
+                                                "advanced": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "flow": [
+                                        {
+                                            "id": 30,
+                                            "module": "sellsy:makeApiCall",
+                                            "version": 2,
+                                            "parameters": {
+                                                "__IMTCONN__": 8601308
+                                            },
+                                            "filter": {
+                                                "name": "Retrouvée",
+                                                "conditions": [
+                                                    [
+                                                        {
+                                                            "a": "{{22.body.data[].id}}",
+                                                            "o": "exist"
+                                                        }
+                                                    ]
+                                                ]
+                                            },
+                                            "mapper": {
+                                                "url": "/v2/companies/{{22.body.data[].id}}/contacts/{{21.body.id}}",
+                                                "body": "{\n    \"roles\": [\n        \"main\"\n    ]\n}",
+                                                "method": "POST",
+                                                "headers": [
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "value": "application/json"
+                                                    }
+                                                ]
+                                            },
+                                            "metadata": {
+                                                "designer": {
+                                                    "x": 2400,
+                                                    "y": 600,
+                                                    "name": "Lie le contact à société"
+                                                },
+                                                "restore": {
+                                                    "expect": {
+                                                        "qs": {
+                                                            "mode": "chose"
+                                                        },
+                                                        "method": {
+                                                            "mode": "chose",
+                                                            "label": "POST"
+                                                        },
+                                                        "headers": {
+                                                            "mode": "chose",
+                                                            "items": [
+                                                                null
+                                                            ]
+                                                        }
+                                                    },
+                                                    "parameters": {
+                                                        "__IMTCONN__": {
+                                                            "data": {
+                                                                "scoped": "true",
+                                                                "connection": "sellsy2"
+                                                            },
+                                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                                        }
+                                                    }
+                                                },
+                                                "parameters": [
+                                                    {
+                                                        "name": "__IMTCONN__",
+                                                        "type": "account:sellsy2",
+                                                        "label": "Connection",
+                                                        "required": true
+                                                    }
+                                                ],
+                                                "expect": [
+                                                    {
+                                                        "name": "url",
+                                                        "type": "text",
+                                                        "label": "URL",
+                                                        "required": true
+                                                    },
+                                                    {
+                                                        "name": "method",
+                                                        "type": "select",
+                                                        "label": "Method",
+                                                        "required": true,
+                                                        "validate": {
+                                                            "enum": [
+                                                                "GET",
+                                                                "POST",
+                                                                "PUT",
+                                                                "PATCH",
+                                                                "DELETE"
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "headers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "key",
+                                                                "type": "text",
+                                                                "label": "Key"
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "text",
+                                                                "label": "Value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Headers"
+                                                    },
+                                                    {
+                                                        "name": "qs",
+                                                        "spec": [
+                                                            {
+                                                                "name": "key",
+                                                                "type": "text",
+                                                                "label": "Key"
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "text",
+                                                                "label": "Value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Query String"
+                                                    },
+                                                    {
+                                                        "name": "body",
+                                                        "type": "any",
+                                                        "label": "Body"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": 31,
+                                            "module": "util:SetVariables",
+                                            "version": 1,
+                                            "parameters": {},
+                                            "mapper": {
+                                                "scope": "execution",
+                                                "variables": [
+                                                    {
+                                                        "name": "contact_id",
+                                                        "value": "{{21.body.id}}"
+                                                    },
+                                                    {
+                                                        "name": "third_id",
+                                                        "value": "{{22.body.data[].id}}"
+                                                    }
+                                                ]
+                                            },
+                                            "metadata": {
+                                                "designer": {
+                                                    "x": 2700,
+                                                    "y": 600
+                                                },
+                                                "restore": {
+                                                    "expect": {
+                                                        "scope": {
+                                                            "label": "One execution"
+                                                        },
+                                                        "variables": {
+                                                            "items": [
+                                                                null,
+                                                                null
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "expect": [
+                                                    {
+                                                        "name": "variables",
+                                                        "spec": [
+                                                            {
+                                                                "name": "name",
+                                                                "type": "text",
+                                                                "label": "Variable name",
+                                                                "required": true
+                                                            },
+                                                            {
+                                                                "name": "value",
+                                                                "type": "any",
+                                                                "label": "Variable value"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Variables"
+                                                    },
+                                                    {
+                                                        "name": "scope",
+                                                        "type": "select",
+                                                        "label": "Variable lifetime",
+                                                        "required": true,
+                                                        "validate": {
+                                                            "enum": [
+                                                                "roundtrip",
+                                                                "execution"
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "interface": [
+                                                    {
+                                                        "name": "contact_id",
+                                                        "type": "any",
+                                                        "label": "contact_id"
+                                                    },
+                                                    {
+                                                        "name": "third_id",
+                                                        "type": "any",
+                                                        "label": "third_id"
+                                                    }
+                                                ],
+                                                "advanced": true
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 32,
+                            "module": "util:GetVariables",
+                            "version": 1,
+                            "parameters": {},
+                            "mapper": {
+                                "variables": [
+                                    "third_id",
+                                    "contact_id"
+                                ]
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1200,
+                                    "y": 900
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "variables": {
+                                            "items": [
+                                                null,
+                                                null
+                                            ]
+                                        }
+                                    }
+                                },
+                                "expect": [
+                                    {
+                                        "name": "variables",
+                                        "spec": {
+                                            "name": "value",
+                                            "type": "text",
+                                            "label": "Variable name",
+                                            "required": true
+                                        },
+                                        "type": "array",
+                                        "label": "Variables"
+                                    }
+                                ],
+                                "interface": [
+                                    {
+                                        "name": "third_id",
+                                        "type": "any",
+                                        "label": "third_id"
+                                    },
+                                    {
+                                        "name": "contact_id",
+                                        "type": "any",
+                                        "label": "contact_id"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 42,
+                            "module": "util:SetVariables",
+                            "version": 1,
+                            "parameters": {},
+                            "mapper": {
+                                "scope": "roundtrip",
+                                "variables": [
+                                    {
+                                        "name": "nouveau_score",
+                                        "value": "{{parseNumber(19.body.data[].`_embed`.custom_fields[].value) + if(37.annulation; parseNumber(-70); parseNumber(70))}}"
+                                    }
+                                ]
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1500,
+                                    "y": 900
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "scope": {
+                                            "label": "One cycle"
+                                        },
+                                        "variables": {
+                                            "items": [
+                                                null
+                                            ]
+                                        }
+                                    }
+                                },
+                                "expect": [
+                                    {
+                                        "name": "variables",
+                                        "spec": [
+                                            {
+                                                "name": "name",
+                                                "type": "text",
+                                                "label": "Variable name",
+                                                "required": true
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Variable value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Variables"
+                                    },
+                                    {
+                                        "name": "scope",
+                                        "type": "select",
+                                        "label": "Variable lifetime",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "roundtrip",
+                                                "execution"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "interface": [
+                                    {
+                                        "name": "nouveau_score",
+                                        "type": "any",
+                                        "label": "nouveau_score"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 33,
+                            "module": "sellsy:makeApiCall",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 8601308
+                            },
+                            "mapper": {
+                                "url": "/v2/opportunities",
+                                "body": "{\n    \"name\":\"RDV Calendly - {{37.societe}}\",\n    \"pipeline\":106689,\n    \"step\":778415,\n    \"source\":57711,\n    \"contact_ids\":[{{ifempty(19.body.data[].id; 32.contact_id)}}],\n    \"related\":[{\"id\":{{32.third_id}},\"type\":\"company\"}],\n    \"note\":\"{{37.note}}<br>RDV prévu le {{37.date_rdv}} jusqu'à {{37.`fin RDV`}}\"\n}",
+                                "method": "POST",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1800,
+                                    "y": 900,
+                                    "name": "Création opportunité"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "qs": {
+                                            "mode": "chose"
+                                        },
+                                        "method": {
+                                            "mode": "chose",
+                                            "label": "POST"
+                                        },
+                                        "headers": {
+                                            "mode": "chose",
+                                            "items": [
+                                                null
+                                            ]
+                                        }
+                                    },
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "sellsy2"
+                                            },
+                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:sellsy2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "method",
+                                        "type": "select",
+                                        "label": "Method",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "GET",
+                                                "POST",
+                                                "PUT",
+                                                "PATCH",
+                                                "DELETE"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "headers",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Headers"
+                                    },
+                                    {
+                                        "name": "qs",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Query String"
+                                    },
+                                    {
+                                        "name": "body",
+                                        "type": "any",
+                                        "label": "Body"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 54,
+                            "module": "sellsy:makeApiCall",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 8601308
+                            },
+                            "mapper": {
+                                "url": "/v2/contacts/{{ifempty(19.body.data[].id; 32.contact_id)}}/custom-fields",
+                                "body": "[\n       {\"id\":250644,\"value\":\"{{if(42.nouveau_score > 100; 100; if(42.nouveau_score < 0; 0; 42.nouveau_score))}}\"},\n{\n    \"id\":250652,\n    \"value\": {{if(42.nouveau_score >= parseNumber(70); 3971222; if((42.nouveau_score < parseNumber(70)) & (42.nouveau_score > parseNumber(40)); 3971224; 3971223))}}\n  }\n]",
+                                "method": "PUT",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 2100,
+                                    "y": 900,
+                                    "name": "MAJ CP"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "qs": {
+                                            "mode": "chose"
+                                        },
+                                        "method": {
+                                            "mode": "chose",
+                                            "label": "PUT"
+                                        },
+                                        "headers": {
+                                            "mode": "chose",
+                                            "items": [
+                                                null
+                                            ]
+                                        }
+                                    },
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "sellsy2"
+                                            },
+                                            "label": "Selssy RA (ANTOINE BERNARD)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:sellsy2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "method",
+                                        "type": "select",
+                                        "label": "Method",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "GET",
+                                                "POST",
+                                                "PUT",
+                                                "PATCH",
+                                                "DELETE"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "headers",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Headers"
+                                    },
+                                    {
+                                        "name": "qs",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Query String"
+                                    },
+                                    {
+                                        "name": "body",
+                                        "type": "any",
+                                        "label": "Body"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": [
+                [
+                    {
+                        "id": 45,
+                        "module": "builtin:BasicFeeder",
+                        "version": 1,
+                        "parameters": {},
+                        "mapper": {
+                            "array": "{{42.tag_actuel}}"
+                        },
+                        "metadata": {
+                            "designer": {
+                                "x": 2576,
+                                "y": 1494,
+                                "name": "Pour chaque tag",
+                                "messages": [
+                                    {
+                                        "category": "reference",
+                                        "severity": "warning",
+                                        "message": "Referenced module 'Tools - Set multiple variables' [42] is not accessible."
+                                    },
+                                    {
+                                        "category": "link",
+                                        "severity": "warning",
+                                        "message": "The module is not connected to the data flow."
+                                    }
+                                ]
+                            },
+                            "restore": {
+                                "expect": {
+                                    "array": {
+                                        "mode": "edit"
+                                    }
+                                }
+                            },
+                            "expect": [
+                                {
+                                    "mode": "edit",
+                                    "name": "array",
+                                    "spec": [],
+                                    "type": "array",
+                                    "label": "Array"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": 53,
+                        "module": "util:SetVariable2",
+                        "version": 1,
+                        "parameters": {},
+                        "filter": {
+                            "name": "Enlève tag températures",
+                            "conditions": [
+                                [
+                                    {
+                                        "a": "{{45.value}}",
+                                        "b": "lead_froid",
+                                        "o": "text:notequal"
+                                    },
+                                    {
+                                        "a": "{{45.value}}",
+                                        "b": "lead_tiede",
+                                        "o": "text:notequal"
+                                    },
+                                    {
+                                        "a": "{{45.value}}",
+                                        "b": "lead_chaud",
+                                        "o": "text:notequal"
+                                    }
+                                ]
+                            ]
+                        },
+                        "mapper": {
+                            "name": "tag",
+                            "scope": "execution",
+                            "value": "{\"value\":\"{{45.value}}\"}"
+                        },
+                        "metadata": {
+                            "designer": {
+                                "x": 2337,
+                                "y": 1083,
+                                "name": "Crée le tag"
+                            },
+                            "restore": {
+                                "expect": {
+                                    "scope": {
+                                        "label": "One execution"
+                                    }
+                                }
+                            },
+                            "expect": [
+                                {
+                                    "name": "name",
+                                    "type": "text",
+                                    "label": "Variable name",
+                                    "required": true
+                                },
+                                {
+                                    "name": "scope",
+                                    "type": "select",
+                                    "label": "Variable lifetime",
+                                    "required": true,
+                                    "validate": {
+                                        "enum": [
+                                            "roundtrip",
+                                            "execution"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "value",
+                                    "type": "any",
+                                    "label": "Variable value"
+                                }
+                            ],
+                            "interface": [
+                                {
+                                    "name": "tag",
+                                    "type": "any",
+                                    "label": "tag"
+                                }
+                            ],
+                            "advanced": true
+                        }
+                    },
+                    {
+                        "id": 49,
+                        "module": "util:AggregateAggregator",
+                        "version": 1,
+                        "parameters": {
+                            "feeder": 45,
+                            "rowSeparator": "other",
+                            "columnSeparator": "other",
+                            "otherRowSeparator": ",",
+                            "otherColumnSeparator": ","
+                        },
+                        "mapper": {
+                            "tag": "{{53.tag}}"
+                        },
+                        "metadata": {
+                            "designer": {
+                                "x": 2637,
+                                "y": 1083,
+                                "name": "Regroupe les tags"
+                            },
+                            "restore": {
+                                "extra": {
+                                    "feeder": {
+                                        "label": "Iterator [45]"
+                                    }
+                                },
+                                "parameters": {
+                                    "rowSeparator": {
+                                        "label": "Other"
+                                    },
+                                    "columnSeparator": {
+                                        "label": "Other"
+                                    }
+                                }
+                            },
+                            "parameters": [
+                                {
+                                    "name": "columnSeparator",
+                                    "type": "select",
+                                    "label": "Column separator",
+                                    "validate": {
+                                        "enum": [
+                                            "\n",
+                                            "\t",
+                                            "other"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "rowSeparator",
+                                    "type": "select",
+                                    "label": "Row separator",
+                                    "validate": {
+                                        "enum": [
+                                            "\n",
+                                            "\t",
+                                            "other"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "otherColumnSeparator",
+                                    "type": "text",
+                                    "label": "Separator"
+                                },
+                                {
+                                    "name": "otherRowSeparator",
+                                    "type": "text",
+                                    "label": "Separator"
+                                }
+                            ],
+                            "advanced": true
+                        }
+                    },
+                    {
+                        "id": 40,
+                        "module": "sellsy:makeApiCall",
+                        "version": 2,
+                        "parameters": {
+                            "__IMTCONN__": 8601308
+                        },
+                        "mapper": {
+                            "url": "/v2/contacts/{{ifempty(19.body.data[].id; 32.contact_id)}}/smart-tags",
+                            "body": "[\n       {{if(49.text; 49.text + \",\"; null)}}\n       {\"value\":\"lead_chaud\"}\n]",
+                            "method": "POST",
+                            "headers": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ]
+                        },
+                        "metadata": {
+                            "designer": {
+                                "x": 2937,
+                                "y": 1083,
+                                "name": "MAJ tag",
+                                "messages": [
+                                    {
+                                        "category": "reference",
+                                        "severity": "warning",
+                                        "message": "Referenced module 'Sellsy - Make an API Call' [19] is not accessible."
+                                    },
+                                    {
+                                        "category": "reference",
+                                        "severity": "warning",
+                                        "message": "Referenced module 'Tools - Get multiple variables' [32] is not accessible."
+                                    }
+                                ]
+                            },
+                            "restore": {
+                                "expect": {
+                                    "qs": {
+                                        "mode": "chose"
+                                    },
+                                    "method": {
+                                        "mode": "chose",
+                                        "label": "POST"
+                                    },
+                                    "headers": {
+                                        "mode": "chose",
+                                        "items": [
+                                            null
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "__IMTCONN__": {
+                                        "data": {
+                                            "scoped": "true",
+                                            "connection": "sellsy2"
+                                        },
+                                        "label": "Selssy RA (ANTOINE BERNARD)"
+                                    }
+                                }
+                            },
+                            "parameters": [
+                                {
+                                    "name": "__IMTCONN__",
+                                    "type": "account:sellsy2",
+                                    "label": "Connection",
+                                    "required": true
+                                }
+                            ],
+                            "expect": [
+                                {
+                                    "name": "url",
+                                    "type": "text",
+                                    "label": "URL",
+                                    "required": true
+                                },
+                                {
+                                    "name": "method",
+                                    "type": "select",
+                                    "label": "Method",
+                                    "required": true,
+                                    "validate": {
+                                        "enum": [
+                                            "GET",
+                                            "POST",
+                                            "PUT",
+                                            "PATCH",
+                                            "DELETE"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "headers",
+                                    "spec": [
+                                        {
+                                            "name": "key",
+                                            "type": "text",
+                                            "label": "Key"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "type": "text",
+                                            "label": "Value"
+                                        }
+                                    ],
+                                    "type": "array",
+                                    "label": "Headers"
+                                },
+                                {
+                                    "name": "qs",
+                                    "spec": [
+                                        {
+                                            "name": "key",
+                                            "type": "text",
+                                            "label": "Key"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "type": "text",
+                                            "label": "Value"
+                                        }
+                                    ],
+                                    "type": "array",
+                                    "label": "Query String"
+                                },
+                                {
+                                    "name": "body",
+                                    "type": "any",
+                                    "label": "Body"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            ]
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

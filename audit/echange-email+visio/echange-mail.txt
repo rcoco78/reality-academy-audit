@@ -1,0 +1,151 @@
+Suivi de notre échange - Discussion préparatoire audit marketing
+♻️ G-Mail
+Freelance
+Meeting scheduling correspondence
+Other
+
+Corentin ROBERT <corentinrobert648@gmail.com>
+✓
+jeu. 11 sept. 17:26
+À Melyna, Antoine
+
+Bonjour Antoine et Mélyna,
+
+Je vous remercie pour cet échange très constructif qui m'a permis de mieux appréhender votre écosystème marketing et commercial chez Reality Academy.
+
+Ce que j'ai retenu
+Votre structure actuelle :
+
+Une offre diversifiée (présentiel, VR, e-learning 2D, roleplay IA à venir)
+Une équipe commerciale structurée (3 SDR, 3 Account Executives, 3 CSM)
+Un ciblage centré sur les responsables formation dans les grands groupes et ETI
+Vos canaux d'acquisition actuels :
+
+Cold calling : votre canal le plus performant (10-15 RDV/semaine)
+Inbound : ressources téléchargeables avec bon trafic mais conversion insuffisante
+LinkedIn organique : publications régulières
+Outbound email (Lemlist) : géré principalement par les commerciaux, résultats mitigés
+LinkedIn Ads : campagnes passées avec résultats décevants
+Salons (Préventica) : participation événementielle
+Mes premières analyses
+Points de friction identifiés :
+
+Conversion site web : écart entre trafic et demandes de devis
+Fragmentation des outils : Lemlist, Make, Sellsy sans intégration complète
+Gestion outbound : manque de stratégie coordonnée et de processus systématiques
+Analyse des performances : difficultés à centraliser les données des différents canaux
+Sécurité des domaines : risques liés à l'utilisation du domaine principal pour l'outbound
+Opportunités détectées :
+
+Potentiel d'optimisation des formulaires et CTA site web
+Centralisation de l'outbound côté marketing
+Mise en place d'un domaine secondaire sécurisé
+Augmentation du volume de prospection avec plusieurs adresses email
+Stratégie webinaire pour 2025
+À ce stade
+Je ne peux pas encore poser de bilan définitif car notre échange m'a donné un aperçu global mais il me manque des éléments d'analyse approfondie, notamment :
+
+Les données détaillées des campagnes LinkedIn Ads
+L'analyse complète des automatisations Make
+L'audit technique des configurations actuelles
+Et éventuellement un accès aux plateformes avec les invités du ou des différents salons (scraping)
+Prochaines étapes
+Nous nous retrouvons lundi matin à 10h avec Mélyna pour approfondir les aspects CRM et automatisations.
+
+D'ici là, j'analyserai :
+
+Le compte Lemlist (accès déjà fourni)
+Les résultats des campagnes LinkedIn que Mélyna m'enverra
+Les accès Make pour comprendre vos automatisations actuelles
+Mon rôle et approche
+Pour remettre à plat mon rôle ici car il est vrai que nous avions échangé de ça il y a maintenant quelques semaines/mois : j'accompagne en tant que consultant externe qui va traduire un audit opérationnel en recommandations concrètes. Mon objectif est de vous fournir des pistes d'orientations précises sur trois axes :
+
+Inbound : optimisation conversion et stratégie de contenu
+Outbound : processus, sécurité et montée en volume
+Automatisation/Growth : intégration des outils et mécaniques de croissance
+Dans un second temps, selon vos besoins, nous pourrons discuter d'un accompagnement opérationnel pour la mise en œuvre des recommandations.
+
+À très bientôt,
+
+
+Corentin
+
+
+Melyna Achouri
+ven. 12 sept. 16:56
+À moi, Antoine
+
+Corentin, 
+Merci pour ce mail très complet
+Je te confirme le partage du compte make, tu as normalement dû recevoir une invitation. 
+Je te partage également les résultats des campagnes dans ce notion : https://reality-group.notion.site/Analyse-campagnes-26c6ef7e65ca80d0bf22f6b6581a4f0c
+Est-ce cela te convient ? 
+
+Corentin ROBERT <corentinrobert648@gmail.com>
+✓
+lun. 15 sept. 08:38
+À Melyna
+
+Bonjour Mélyna,
+
+Parfait pour les accès Make et le partage des résultats LinkedIn Ads, merci beaucoup. Ça me convient très bien.
+
+Pour notre échange de ce matin, je te propose ce plan rapide afin de compléter ce que j’ai déjà retenu et creuser les points clés:
+
+Outbound — 20 min
+Gouvernance: qui pilote les séquences, qui répond, qui analyse
+Délivrabilité: décision domaine secondaire + 2 adresses dédiées à créer
+Standardisation: 1 séquence type par persona avec cadence et CTA
+Qualité des listes: déduplication et exclusions CRM (avez-vous la base de données de vos clients?)
+LinkedIn Ads — 15 min
+Capitaliser sur “Calendrier RH” et cadrer 2 hypothèses d’AB test sur 14 jours
+Décider budget minimal par test
+Choisir formulaire natif vs landing page pour la ressource prioritaire
+Make x Sellsy — 10 min
+Schéma d’états cible: New → MQL → SQL → Meeting → Proposal → Won/Lost
+Règles d’entrée/sortie et “stop séquence” automatiques
+Journalisation des évènements marketing dans Sellsy
+Clôture — 5 min
+Prochaines actions à 7 jours, avec responsables et échéances
+Pour gagner du temps, pourrais-tu réunir d’ici notre appel:
+
+Si possible: la liste des tags/états utilisés aujourd’hui dans Sellsy pour qualifier l’avancée commerciale
+La liste des noms de domaines tiers que vous pourriez utiliser (si déjà achetés)
+La liste de données de vos clients actuels pour éviter de les contacter
+Et un mini document qui m'explique les 4 automatisations actuelles, actives.
+De mon côté, je parcours déjà Lemlist et le doc de résultats. On actera ensemble les décisions “go/no go” sur domaine secondaire, AB tests LinkedIn et règles d’arrêt de séquence.
+
+À tout à l’heure,
+
+Corentin
+
+
+Melyna Achouri
+lun. 22 sept. 09:52 (il y a 9 jours)
+À moi
+
+Hello Corentin
+J'espère que tu vas bien 
+Je n'ai pas eu de nouvelles de ta part fin de semaine dernière
+Tout se passe bien côté audit ? 
+Je reste disponible si tu as besoin
+Bien à toi 
+
+Corentin ROBERT <corentinrobert648@gmail.com>
+lun. 22 sept. 13:17 (il y a 9 jours)
+À Melyna
+
+Bonjour Mélyna,
+
+Merci pour ton message. Je n’ai pas encore eu le temps de finaliser l’audit, mais je me concentre dessus dès demain. Je te ferai un retour complet rapidement.
+
+Très bonne journée,
+Corentin
+
+
+Melyna Achouri
+lun. 22 sept. 14:06 (il y a 9 jours)
+À moi
+
+Très bien merci de ton retour
+À très vite

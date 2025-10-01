@@ -1,0 +1,40 @@
+Bonjour {{firstName}}, 
+
+
+
+Je me permets de vous contacter dans le cadre de notre collaboration avec plusieurs grands groupes industriels tels que Safran, Naval Group ou encore la SNCF, qui utilisent aujourd’hui la Réalité Virtuelle pour renforcer l’impact de leurs formations.
+
+
+
+
+
+Ces dispositifs immersifs permettent aux collaborateurs de vivre des situations concrètes, de prendre conscience des enjeux humains, opérationnels et sociétaux, et de renforcer durablement les bons réflexes dans un cadre sécurisé et engageant.
+
+
+
+Chez Reality Academy, organisme certifié Qualiopi, nous avons conçu un catalogue de plus de 40 modules immersifs en VR et e-learning autour des grandes priorités RH, RSE et HSE :
+
+🎯 Diversité & inclusion
+🚑 Gestes de premiers secours & sécurité au travail
+🚗 Prévention des risques routiers & mobilité
+🧠 Risques psychosociaux & bien-être au travail
+👔 Management, leadership & soft skills
+🌍 Enjeux environnementaux & transition énergétique
+👩🏻‍💻 Cybersécurité et conformité
+
+
+
+📌 Découvrez notre catalogue détaillé : Lien
+
+
+
+💡 Pourquoi ne pas tester la VR par vous-même ?
+Nous pouvons organiser une démonstration immersive, dans vos locaux ou à distance, pour vous faire découvrir concrètement l’impact pédagogique de cette approche.
+
+
+📅 Seriez-vous disponible le Mercredi 16 avril ou le Jeudi 17 avril pour un échange rapide à ce sujet ?
+
+Au plaisir d’échanger,
+
+
+{{signature}}

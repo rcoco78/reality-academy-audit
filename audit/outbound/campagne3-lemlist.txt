@@ -1,0 +1,46 @@
+Bonjour {{firstName}},
+
+
+J'espère que vous allez bien.
+
+
+
+La Semaine Nationale de la Sécurité Routière au travail approche à grands pas !
+
+
+
+📊 Quelques chiffres clés, en France :
+
+Les accidents sur la route sont la première cause d'accidents au travail et 30% de ces derniers sont mortels
+3 conducteurs sur 4 admettent être distraits au volant
+14% des piétons sont victimes d’accidents de la route, soit 1 accident sur 7
+Compte tenu de votre culture de prévention, je vous encourage à saisir cette occasion pour renforcer la sécurité de vos collaborateurs chez {{companyName}} 
+
+
+
+Dans la peau du conducteur, nos modules de prévention permettent de :
+
+🛴 Sensibiliser vos collaborateurs aux risques liés aux mobilités douces.
+🏘️ Proposer des formations ludiques et interactives réalisées en prise de vue réelle
+🌿 Renforcer vos initiatives RSE et l’utilisation de Forfaits de Mobilité Durables (FMD)
+Entre-temps, voici une présentation de notre catalogue : Lien catalogue
+
+
+
+Voici un accès démo format E-Learning dédié à la Sensibilisation aux Risques Routiers Auto : Lien Démo
+
+
+
+Je vous propose d’organiser un échange visio afin de vous faire une démonstration de notre sensibilisation immersive.
+
+
+
+Seriez-vous disponible le Lundi 28 Avril, le Mardi 29 avril ou le Mercredi 30 Avril ?
+
+
+
+Au plaisir d'échanger avec vous, 
+
+
+
+{{signature}} 

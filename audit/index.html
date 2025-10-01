@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reality Academy — Audit 360</title>
+    <link rel="icon" href="https://media.licdn.com/dms/image/v2/C4D0BAQHBMNibXs1M0Q/company-logo_200_200/company-logo_200_200/0/1630528138849/reality_academy_logo?e=2147483647&v=beta&t=fRIg7eauyDwxzKRO5xvwtFc36cnvkYpP1U96Vd88dX0" />
+    <link rel="shortcut icon" href="https://media.licdn.com/dms/image/v2/C4D0BAQHBMNibXs1M0Q/company-logo_200_200/company-logo_200_200/0/1630528138849/reality_academy_logo?e=2147483647&v=beta&t=fRIg7eauyDwxzKRO5xvwtFc36cnvkYpP1U96Vd88dX0" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111418;
+      --muted: #5c6672;
+      --border: #e6e8eb;
+      --primary: #0d6efd; /* accent léger inspiré RA */
+      --accent: #0d6efd10;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font: 16px/1.65 ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    .container { max-width: 860px; padding: 32px 24px 56px; margin: 0 auto; }
+    header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 5; }
+    header .bar { display: flex; gap: 12px; align-items: center; justify-content: space-between; padding: 12px 24px; max-width: 980px; margin: 0 auto; }
+    h1 { font-size: 20px; margin: 0; letter-spacing: 0.2px; }
+    .brand { display: inline-flex; gap: 10px; align-items: center; }
+    .brand img { width: 22px; height: 22px; border-radius: 6px; border: 1px solid var(--border); }
+    h2 { font-size: 22px; margin: 0 0 8px; line-height: 1.3; }
+    h3 { font-size: 18px; margin: 0 0 6px; line-height: 1.35; }
+    p { margin: 10px 0 14px; }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; }
+    nav button { appearance: none; border: 1px solid var(--border); background: #fff; color: var(--fg); padding: 8px 10px; border-radius: 8px; cursor: pointer; }
+    nav button.active { border-color: var(--primary); background: var(--accent); color: var(--primary); }
+    .action-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn { appearance: none; border: 1px solid var(--border); background: #fff; color: var(--fg); padding: 8px 10px; border-radius: 8px; cursor: pointer; }
+    .btn.primary { border-color: var(--primary); background: var(--primary); color: #fff; }
+    .muted { color: var(--muted); }
+    section { display: none; padding: 24px 0; }
+    section.active { display: block; }
+    .card { border: 1px solid var(--border); border-radius: 12px; padding: 18px 18px; margin: 16px 0; background: #fff; }
+    .grid { display: grid; gap: 12px; }
+    @media (min-width: 860px) { .grid.cols-2 { grid-template-columns: 1fr 1fr; gap: 16px; } }
+    ul { padding-left: 18px; margin: 8px 0; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .overline { text-transform: uppercase; font-size: 12px; letter-spacing: .08em; color: var(--muted); margin-bottom: 6px; display: block; }
+    .lede { color: var(--muted); font-size: 15px; }
+
+    /* Styles article (prose) */
+    .article { font-size: 16px; line-height: 1.75; }
+    .article h1 { font-size: 28px; line-height: 1.25; margin: 18px 0 10px; scroll-margin-top: 80px; }
+    .article h2 { font-size: 22px; margin: 22px 0 8px; scroll-margin-top: 80px; }
+    .article h3 { font-size: 18px; margin: 18px 0 6px; scroll-margin-top: 80px; }
+    .article p { margin: 12px 0; }
+    .article blockquote { margin: 12px 0; padding: 8px 12px; border-left: 3px solid var(--border); color: var(--muted); background: #f9fafb; border-radius: 8px; }
+    .article pre { background: #0b1020; color: #eaeefb; padding: 12px; border-radius: 10px; overflow: auto; }
+    .article code { background: #f1f3f5; padding: 2px 5px; border-radius: 6px; }
+    .article ul, .article ol { padding-left: 20px; margin: 8px 0; }
+    .article table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+    .article th, .article td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    .article img { max-width: 100%; border-radius: 10px; }
+
+    footer.site-footer { border-top: 1px solid var(--border); margin-top: 32px; }
+    footer.site-footer .inner { max-width: 860px; margin: 0 auto; padding: 16px 24px 40px; color: var(--muted); display: flex; gap: 12px; align-items: center; justify-content: space-between; }
+    .footer-links { display: flex; gap: 12px; align-items: center; }
+
+    /* Impression sobre */
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      header, .no-print { display: none !important; }
+      section { display: block !important; page-break-inside: avoid; }
+      .card { break-inside: avoid; }
+      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 12px; color: var(--muted); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div class="brand no-print">
+        <img src="https://media.licdn.com/dms/image/v2/C4D0BAQHBMNibXs1M0Q/company-logo_200_200/company-logo_200_200/0/1630528138849/reality_academy_logo?e=2147483647&v=beta&t=fRIg7eauyDwxzKRO5xvwtFc36cnvkYpP1U96Vd88dX0" alt="Reality Academy" />
+        <h1>Reality Academy — Audit 360</h1>
+      </div>
+      <nav class="no-print" id="tabs">
+        <button data-tab="synthese" class="active">Synthèse</button>
+        <button data-tab="documents">Documents</button>
+        <button data-tab="annexes">Annexes</button>
+      </nav>
+      <div class="action-row no-print">
+        <button class="btn" id="print">Imprimer / PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="synthese" class="active">
+      <div class="card">
+        <span class="overline">Synthèse</span>
+        <h2>Enjeux clés</h2>
+        <ul>
+          <li>Écosystème éclaté (Sellsy, Make, Notion, Lemlist, Mailjet) sans journalisation unifiée.</li>
+          <li>Conversion inbound perfectible (formulaires, CTA RDV, stop‑rules).</li>
+          <li>Outbound à industrialiser (délivrabilité domaine secondaire, séquences, déduplication CRM).</li>
+        </ul>
+      </div>
+      <div class="grid cols-2">
+        <div class="card">
+          <span class="overline">Priorités</span>
+          <h3>Top 3 priorités (30 jours)</h3>
+          <ol>
+            <li>Orchestration & data: états `Sellsy`, journalisation, stop‑rules Make.</li>
+            <li>Conversion: CTA RDV sticky, formulaires durcis (email pro, phone regex, double opt‑in).</li>
+            <li>Outbound: domaine secondaire + warm‑up, séquences persona, déduplication.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <span class="overline">Acquisition</span>
+          <h3>Quick wins Ads (14 jours)</h3>
+          <ul>
+            <li>AB tests « Calendrier RH » (fond blanc vs variantes, RH vs pôles, natif vs LP).</li>
+            <li>Repack « Catalogue » en offre utile (kit + replay + template) + ciblage par fonction.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <span class="overline">Roadmap</span>
+        <h3>Plan 4–6 semaines</h3>
+        <details open>
+          <summary><b>S1</b> — États + stop‑rules + formulaires</summary>
+          <ul>
+            <li>Valider schéma d’états & événements dans `Sellsy`.</li>
+            <li>Activer stop‑rules Make (SQL ➔ stop nurture; annulé ➔ décrément score; no‑show ➔ relance).</li>
+            <li>Durcir formulaires (email pro, phone regex, reCAPTCHA, double opt‑in Mailjet).</li>
+          </ul>
+        </details>
+        <details>
+          <summary><b>S2</b> — Domaine secondaire + personas + AB test</summary>
+          <ul>
+            <li>Créer domaine secondaire outbound + warm‑up; 2–4 inbox/persona.</li>
+            <li>Lancer AB test « Calendrier RH » (budget suffisant/variante).</li>
+          </ul>
+        </details>
+        <details>
+          <summary><b>S3</b> — Dashboard funnel + SEO + contenus</summary>
+          <ul>
+            <li>Mettre en place dashboard hebdo (funnel complet).</li>
+            <li>Correctifs SEO Core Web Vitals + 2–3 articles ciblés.</li>
+          </ul>
+        </details>
+        <details>
+          <summary><b>S4–S6</b> — Scale outbound + ads + salons</summary>
+          <ul>
+            <li>Industrialiser outbound (séquences persona, déduplication CRM, scoring).</li>
+            <li>Itérer Ads (offres utiles, ciblages par fonction), playbook salons.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section id="annexes">
+      <div class="card">
+        <span class="overline">Annexes</span>
+        <h2>Sources utilisées pour l’audit</h2>
+        <p class="lede">Tous les fichiers de travail, cliquables (formats mixtes: MD, TXT, CSV, JSON).</p>
+        <div class="card" style="border-left: 4px solid var(--primary)">
+          <span class="overline">Contexte client</span>
+          <h3>REALITY ACADEMY — Immersive Learning</h3>
+          <p class="lede">Edtech spécialisée en formations VR & E‑Learning (management, vente, prévention, diversité, cybersécurité…). ~11–50 employés, +7.6k abonnés LinkedIn. Positionnement: pédagogie active « learning by doing » avec catalogue étendu et ateliers.</p>
+          <ul>
+            <li>Preuves d’impact mises en avant: complétion ~90–100%, mémorisation ×4, confiance +92%.</li>
+            <li>Offres: Intra‑entreprise, Ateliers VR, Licences VR/E‑Learning, Sur‑mesure; app multi‑casques.</li>
+            <li>Ressources phares: Calendrier RH, webinaires, livre blanc, cas d’usage.</li>
+          </ul>
+        </div>
+        <div class="grid cols-2">
+          <div>
+            <h3>Échanges & contexte</h3>
+            <ul>
+              <li><a href="echange1.txt" target="_blank">echange1.txt</a></li>
+              <li><a href="echange2.txt" target="_blank">echange2.txt</a></li>
+              <li><a href="echange-mail.txt" target="_blank">echange-mail.txt</a></li>
+            </ul>
+            <h3>Outbound</h3>
+            <ul>
+              <li><a href="outbound/campagne3-lemlist.txt" target="_blank">outbound/campagne3-lemlist.txt</a></li>
+              <li><a href="outbound/campagne4-lemlist.txt" target="_blank">outbound/campagne4-lemlist.txt</a></li>
+              <li><a href="Semaine de la QVT.csv" target="_blank">Semaine de la QVT.csv</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Automatisations Make (blueprints)</h3>
+            <ul>
+              <li><a href="automatisation-make-blueprints/Calendly Esteban.blueprint.json" target="_blank">Calendly Esteban.blueprint.json</a></li>
+              <li><a href="automatisation-make-blueprints/Appel tagé - Remonte tag Sellsy v2.blueprint.json" target="_blank">Appel tagé - Remonte tag Sellsy v2.blueprint.json</a></li>
+              <li><a href="automatisation-make-blueprints/Appel commenté - Remonte note Sellsy.blueprint.json" target="_blank">Appel commenté - Remonte note Sellsy.blueprint.json</a></li>
+              <li><a href="automatisation-make-blueprints/Catalogue (thématiques et all) - Livre Blanc - RH - Newsletter.blueprint.json" target="_blank">Catalogue (thématiques…) - Newsletter.blueprint.json</a></li>
+            </ul>
+            <h3>Analyses</h3>
+            <ul>
+              <li><a href="analyse-campagne-ads.txt" target="_blank">analyse-campagne-ads.txt</a></li>
+              <li><a href="audit-360-reality-academy.md" target="_blank">audit-360-reality-academy.md</a></li>
+              <li><a href="one-pager-reality-academy.md" target="_blank">one-pager-reality-academy.md</a></li>
+              <li><a href="deck-reality-academy.md" target="_blank">deck-reality-academy.md</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="documents">
+      <div class="card">
+        <span class="overline">Livrables</span>
+        <h2>Documents</h2>
+        <p class="lede">Accès direct aux livrables. Les versions PDF peuvent être générées via le bouton « Imprimer / PDF ».</p>
+        <div class="action-row">
+          <button class="btn" data-md="one-pager-reality-academy.md">Lire le one‑pager</button>
+          <button class="btn" data-md="audit-360-reality-academy.md">Lire l’audit complet</button>
+          <button class="btn" onclick="window.open('deck.html','_blank')">Ouvrir les slides</button>
+        </div>
+        <hr />
+        <div class="card">
+          <div id="md-view" class="article">
+            <p class="muted">Sélectionnez un document ci‑dessus pour l’afficher ici. Le one‑pager se charge par défaut.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Exporter en PDF</h3>
+          <p>Utilisez le bouton « Imprimer / PDF » (ou Ctrl/Cmd+P) pour exporter en PDF sans logo, marges 15 mm.</p>
+          <button class="btn primary" onclick="window.print()">Imprimer / PDF</button>
+        </div>
+        <div class="card">
+          <h3>Annexes techniques</h3>
+          <ul>
+            <li>Blueprints Make (Calendly, Aircall tag/notes, Webflow) — voir dossier <code>automatisation-make-blueprints/</code>.</li>
+            <li>Outbound Lemlist (campagnes 3 & 4, CSV QVCT) — voir dossier <code>outbound/</code>.</li>
+            <li><a href="deck.html" target="_blank">Ouvrir le pitch deck (slides HTML)</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    
+
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>fait par Corentin Robert</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/robertcorentin/?skipRedirect=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>·</span>
+        <a href="https://www.malt.fr/profile/growth" target="_blank" rel="noopener noreferrer">Malt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it-anchor@8.6.7/dist/markdownItAnchor.umd.min.js"></script>
+  <script>
+    const tabs = document.querySelectorAll('#tabs button');
+    const sections = document.querySelectorAll('main section');
+    tabs.forEach(btn => btn.addEventListener('click', () => {
+      tabs.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const id = btn.dataset.tab;
+      sections.forEach(s => s.classList.toggle('active', s.id === id));
+    }));
+    document.getElementById('print').addEventListener('click', () => window.print());
+
+    // Markdown rendering
+    const md = window.markdownit({ html: true, linkify: true, breaks: false });
+    const keepAccentsSlugify = (s) => s.trim().toLowerCase().replace(/[\s]+/g, '-');
+    if (window.markdownitAnchor) {
+      md.use(window.markdownitAnchor, { slugify: keepAccentsSlugify });
+    }
+    const viewer = document.getElementById('md-view');
+    async function loadMd(path) {
+      try {
+        viewer.innerHTML = '<p class="muted">Chargement…</p>';
+        const res = await fetch(path);
+        const text = await res.text();
+        const html = md.render(text);
+        viewer.innerHTML = html;
+        // Aller à la section documents si non visible
+        document.getElementById('documents').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Si l'URL porte déjà un hash, scroller vers l’ancre après rendu
+        if (location.hash) {
+          const id = decodeURIComponent(location.hash.slice(1));
+          const target = document.getElementById(id);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } catch (e) {
+        viewer.innerHTML = '<p class="muted">Impossible de charger le document.</p>';
+      }
+    }
+    // Boutons de lecture
+    document.querySelectorAll('[data-md]').forEach(btn => {
+      btn.addEventListener('click', () => loadMd(btn.getAttribute('data-md')));
+    });
+    // Gestion des clics sur ancres internes dans le viewer
+    viewer.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if (a && a.getAttribute('href') && a.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+        const id = decodeURIComponent(a.getAttribute('href').slice(1));
+        const target = document.getElementById(id);
+        if (target) {
+          history.pushState(null, '', '#' + id);
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+    // Chargement par défaut
+    loadMd('one-pager-reality-academy.md');
+  </script>
+</body>
+</html>
