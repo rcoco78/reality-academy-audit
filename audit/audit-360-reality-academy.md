@@ -7,7 +7,7 @@
 - [Plan d’exécution priorisé (4–6 semaines)](#plan-dexécution-priorisé-4–6-semaines)
 - [KPI à suivre (hebdo)](#kpi-à-suivre-hebdo)
 - [Risques & mitigations](#risques--mitigations)
-- [Ce que nous prenons en charge (expertise)](#ce-que-nous-prenons-en-charge-expertise)
+- [Ce que je prends en charge (expertise)](#ce-que-je-prends-en-charge-expertise)
 - [Ce que vous pouvez déléguer](#ce-que-vous-pouvez-déléguer)
 - [Annexe — Faits marquants](#annexe--faits-marquants)
 - [Annexes détaillées](#annexes-détaillées)
@@ -112,7 +112,7 @@
 - **Qualité de data**: déduplication stricte + exclusions CRM à l’import; QA hebdo.
 - **Fiabilité Make**: monitoring + alerting + runbooks; versionner scénarios critiques.
 
-### Ce que nous prenons en charge (expertise)
+### Ce que je prends en charge (expertise)
 - Orchestration RevOps: états, événements, routage stop‑rules, QA des scénarios Make.
 - Outbound à l’échelle: domaine secondaire, séquences persona‑driven, pipeline data, reporting unifié.
 - Optimisation conversion: formulaires robustes, UX RDV, copies/CTA testés vite, landing rapides.
