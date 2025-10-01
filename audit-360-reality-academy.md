@@ -27,7 +27,7 @@
 - **Site & conversion**: CTA RDV sous‑exploité; formulaires sans garde‑fous (email pro, regex phone, double opt‑in); friction dans l’attribution et le stop des campagnes.
 - **SEO**: blog non indexé correctement; canoniques/redirections incohérentes; courbe SEO non linéaire; backlog d’articles non publiés.
 - **Automatisations (Make)**: migration incomplète, scénarios instables/désactivés; absence de "stop nurturing" quand un lead passe SQL/Meeting.
-- **Outbound**: campagnes éclatées par commerciaux; manque de normalisation (déduplication CRM, exclusions clients, cadences, CTA); risque délivrabilité (domaine principal).
+- **Outbound**: campagnes éclatées par commerciaux; manque de normalisation (déduplication CRM, exclusions clients, cadences, CTA); base de données non structurée (volumétrie faible, champs non normalisés) limitant la personnalisation; risque délivrabilité (domaine principal).
 - **Cold calling**: meilleur canal actuel (10–15 RDV/sem) mais peu de feedback loop structuré vers marketing.
 - **Ads**: LinkedIn « Calendrier RH » performant (CPL ~16,29 €; créas fond blanc <10 €). Campagnes « Catalogue » non performantes (offre trop générique, ciblage dispersé, budgets sous‑critiques).
 
@@ -65,7 +65,7 @@
 - Recos:
   - **Domaine secondaire** (SPF/DKIM/DMARC/BIMI), warm‑up, 2–4 inbox dédiées/persona; montée en charge progressive.
   - Séquences standardisées par persona (RH, HSE/QSE, Handicap, Cyber), cadence et CTA unique (demo 20 min).
-  - Pipeline data: déduplication vs `Sellsy` (clients/opp ouvertes), enrichissement (titre, seniorité, téléphone), règles d’exclusion.
+  - Pipeline data: déduplication vs `Sellsy` (clients/opp ouvertes), enrichissement (titre, seniorité, téléphone), règles d’exclusion; base maîtresse unique avec champs normalisés et collecte continue.
   - Routage des réponses vers commerciaux; tagging auto dans `Sellsy`.
 
 #### 6) Ads (LinkedIn/Meta)
@@ -86,11 +86,13 @@
   - Valider schéma d’états & événements `Sellsy`.
   - Implémenter stop‑rules Make + healthcheck & alerting.
   - Durcir formulaires (email pro, phone regex, reCAPTCHA, double opt‑in).
+  - Définir schéma base maîtresse (contacts/entreprises) + règles strictes de déduplication.
 
 - Semaine 2
   - Créer domaine secondaire + boîtes dédiées + warm‑up.
   - Déployer séquences outbound v1 (2 personas) + pipeline déduplication vs `Sellsy`.
   - Lancer AB test « Calendrier RH » (créa, audience, form natif vs LP) avec budget par variante.
+  - Démarrer collecte continue + enrichissement (salons, ressources, LinkedIn) et QA hebdo.
 
 - Semaine 3
   - Dashboard hebdo funnel complet (marketing → sales → revenu).
@@ -106,6 +108,7 @@
 - **Funnel**: Leads, MQL, SQL, Meetings, Proposal, Won; taux de conv. inter‑étapes.
 - **Emailing**: délivrabilité (open rate by provider), reply rate, bounce, spam rate.
 - **Sales**: win rate, cycle, ARR par source/campagne.
+ - **Data health**: % emails pro, bounces, % enrichis, doublons évités, opt‑out.
 
 ### Risques & mitigations
 - **Délivrabilité**: montée de volume ➔ warm‑up, domaine secondaire, limites quotidiennes.
